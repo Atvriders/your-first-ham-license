@@ -1,0 +1,8 @@
+{
+  "id": "ch07-echolink-topology",
+  "chapter": 7,
+  "caption": "Internet linking with EchoLink or IRLP: your HT talks to a local repeater's node, your voice crosses the internet as data (VoIP), and a remote repeater puts you on the air in another part of the world.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A chain diagram: your handheld radio reaches a local repeater with an internet node, the internet carries your voice to a distant repeater, and a far-away ham hears you on their radio — EchoLink and IRLP style."
+}

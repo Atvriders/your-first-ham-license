@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="sans-serif">
+
+  <!-- ================= SERIES ================= -->
+  <text x="170" y="44" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle">SERIES</text>
+  <text x="170" y="66" font-size="13" fill="currentColor" text-anchor="middle">one single path for the current</text>
+
+  <!-- loop wires -->
+  <line x1="60" y1="110" x2="88" y2="110" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="152" y1="110" x2="188" y2="110" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="252" y1="110" x2="280" y2="110" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="280" y1="110" x2="280" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="280" y1="230" x2="60" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="60" y1="110" x2="60" y2="148" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="60" y1="180" x2="60" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+
+  <!-- battery on the left leg: two cell pairs, long plate up -->
+  <line x1="45" y1="148" x2="75" y2="148" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="52" y1="158" x2="68" y2="158" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="45" y1="170" x2="75" y2="170" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="52" y1="180" x2="68" y2="180" stroke="currentColor" stroke-width="3" fill="none"/>
+  <text x="36" y="176" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">E</text>
+
+  <!-- R1 zigzag (88..152) -->
+  <polyline points="88,110 96,110 100,101 108,119 116,101 124,119 132,101 140,119 144,110 152,110" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <text x="120" y="97" font-size="13" font-weight="bold" fill="currentColor" text-anchor="middle">R1</text>
+
+  <!-- R2 zigzag (188..252) -->
+  <polyline points="188,110 196,110 200,101 208,119 216,101 224,119 232,101 240,119 244,110 252,110" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <text x="220" y="97" font-size="13" font-weight="bold" fill="currentColor" text-anchor="middle">R2</text>
+
+  <!-- current arrow on the bottom leg (conventional current: out of +, back to -) -->
+  <polygon points="162,230 174,225 174,235" fill="currentColor" stroke="none"/>
+  <text x="170" y="214" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">I</text>
+
+  <text x="170" y="262" font-size="13" fill="currentColor" text-anchor="middle">Current is the same through every component</text>
+  <text x="170" y="284" font-size="13" fill="currentColor" text-anchor="middle">Voltage divides across the resistors</text>
+
+  <!-- ================= PARALLEL ================= -->
+  <text x="490" y="44" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle">PARALLEL</text>
+  <text x="490" y="66" font-size="13" fill="currentColor" text-anchor="middle">a separate path for each branch</text>
+
+  <!-- rails and legs -->
+  <line x1="380" y1="110" x2="600" y2="110" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="600" y1="110" x2="600" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="600" y1="230" x2="380" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="380" y1="110" x2="380" y2="148" stroke="currentColor" stroke-width="2" fill="none"/>
+  <line x1="380" y1="180" x2="380" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+
+  <!-- battery on the left leg: two cell pairs, long plate up -->
+  <line x1="365" y1="148" x2="395" y2="148" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="372" y1="158" x2="388" y2="158" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="365" y1="170" x2="395" y2="170" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="372" y1="180" x2="388" y2="180" stroke="currentColor" stroke-width="3" fill="none"/>
+  <text x="356" y="176" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">E</text>
+
+  <!-- branch 1 at x=460: vertical resistor -->
+  <line x1="460" y1="110" x2="460" y2="138" stroke="currentColor" stroke-width="2" fill="none"/>
+  <polyline points="460,138 460,146 451,150 469,158 451,166 469,174 451,182 469,190 460,194 460,202" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="460" y1="202" x2="460" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <text x="476" y="176" font-size="13" font-weight="bold" fill="currentColor" text-anchor="start">R1</text>
+
+  <!-- branch 2 at x=540: vertical resistor -->
+  <line x1="540" y1="110" x2="540" y2="138" stroke="currentColor" stroke-width="2" fill="none"/>
+  <polyline points="540,138 540,146 531,150 549,158 531,166 549,174 531,182 549,190 540,194 540,202" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="540" y1="202" x2="540" y2="230" stroke="currentColor" stroke-width="2" fill="none"/>
+  <text x="556" y="176" font-size="13" font-weight="bold" fill="currentColor" text-anchor="start">R2</text>
+
+  <text x="490" y="262" font-size="13" fill="currentColor" text-anchor="middle">Voltage is the same across every branch</text>
+  <text x="490" y="284" font-size="13" fill="currentColor" text-anchor="middle">Current divides among the branches</text>
+
+</svg>

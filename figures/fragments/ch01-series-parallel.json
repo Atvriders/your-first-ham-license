@@ -1,0 +1,8 @@
+{
+  "id": "ch01-series-parallel",
+  "chapter": 1,
+  "caption": "Series and parallel resistor circuits compared. In a series circuit there is one path, so the same current flows through every component while the voltage divides across the resistors; in a parallel circuit each branch has its own path, so every branch sees the same voltage while the current divides among the branches.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a series circuit and a parallel circuit side by side, labeled with what happens to current and voltage in each"
+}

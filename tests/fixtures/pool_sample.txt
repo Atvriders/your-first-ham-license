@@ -1,0 +1,84 @@
+T1A01 (A)
+Which agency regulates the amateur service in the United States?
+A. The FCC
+B. The ITU
+C. The Department of Defense
+D. The United Nations
+~~
+T1A02 (A)
+What is the purpose of the amateur service?
+A. Advancing skills in the technical and communication phases of the radio art
+B. Broadcasting music to the general public
+C. Providing commercial message traffic
+D. Coordinating military communications
+~~
+T1A03 (B)
+How many questions are on the Technician class exam?
+A. 26
+B. 35
+C. 50
+D. 74
+~~
+T1B01 (B)
+When must an amateur station transmit its call sign?
+A. Every 5 minutes during a contact
+B. At least every 10 minutes during and at the end of a contact
+C. Once per hour while operating
+D. Only at the beginning of a contact
+~~
+T1B02 (B)
+Which of the following is a valid US amateur call sign?
+A. K1A
+B. W1ABC
+C. AB12345
+D. 1WXY9
+~~
+T1B03 (C)
+What does the FCC issue to each new amateur licensee?
+A. A station log book
+B. A band plan
+C. A call sign
+D. A repeater directory
+~~
+T2A01 (A)
+What is a repeater?
+A. A station that retransmits your signal on a different frequency
+B. A radio that only receives weather broadcasts
+C. An antenna with more than one element
+D. A type of battery charger
+~~
+T2A02 (C)
+What is the purpose of CTCSS tones on a repeater?
+A. They encrypt the audio
+B. They increase transmitter power
+C. They allow the repeater to respond only to signals carrying the tone
+D. They identify the operator
+~~
+T2A03 (A)
+What is simplex operation?
+A. Transmitting and receiving on the same frequency
+B. Using two radios at once
+C. Operating through a satellite
+D. Transmitting without a license
+~~
+T5A01 (B)
+What is the unit of electrical current?
+A. Volt
+B. Ampere
+C. Ohm
+D. Watt
+~~
+T5A02 (D)
+What is the voltage across a 10 ohm resistor carrying 2 amperes?
+A. 5 volts
+B. 8 volts
+C. 12 volts
+D. 20 volts
+~~
+T5A03 (C)
+Which term describes the flow of electrons in a circuit?
+A. Voltage
+B. Resistance
+C. Current
+D. Inductance
+~~

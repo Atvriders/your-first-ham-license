@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 580" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="34" font-size="19" font-weight="bold">ANATOMY OF A US CALL SIGN</text>
+    <text x="380" y="55" font-size="12">every call sign = prefix + district numeral + suffix — the pool's example: KF1XXX</text>
+  </g>
+
+  <!-- ===== the call sign, glyph by glyph ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="48" font-weight="bold">
+    <text x="245" y="115">K</text>
+    <text x="290" y="115">F</text>
+    <text x="360" y="115">1</text>
+    <text x="430" y="115">X</text>
+    <text x="475" y="115">X</text>
+    <text x="520" y="115">X</text>
+  </g>
+
+  <!-- ===== part brackets ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.6">
+    <path d="M222,126 L222,132 L312,132 L312,126"/>
+    <path d="M340,126 L340,132 L380,132 L380,126"/>
+    <path d="M408,126 L408,132 L542,132 L542,126"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="267" y="152" font-size="13" font-weight="bold">PREFIX</text>
+    <text x="267" y="169" font-size="10">1 or 2 letters</text>
+    <text x="360" y="152" font-size="11" font-weight="bold">DISTRICT NUMERAL</text>
+    <text x="360" y="169" font-size="10">0–9</text>
+    <text x="475" y="152" font-size="13" font-weight="bold">SUFFIX</text>
+    <text x="475" y="169" font-size="10">1 to 3 letters</text>
+  </g>
+
+  <!-- ===== what each part can be (three columns) ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1">
+    <line x1="263" y1="196" x2="263" y2="266"/>
+    <line x1="497" y1="196" x2="497" y2="266"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="10.5">
+    <text x="145" y="208" font-weight="bold" font-size="11.5">the prefix says “US amateur”</text>
+    <text x="145" y="226">one letter: K, N, or W</text>
+    <text x="145" y="242">or two letters:</text>
+    <text x="145" y="258">AA–AL · KA–KZ · NA–NZ · WA–WZ</text>
+    <text x="380" y="208" font-weight="bold" font-size="11.5">the numeral is the call region</text>
+    <text x="380" y="226">1 = New England · 6 = California</text>
+    <text x="380" y="242">0 = the tenth region</text>
+    <text x="380" y="258">(Alaska, Hawaii, islands have their own)</text>
+    <text x="615" y="208" font-weight="bold" font-size="11.5">the suffix makes it yours</text>
+    <text x="615" y="226">issued in sequence,</text>
+    <text x="615" y="242">or chosen later</text>
+    <text x="615" y="258">as a vanity call sign</text>
+  </g>
+
+  <!-- ===== the four call-sign groups ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="300" font-size="15" font-weight="bold">THE FOUR CALL-SIGN GROUPS (the sequential system)</text>
+    <text x="380" y="321" font-size="11" font-style="italic">a Technician may hold Group C or Group D formats</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="11.5" font-weight="bold">
+    <text x="80" y="348">GROUP</text>
+    <text x="185" y="348">ISSUED TO</text>
+    <text x="455" y="348">FORMATS</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="12">
+    <text x="80" y="380" font-weight="bold">A</text>
+    <text x="185" y="380">Amateur Extra</text>
+    <text x="455" y="380">1×2 · 2×1 · 2×2 starting with A</text>
+    <text x="80" y="414" font-weight="bold">B</text>
+    <text x="185" y="414">Advanced</text>
+    <text x="455" y="414">2×2 starting K, N, or W</text>
+    <text x="80" y="448" font-weight="bold">C</text>
+    <text x="185" y="448">General · Technician · Technician Plus</text>
+    <text x="455" y="448">1×3 — like K1XXX</text>
+  </g>
+
+  <!-- Group D row, highlighted as the exam's example -->
+  <rect x="68" y="462" width="652" height="34" rx="7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <g fill="currentColor" stroke="none" font-size="12">
+    <text x="80" y="483" font-weight="bold">D</text>
+    <text x="185" y="483">Novice · club · military recreation</text>
+    <text x="455" y="483">2×3 — like <tspan font-weight="bold">KF1XXX</tspan> ← the pool's answer (T1C05)</text>
+  </g>
+
+  <!-- ===== footnotes ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="526" font-size="11" font-style="italic">read “2×3” as: 2 prefix letters · 1 district numeral · 3 suffix letters</text>
+    <text x="380" y="548" font-size="9.5">Novice, Technician Plus, and Advanced are legacy classes — still held, no longer issued new.</text>
+    <text x="380" y="565" font-size="9.5">New call signs come from the sequential system; when one group's list runs out, the next lower group is used.</text>
+  </g>
+
+</svg>

@@ -1,0 +1,8 @@
+{
+  "id": "ch01-wavelength-freq",
+  "chapter": 1,
+  "caption": "One wavelength λ is the distance the wave travels in one cycle, marked here crest to crest. The pool's own shortcut: wavelength in meters equals 300 divided by frequency in megahertz — at 146 MHz, λ = 300 / 146 ≈ 2 m, which is why it is called the 2-meter band. (The 300 comes from the wave's speed, about 3×10⁸ m/s; higher frequency means shorter wavelength.)",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a sine wave with one wavelength marked crest to crest, illustrating wavelength in meters equals 300 divided by frequency in megahertz, with the 146 megahertz example"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ch05-rfi-path",
+  "chapter": 5,
+  "caption": "How RFI happens and where to stop it. Your radiated RF reaches a neighbor's device directly and by pickup on its wiring, and a strong signal overloads a receiver that cannot reject it — the problem is in the affected device. The fixes, at each entry point: more distance between antennas and less power at your end; a filter at the affected receiver's antenna input; clip-on ferrite chokes on the device's cables; and properly installed coax connectors with sound shielding and grounding. First, though, make sure your own station is operating properly.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a ham antenna radiating toward a TV and speaker, with four numbered fixes: distance and lower power, a filter at the receiver's antenna input, ferrite chokes on the cables, and good connectors, shielding, and grounding"
+}

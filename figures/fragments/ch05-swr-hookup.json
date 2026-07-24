@@ -1,0 +1,8 @@
+{
+  "id": "ch05-swr-hookup",
+  "chapter": 5,
+  "caption": "An SWR meter goes inline between the transceiver and the antenna, on a short coax jumper, where it reads forward and reflected power — 1:1 is a perfect match and 4:1 warns of a mismatch. For testing, swap the antenna for a dummy load: a 50-ohm non-inductive resistor on a heat sink that absorbs the transmitter's power so nothing goes on the air.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "two hookups: the SWR meter on a short jumper between the transceiver and the antenna, and the same setup with a dummy load replacing the antenna for off-the-air testing"
+}

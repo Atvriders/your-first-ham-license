@@ -1,0 +1,8 @@
+{
+  "id": "ch04-swr-curve",
+  "chapter": 4,
+  "caption": "SWR — a measure of how well a load is matched to a transmission line (T9B12) — is lowest at the antenna's resonant frequency, where 1:1 means a perfect match between antenna and feed line. Away from resonance, reflected power climbs and the reading rises toward a mismatch like 4:1. It matters because high SWR makes a solid-state transceiver reduce its output power to protect the RF output transistors (T7B04).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a curve of SWR versus frequency across the two-meter band, dipping to one-to-one at the resonant frequency and rising toward the band edges"
+}

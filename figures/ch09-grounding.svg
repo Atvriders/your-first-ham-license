@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 570" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="390" y="32" font-size="18" font-weight="bold">STATION GROUNDING &amp; LIGHTNING PROTECTION</text>
+    <text x="390" y="53" font-size="12">one ground point for everything, an arrestor where the feed line enters, and every rod bonded together</text>
+  </g>
+
+  <!-- ===== the wall: inside left, outside right ===== -->
+  <line x1="330" y1="80" x2="330" y2="470" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="10.5" font-style="italic">
+    <text x="180" y="76">inside the shack</text>
+    <text x="560" y="76">outside</text>
+  </g>
+
+  <!-- ===== station equipment, bonded to one bus ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.2">
+    <rect x="50" y="130" width="150" height="50"/>
+    <rect x="50" y="196" width="150" height="50"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="125" y="152" font-size="12.5" font-weight="bold">TRANSCEIVER</text>
+    <text x="125" y="169" font-size="9.5">chassis ground lug</text>
+    <text x="125" y="218" font-size="12" font-weight="bold">POWER SUPPLY /</text>
+    <text x="125" y="233" font-size="12" font-weight="bold">COMPUTER</text>
+  </g>
+  <!-- bond wires from each chassis to the bus bar -->
+  <g stroke="currentColor" fill="none" stroke-width="2.2">
+    <path d="M200,170 L250,170"/>
+    <path d="M200,221 L225,221 L225,268 L250,268"/>
+  </g>
+  <!-- the single ground point: station ground bus -->
+  <line x1="250" y1="160" x2="250" y2="310" stroke="currentColor" stroke-width="4"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="200" cy="170" r="3.2"/>
+    <circle cx="200" cy="221" r="3.2"/>
+    <circle cx="250" cy="170" r="3.2"/>
+    <circle cx="250" cy="268" r="3.2"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="125" y="288" font-size="11" font-weight="bold">bond every chassis to</text>
+    <text x="125" y="303" font-size="11" font-weight="bold">ONE ground point</text>
+    <text x="125" y="320" font-size="9.5">(the station ground bus)</text>
+  </g>
+  <!-- short-and-direct note with leader to the down conductor -->
+  <g fill="currentColor" stroke="none">
+    <text x="56" y="360" font-size="9.5">keep ground wires short</text>
+    <text x="56" y="373" font-size="9.5">and direct, with smooth</text>
+    <text x="56" y="386" font-size="9.5">bends — no sharp corners</text>
+  </g>
+  <path d="M180,372 L246,382" stroke="currentColor" stroke-width="0.9" fill="none"/>
+
+  <!-- ===== feed line: transceiver -> wall -> arrestor -> antenna ===== -->
+  <path d="M200,140 L610,140" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="296,140 284,135 284,145" fill="currentColor"/>
+  <text x="268" y="130" font-size="10" fill="currentColor" stroke="none" text-anchor="middle">coax feed line</text>
+
+  <!-- lightning arrestor inline at the entry, just outside the wall -->
+  <rect x="395" y="120" width="50" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="420" y="137" font-size="8.5" font-weight="bold">LIGHTNING</text>
+    <text x="420" y="148" font-size="8.5" font-weight="bold">ARRESTOR</text>
+    <text x="455" y="110" font-size="10" font-weight="bold">arrestor on a grounded panel</text>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="432" y="178" font-size="9.5">where the feed line</text>
+    <text x="432" y="191" font-size="9.5">enters the building</text>
+  </g>
+
+  <!-- ===== antenna mast with whip ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="3">
+    <line x1="610" y1="470" x2="610" y2="150"/>
+    <line x1="610" y1="150" x2="610" y2="118"/>
+    <line x1="594" y1="132" x2="626" y2="132"/>
+  </g>
+  <text x="655" y="124" font-size="11" fill="currentColor" stroke="none" font-weight="bold">ANTENNA</text>
+
+  <!-- lightning bolt near the antenna -->
+  <polygon points="700,150 678,196 692,196 672,246 706,188 690,188 712,150"
+           fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- ===== earth ===== -->
+  <line x1="20" y1="470" x2="760" y2="470" stroke="currentColor" stroke-width="2.4"/>
+  <g stroke="currentColor" fill="none" stroke-width="1.2">
+    <line x1="40" y1="470" x2="30" y2="480"/>
+    <line x1="110" y1="470" x2="100" y2="480"/>
+    <line x1="180" y1="470" x2="170" y2="480"/>
+    <line x1="250" y1="470" x2="240" y2="480"/>
+    <line x1="330" y1="470" x2="320" y2="480"/>
+    <line x1="470" y1="470" x2="460" y2="480"/>
+    <line x1="540" y1="470" x2="530" y2="480"/>
+    <line x1="680" y1="470" x2="670" y2="480"/>
+    <line x1="740" y1="470" x2="730" y2="480"/>
+  </g>
+
+  <!-- ===== grounding conductors: bus and arrestor down to rod A ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="3">
+    <path d="M250,310 L250,400 L372,400 L372,462"/>
+    <path d="M420,160 L420,340 L388,340 L388,462"/>
+    <line x1="372" y1="462" x2="388" y2="462"/>
+  </g>
+  <!-- rod A (entry) and rod B (mast base) -->
+  <g stroke="currentColor" fill="none" stroke-width="3">
+    <line x1="380" y1="462" x2="380" y2="516"/>
+    <line x1="610" y1="462" x2="610" y2="516"/>
+  </g>
+
+  <!-- the crucial bond between the rods -->
+  <path d="M380,496 L610,496" stroke="currentColor" fill="none" stroke-width="3.5"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="212" y="494" font-size="10.5" font-weight="bold">bond ALL ground rods together</text>
+    <text x="212" y="509" font-size="9.5">with heavy wire or strap</text>
+    <text x="380" y="538" font-size="9.5">rod at the entry</text>
+    <text x="610" y="538" font-size="9.5">rod at the tower/mast</text>
+  </g>
+
+  <!-- ===== why ===== -->
+  <text x="390" y="560" font-size="10.5" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">why: separate, unbonded grounds can sit at very different voltages in a strike or fault — bonding keeps everything at one potential.</text>
+
+</svg>

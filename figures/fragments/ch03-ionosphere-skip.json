@@ -1,0 +1,8 @@
+{
+  "id": "ch03-ionosphere-skip",
+  "chapter": 3,
+  "caption": "How the ionosphere bends an HF signal back to Earth: the ground wave dies out close in, the sky wave lands far away, and the ring between them — the skip zone — hears nothing.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "This figure shows an HF signal refracted by the ionosphere. The ground wave fades close to the transmitter and the sky wave lands much farther away, at the skip distance, leaving a skip zone in between where the signal cannot be heard."
+}

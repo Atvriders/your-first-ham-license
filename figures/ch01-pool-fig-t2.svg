@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070 540" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Pool figure T-2: AC power supply">
+  <title>Pool figure T-2 — AC power supply (redrawn from the NCVEC 2026–2030 Technician pool)</title>
+  <defs>
+    <!-- ground symbol per canon §7.4: three slanted strokes of decreasing length, longest on top; wire enters at (0,0) -->
+    <g id="gnd" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <line x1="14.7" y1="-0.5" x2="-14.7" y2="16.5"/>
+      <line x1="10.5" y1="14.5" x2="-8.5" y2="25.5"/>
+      <line x1="7.2" y1="26" x2="-3.2" y2="32"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- primary loop: left leg with source 1, top wire with fuse 2 and switch 3, right leg with primary coil, bottom wire -->
+    <line x1="80" y1="140" x2="80" y2="248"/>
+    <line x1="80" y1="312" x2="80" y2="420"/>
+    <line x1="80" y1="420" x2="330" y2="420"/>
+    <line x1="330" y1="420" x2="330" y2="340"/>
+    <line x1="330" y1="220" x2="330" y2="140"/>
+    <line x1="80" y1="140" x2="170" y2="140"/>
+
+    <!-- 1 = AC voltage source: circle with two thick horizontal filled bars -->
+    <circle cx="80" cy="280" r="32"/>
+
+    <!-- 2 = fuse: small open rectangle in the top wire -->
+    <rect x="170" y="128" width="46" height="24"/>
+    <line x1="216" y1="140" x2="244" y2="140"/>
+
+    <!-- 3 = SPST switch: two open contacts, blade hinged at left, drawn open -->
+    <circle cx="252" cy="140" r="8"/>
+    <circle cx="314" cy="140" r="8"/>
+    <line x1="252" y1="140" x2="308" y2="116"/>
+    <line x1="322" y1="140" x2="330" y2="140"/>
+
+    <!-- 4 = transformer: primary 3 humps, two core lines, secondary 4 humps -->
+    <path d="M330,220 a16,20 0 0 1 0,40 a16,20 0 0 1 0,40 a16,20 0 0 1 0,40"/>
+    <line x1="362" y1="210" x2="362" y2="350"/>
+    <line x1="384" y1="210" x2="384" y2="350"/>
+    <path d="M432,205 a16,20 0 0 0 0,40 a16,20 0 0 0 0,40 a16,20 0 0 0 0,40 a16,20 0 0 0 0,40"/>
+    <line x1="432" y1="205" x2="432" y2="140"/>
+    <line x1="432" y1="365" x2="432" y2="440"/>
+
+    <!-- top DC rail: from secondary top through diode 5 to rheostat 9 -->
+    <line x1="432" y1="140" x2="500" y2="140"/>
+    <line x1="535" y1="140" x2="830" y2="140"/>
+
+    <!-- 5 = rectifier diode: filled triangle pointing right into a vertical bar -->
+    <line x1="530" y1="118" x2="530" y2="162" stroke-width="5"/>
+
+    <!-- 6 = polarized capacitor: straight top plate, curved-upward bottom plate, shunt to ground -->
+    <line x1="600" y1="140" x2="600" y2="212"/>
+    <line x1="572" y1="212" x2="628" y2="212"/>
+    <path d="M572,226 Q600,246 628,226"/>
+    <line x1="600" y1="236" x2="600" y2="440"/>
+
+    <!-- 7 = resistor: vertical zigzag from the rail down to the LED branch -->
+    <path d="M730,140 L730,176 L718,188 L742,200 L718,212 L742,224 L718,236 L742,248 L718,260 L730,272 L730,296"/>
+    <!-- 8 = LED: filled triangle pointing down into a horizontal bar, two light arrows away down-right -->
+    <line x1="706" y1="326" x2="754" y2="326" stroke-width="5"/>
+    <line x1="730" y1="326" x2="730" y2="440"/>
+    <line x1="744" y1="302" x2="757" y2="315"/>
+    <line x1="756" y1="292" x2="771" y2="307"/>
+
+    <!-- 9 = variable resistor (rheostat-wired): zigzag in the rail, diagonal arrow from below, tail wire joining the rail at the resistor's right end -->
+    <path d="M830,140 L841,126 L852,154 L863,126 L874,154 L885,126 L896,154 L907,126 L920,140"/>
+    <line x1="866" y1="164" x2="860" y2="196"/>
+    <line x1="860" y1="196" x2="920" y2="196"/>
+    <line x1="920" y1="196" x2="920" y2="145"/>
+
+    <!-- rail to output terminal -->
+    <line x1="920" y1="140" x2="1026" y2="140"/>
+    <circle cx="1035" cy="140" r="9"/>
+
+    <!-- 10 = Zener diode: bent Z-shaped cathode bar on top, filled triangle pointing up, shunt to ground -->
+    <line x1="985" y1="140" x2="985" y2="192"/>
+    <path d="M968,190 L976,200 L994,200 L1002,210" stroke-width="5"/>
+    <line x1="985" y1="238" x2="985" y2="440"/>
+  </g>
+
+  <g fill="currentColor" stroke="none">
+    <!-- source bars -->
+    <rect x="62" y="262" width="36" height="10"/>
+    <rect x="62" y="288" width="36" height="10"/>
+    <!-- diode 5 triangle -->
+    <path d="M502,124 L502,156 L528,140 Z"/>
+    <!-- LED 8 triangle -->
+    <path d="M712,296 L748,296 L730,322 Z"/>
+    <!-- LED light arrowheads -->
+    <path d="M764,322 L754,318 L760,312 Z"/>
+    <path d="M778,314 L768,310 L774,304 Z"/>
+    <!-- rheostat 9 arrowhead, pointing up at the zigzag -->
+    <path d="M868,152 L862,164 L874,164 Z"/>
+    <!-- Zener 10 triangle -->
+    <path d="M985,200 L967,238 L1003,238 Z"/>
+    <!-- rail junction dots -->
+    <circle cx="600" cy="140" r="5"/>
+    <circle cx="730" cy="140" r="5"/>
+    <circle cx="830" cy="140" r="5"/>
+    <circle cx="920" cy="140" r="5"/>
+    <circle cx="985" cy="140" r="5"/>
+  </g>
+
+  <use href="#gnd" transform="translate(432 440)"/>
+  <use href="#gnd" transform="translate(600 440)"/>
+  <use href="#gnd" transform="translate(730 440)"/>
+  <use href="#gnd" transform="translate(985 440)"/>
+
+  <g fill="currentColor" stroke="none" font-weight="bold" text-anchor="middle">
+    <text x="128" y="290" font-size="30">1</text>
+    <text x="193" y="108" font-size="30">2</text>
+    <text x="283" y="108" font-size="30">3</text>
+    <text x="373" y="192" font-size="30">4</text>
+    <text x="517" y="110" font-size="30">5</text>
+    <text x="550" y="234" font-size="30">6</text>
+    <text x="678" y="232" font-size="30">7</text>
+    <text x="678" y="330" font-size="30">8</text>
+    <text x="875" y="110" font-size="30">9</text>
+    <text x="936" y="252" font-size="30">10</text>
+    <text x="535" y="525" font-size="34">Figure T-2</text>
+  </g>
+</svg>

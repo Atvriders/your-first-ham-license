@@ -1,0 +1,8 @@
+{
+  "id": "ch07-ft8-sequence",
+  "chapter": 7,
+  "caption": "FT8 runs on a strict clock: stations take turns in 15-second transmit/receive slots, kept in lock-step by internet-synced computer clocks — and the mode decodes signals buried below the noise.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A timeline of two FT8 stations taking turns: each transmits for 15 seconds while the other listens, then they swap. Every computer's clock is synchronized, so the slots line up, and a whole contact fits in about a minute."
+}

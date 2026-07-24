@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="390" y="32" font-size="18" font-weight="bold">RF EXPOSURE: THE SIMPLE PICTURE</text>
+    <text x="390" y="53" font-size="12">RF is non-ionizing — the hazard is heating, and the limits are about your average exposure</text>
+  </g>
+
+  <!-- ===== left scene: antenna up high, people far away ===== -->
+  <!-- house -->
+  <g stroke="currentColor" fill="none" stroke-width="2.2">
+    <rect x="55" y="258" width="170" height="110"/>
+    <polygon points="45,258 140,203 235,258"/>
+    <!-- mast + antenna on the roof -->
+    <line x1="140" y1="203" x2="140" y2="90"/>
+    <line x1="126" y1="100" x2="154" y2="100"/>
+  </g>
+  <!-- radiating arcs from the antenna tip -->
+  <g stroke="currentColor" fill="none" stroke-width="1.6">
+    <path d="M126,88 A14,14 0 0 1 154,88"/>
+    <path d="M118,88 A22,22 0 0 1 162,88"/>
+    <path d="M110,88 A30,30 0 0 1 170,88"/>
+  </g>
+  <text x="185" y="84" font-size="10.5" fill="currentColor" stroke="none" font-weight="bold">antenna up high</text>
+
+  <!-- person, well clear of the antenna -->
+  <g stroke="currentColor" fill="none" stroke-width="2.2">
+    <circle cx="310" cy="310" r="9"/>
+    <path d="M310,319 L310,350 M310,326 L296,338 M310,326 L324,338 M310,350 L300,368 M310,350 L320,368"/>
+  </g>
+  <text x="310" y="384" font-size="10" fill="currentColor" stroke="none" text-anchor="middle">people</text>
+
+  <!-- distance arrow between antenna and person -->
+  <path d="M160,110 L292,292" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5,4"/>
+  <g fill="currentColor" stroke="none">
+    <polygon points="161,111 169,118 159,121"/>
+    <polygon points="291,291 283,284 293,281"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="240" y="120" font-size="10.5" font-weight="bold">distance is the</text>
+    <text x="240" y="134" font-size="10.5" font-weight="bold">cheapest fix</text>
+  </g>
+
+  <!-- never touch note -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="165" y="404" font-size="10">never touch an antenna while transmitting —</text>
+    <text x="165" y="418" font-size="10">it can burn your skin (RF burn)</text>
+  </g>
+
+  <!-- ===== right: the three levers ===== -->
+  <g fill="currentColor" stroke="none">
+    <text x="545" y="92" font-size="14" font-weight="bold" text-anchor="middle">THE THREE LEVERS YOU CONTROL</text>
+  </g>
+
+  <g stroke="currentColor" fill="none" stroke-width="2">
+    <rect x="380" y="110" width="330" height="72" rx="8"/>
+    <rect x="380" y="196" width="330" height="72" rx="8"/>
+    <rect x="380" y="282" width="330" height="72" rx="8"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="396" y="134" font-size="13" font-weight="bold">1 · POWER</text>
+    <text x="396" y="152" font-size="10.5">use the minimum power necessary for the contact —</text>
+    <text x="396" y="166" font-size="10.5">lower power means less RF out there</text>
+    <text x="396" y="220" font-size="13" font-weight="bold">2 · DISTANCE</text>
+    <text x="396" y="238" font-size="10.5">exposure drops off fast with distance — keep antennas</text>
+    <text x="396" y="252" font-size="10.5">away from people (relocate the antenna, not the people)</text>
+    <text x="396" y="306" font-size="13" font-weight="bold">3 · DUTY CYCLE</text>
+    <text x="396" y="324" font-size="10.5">transmit less of the time: limits are about the average,</text>
+    <text x="396" y="338" font-size="10.5">so half the air-time means half the average exposure</text>
+  </g>
+
+  <!-- ===== bottom strip: the rules behind it ===== -->
+  <rect x="60" y="432" width="660" height="76" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="390" y="456" font-size="12" font-weight="bold">THE FCC SETS MAXIMUM PERMISSIBLE EXPOSURE (MPE) LIMITS</text>
+    <text x="390" y="475" font-size="10.5">the station licensee is responsible for evaluating the station — by calculation (OET Bulletin 65),</text>
+    <text x="390" y="490" font-size="10.5">computer modeling, or measurement — and for re-evaluating whenever anything changes</text>
+  </g>
+
+</svg>

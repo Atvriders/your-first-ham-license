@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="sans-serif">
+
+  <!-- ============ OHM'S LAW (E = I x R) ============ -->
+  <text x="170" y="42" font-size="17" font-weight="bold" fill="currentColor" text-anchor="middle">OHM'S LAW</text>
+
+  <!-- triangle: E on top, I and R below -->
+  <polygon points="170,60 80,220 260,220" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="125" y1="140" x2="215" y2="140" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="170" y1="140" x2="170" y2="220" stroke="currentColor" stroke-width="3" fill="none"/>
+  <text x="170" y="118" font-size="30" font-weight="bold" fill="currentColor" text-anchor="middle">E</text>
+  <text x="146" y="200" font-size="26" font-weight="bold" fill="currentColor" text-anchor="middle">I</text>
+  <text x="194" y="200" font-size="26" font-weight="bold" fill="currentColor" text-anchor="middle">R</text>
+
+  <!-- the three forms -->
+  <text x="170" y="262" font-size="17" fill="currentColor" text-anchor="middle">E = I × R</text>
+  <text x="170" y="288" font-size="17" fill="currentColor" text-anchor="middle">I = E / R</text>
+  <text x="170" y="314" font-size="17" fill="currentColor" text-anchor="middle">R = E / I</text>
+  <text x="170" y="346" font-size="14" fill="currentColor" text-anchor="middle">Example: R = 12 V / 4 A = 3 Ω</text>
+
+  <!-- ============ POWER (P = E x I) ============ -->
+  <text x="470" y="42" font-size="17" font-weight="bold" fill="currentColor" text-anchor="middle">POWER</text>
+
+  <!-- triangle: P on top, E and I below -->
+  <polygon points="470,60 380,220 560,220" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="425" y1="140" x2="515" y2="140" stroke="currentColor" stroke-width="3" fill="none"/>
+  <line x1="470" y1="140" x2="470" y2="220" stroke="currentColor" stroke-width="3" fill="none"/>
+  <text x="470" y="118" font-size="30" font-weight="bold" fill="currentColor" text-anchor="middle">P</text>
+  <text x="446" y="200" font-size="26" font-weight="bold" fill="currentColor" text-anchor="middle">E</text>
+  <text x="494" y="200" font-size="26" font-weight="bold" fill="currentColor" text-anchor="middle">I</text>
+
+  <!-- the three forms -->
+  <text x="470" y="262" font-size="17" fill="currentColor" text-anchor="middle">P = E × I</text>
+  <text x="470" y="288" font-size="17" fill="currentColor" text-anchor="middle">I = P / E</text>
+  <text x="470" y="314" font-size="17" fill="currentColor" text-anchor="middle">E = P / I</text>
+  <text x="470" y="346" font-size="14" fill="currentColor" text-anchor="middle">Example: P = 12 V × 2.5 A = 30 W</text>
+
+  <!-- shared notes -->
+  <text x="320" y="376" font-size="13" fill="currentColor" text-anchor="middle">The exam writes voltage as E — some books and radios write V. Both mean volts.</text>
+  <text x="320" y="394" font-size="13" fill="currentColor" text-anchor="middle">Cover the letter you want to find: what stays visible is the formula.</text>
+
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Pool figure T-1: transistor lamp switch circuit">
+  <title>Pool figure T-1 — transistor switch circuit (redrawn from the NCVEC 2026–2030 Technician pool)</title>
+  <defs>
+    <!-- ground symbol per canon §7.4: three slanted strokes of decreasing length, longest on top; wire enters at (0,0) -->
+    <g id="gnd" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <line x1="14.7" y1="-0.5" x2="-14.7" y2="16.5"/>
+      <line x1="10.5" y1="14.5" x2="-8.5" y2="25.5"/>
+      <line x1="7.2" y1="26" x2="-3.2" y2="32"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- two-position switch (unnumbered): two open-circle contacts, each with a leftward forked stub -->
+    <line x1="76" y1="216" x2="98" y2="230"/>
+    <line x1="76" y1="244" x2="98" y2="230"/>
+    <line x1="98" y1="230" x2="111" y2="230"/>
+    <circle cx="120" cy="230" r="9"/>
+    <line x1="76" y1="286" x2="98" y2="300"/>
+    <line x1="76" y1="314" x2="98" y2="300"/>
+    <line x1="98" y1="300" x2="111" y2="300"/>
+    <circle cx="120" cy="300" r="9"/>
+
+    <!-- lower contact straight down to ground 5 -->
+    <line x1="120" y1="309" x2="120" y2="360"/>
+
+    <!-- 1 = resistor: horizontal zigzag between upper switch contact and transistor base -->
+    <path d="M129,230 L200,230 L212,216 L224,244 L236,216 L248,244 L260,216 L272,244 L284,216 L300,230 L415,230"/>
+
+    <!-- 2 = NPN transistor: circle, base lead from left, collector up, emitter down -->
+    <circle cx="440" cy="230" r="50"/>
+    <path d="M415,203 L462,184"/>
+    <path d="M462,184 L462,110"/>
+    <path d="M415,256 L460,274"/>
+    <path d="M468,274 L468,340"/>
+
+    <!-- top rail: collector riser through lamp 3 to battery riser -->
+    <line x1="462" y1="110" x2="620" y2="110"/>
+
+    <!-- 3 = lamp: arch/dome standing on the top wire -->
+    <path d="M512,110 Q512,70 540,70 Q568,70 568,110"/>
+    <path d="M526,110 Q526,86 540,86 Q554,86 554,110"/>
+
+    <!-- 4 = battery: two cell pairs, plates alternating long/short -->
+    <line x1="620" y1="110" x2="620" y2="150"/>
+    <line x1="585" y1="150" x2="655" y2="150"/>
+    <line x1="600" y1="168" x2="640" y2="168"/>
+    <line x1="585" y1="186" x2="655" y2="186"/>
+    <line x1="600" y1="204" x2="640" y2="204"/>
+    <line x1="620" y1="204" x2="620" y2="270"/>
+  </g>
+
+  <g fill="currentColor" stroke="none">
+    <!-- transistor base bar -->
+    <rect x="411" y="196" width="8" height="68"/>
+    <!-- emitter arrowhead, filled, pointing outward down-right -->
+    <path d="M472,279 L455,279 L460,267 Z"/>
+  </g>
+
+  <use href="#gnd" transform="translate(120 360)"/>
+  <use href="#gnd" transform="translate(468 340)"/>
+  <use href="#gnd" transform="translate(620 270)"/>
+
+  <g fill="currentColor" stroke="none" font-weight="bold" text-anchor="middle">
+    <text x="250" y="192" font-size="30">1</text>
+    <text x="430" y="152" font-size="30">2</text>
+    <text x="540" y="50" font-size="30">3</text>
+    <text x="678" y="186" font-size="30">4</text>
+    <text x="120" y="436" font-size="30">5</text>
+    <text x="380" y="462" font-size="34">Figure T-1</text>
+  </g>
+</svg>

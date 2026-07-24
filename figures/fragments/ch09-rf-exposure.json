@@ -1,0 +1,8 @@
+{
+  "id": "ch09-rf-exposure",
+  "chapter": 9,
+  "caption": "RF exposure in one picture. RF energy is non-ionizing radiation — its hazard is heating, not DNA damage — and the exposure limits are about your average exposure. You control three levers: power (use the minimum transmitter power necessary for the contact), distance (exposure falls off fast with separation, so keep antennas away from people — relocate the antenna, not the people), and duty cycle (transmit less of the time and the average drops with it). Never touch an antenna while transmitting; it can cause an RF burn to the skin. Behind the habits sit the FCC's Maximum Permissible Exposure (MPE) limits: the station licensee is responsible for evaluating the station — by calculation per OET Bulletin 65, by computer modeling, or by measurement with calibrated field-strength equipment — and for re-evaluating whenever anything in the transmitter or antenna system changes.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "an antenna high on a house roof with a person standing well clear of it, a dashed arrow marked distance between them, beside three cards listing the levers you control — power, distance, and duty cycle — over a note that the FCC sets maximum permissible exposure limits that the licensee must evaluate"
+}

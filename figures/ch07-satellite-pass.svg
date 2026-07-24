@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 548" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="34" font-size="18" font-weight="bold">WORKING A SATELLITE PASS</text>
+    <text x="380" y="56" font-size="12.5">LEO = Low Earth Orbit — about 100 minutes per orbit, so a pass overhead lasts roughly 10 minutes</text>
+  </g>
+
+  <!-- ===== satellite trajectory (circular arc over the top, gapped around the satellite icons) ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.8" stroke-dasharray="7,5" stroke-linecap="round">
+    <path d="M170,432 A221.5,221.5 0 0 1 227,201.3"/>
+    <path d="M279,164.3 A221.5,221.5 0 0 1 354,141.5"/>
+    <path d="M406,141.5 A221.5,221.5 0 0 1 481,164.3"/>
+    <path d="M533,201.3 A221.5,221.5 0 0 1 590,432"/>
+  </g>
+  <!-- direction of travel arrow (near AOS, pointing up-right) -->
+  <g fill="currentColor" stroke="none">
+    <polygon points="203,230 198,246 189,240"/>
+  </g>
+
+  <!-- ===== satellites at rising / overhead / setting ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+    <!-- rising -->
+    <g transform="translate(253,180)">
+      <rect x="-9" y="-6" width="18" height="12"/>
+      <rect x="-23" y="-4" width="12" height="8"/>
+      <rect x="11" y="-4" width="12" height="8"/>
+      <line x1="-17" y1="-4" x2="-17" y2="4"/>
+      <line x1="17" y1="-4" x2="17" y2="4"/>
+    </g>
+    <!-- overhead -->
+    <g transform="translate(380,140)">
+      <rect x="-9" y="-6" width="18" height="12"/>
+      <rect x="-23" y="-4" width="12" height="8"/>
+      <rect x="11" y="-4" width="12" height="8"/>
+      <line x1="-17" y1="-4" x2="-17" y2="4"/>
+      <line x1="17" y1="-4" x2="17" y2="4"/>
+    </g>
+    <!-- setting -->
+    <g transform="translate(507,180)">
+      <rect x="-9" y="-6" width="18" height="12"/>
+      <rect x="-23" y="-4" width="12" height="8"/>
+      <rect x="11" y="-4" width="12" height="8"/>
+      <line x1="-17" y1="-4" x2="-17" y2="4"/>
+      <line x1="17" y1="-4" x2="17" y2="4"/>
+    </g>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="232" y="158" font-size="11.5" text-anchor="end">rising</text>
+    <text x="380" y="116" font-size="11.5" font-weight="bold">overhead — mid-pass</text>
+    <text x="528" y="158" font-size="11.5" text-anchor="start">setting</text>
+  </g>
+
+  <!-- ===== uplink / downlink between your station and the satellite ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+    <line x1="372" y1="380" x2="372" y2="164"/>
+    <line x1="388" y1="164" x2="388" y2="380"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="372,156 367,168 377,168"/>
+    <polygon points="388,388 383,376 393,376"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="362" y="246" font-size="11" text-anchor="end">uplink —</text>
+    <text x="362" y="260" font-size="11" text-anchor="end">you transmit up</text>
+    <text x="362" y="274" font-size="10" text-anchor="end">(e.g. 70 cm)</text>
+    <text x="398" y="246" font-size="11" text-anchor="start">downlink —</text>
+    <text x="398" y="260" font-size="11" text-anchor="start">you listen</text>
+    <text x="398" y="274" font-size="10" text-anchor="start">(e.g. 2 m)</text>
+  </g>
+
+  <!-- ===== horizon ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.2" stroke-dasharray="3,4">
+    <line x1="150" y1="432" x2="610" y2="432"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="165" y="452" font-size="11.5" font-weight="bold">AOS (rises)</text>
+    <text x="595" y="452" font-size="11.5" font-weight="bold">LOS (sets)</text>
+    <text x="620" y="436" font-size="10.5" text-anchor="start">your horizon</text>
+  </g>
+
+  <!-- ===== Earth ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <path d="M60,509.4 A700,700 0 0 1 700,509.4"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="492" font-size="12" font-style="italic">Earth</text>
+  </g>
+
+  <!-- ===== your ground station ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <line x1="380" y1="432" x2="380" y2="392"/>
+    <line x1="368" y1="398" x2="392" y2="398"/>
+    <line x1="371" y1="406" x2="389" y2="406"/>
+    <line x1="374" y1="414" x2="386" y2="414"/>
+    <rect x="352" y="432" width="56" height="26" rx="3"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="418" y="449" font-size="11.5" text-anchor="start" font-weight="bold">your station</text>
+  </g>
+
+  <!-- ===== bottom notes ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="11.5" font-style="italic">
+    <text x="380" y="516">AOS / LOS = acquisition / loss of signal — you can work the satellite only while it is above your horizon.</text>
+    <text x="380" y="534">Uplink and downlink use different frequencies: an FM satellite is a cross-band repeater in the sky.</text>
+  </g>
+
+</svg>

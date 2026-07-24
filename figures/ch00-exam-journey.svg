@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="sans-serif">
+
+  <!-- ================= row 1 (left to right) ================= -->
+
+  <!-- 1: study -->
+  <text x="30" y="40" font-size="12" font-weight="bold" fill="currentColor">1</text>
+  <rect x="24" y="48" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="108" y="82" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">STUDY</text>
+  <text x="108" y="100" font-size="10" fill="currentColor" text-anchor="middle">the 409-question pool</text>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="196" y1="87" x2="216" y2="87" stroke="currentColor" stroke-width="2"/>
+  <polygon points="224,87 214,82 214,92" fill="currentColor"/>
+
+  <!-- 2: find a session -->
+  <text x="230" y="40" font-size="12" font-weight="bold" fill="currentColor">2</text>
+  <rect x="224" y="48" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="308" y="82" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">FIND A SESSION</text>
+  <text x="308" y="100" font-size="10" fill="currentColor" text-anchor="middle">in person or remote</text>
+
+  <!-- arrow 2 -> 3 -->
+  <line x1="396" y1="87" x2="416" y2="87" stroke="currentColor" stroke-width="2"/>
+  <polygon points="424,87 414,82 414,92" fill="currentColor"/>
+
+  <!-- 3: the exam -->
+  <text x="430" y="40" font-size="12" font-weight="bold" fill="currentColor">3</text>
+  <rect x="424" y="48" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="508" y="80" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">THE EXAM</text>
+  <text x="508" y="97" font-size="10" fill="currentColor" text-anchor="middle">35 questions,</text>
+  <text x="508" y="111" font-size="10" fill="currentColor" text-anchor="middle">26 correct to pass</text>
+
+  <!-- arrow 3 -> 4 -->
+  <line x1="596" y1="87" x2="616" y2="87" stroke="currentColor" stroke-width="2"/>
+  <polygon points="624,87 614,82 614,92" fill="currentColor"/>
+
+  <!-- 4: CSCE -->
+  <text x="630" y="40" font-size="12" font-weight="bold" fill="currentColor">4</text>
+  <rect x="624" y="48" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="708" y="82" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">CSCE</text>
+  <text x="708" y="100" font-size="10" fill="currentColor" text-anchor="middle">proof you passed</text>
+
+  <!-- arrow 4 -> 5 (down) -->
+  <line x1="708" y1="130" x2="708" y2="192" stroke="currentColor" stroke-width="2"/>
+  <polygon points="708,200 703,190 713,190" fill="currentColor"/>
+
+  <!-- ================= row 2 (right to left) ================= -->
+
+  <!-- 5: pay the fee -->
+  <text x="630" y="192" font-size="12" font-weight="bold" fill="currentColor">5</text>
+  <rect x="624" y="200" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="708" y="232" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">PAY THE $35 FEE</text>
+  <text x="708" y="250" font-size="10" fill="currentColor" text-anchor="middle">online, to the FCC</text>
+
+  <!-- arrow 5 -> 6 (leftward) -->
+  <line x1="600" y1="239" x2="620" y2="239" stroke="currentColor" stroke-width="2"/>
+  <polygon points="592,239 602,234 602,244" fill="currentColor"/>
+
+  <!-- 6: ULS grant -->
+  <text x="430" y="192" font-size="12" font-weight="bold" fill="currentColor">6</text>
+  <rect x="424" y="200" width="168" height="78" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.06"/>
+  <text x="508" y="232" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">ULS GRANT</text>
+  <text x="508" y="250" font-size="10" fill="currentColor" text-anchor="middle">your call sign appears</text>
+
+  <!-- arrow 6 -> 7 (leftward) -->
+  <line x1="400" y1="239" x2="420" y2="239" stroke="currentColor" stroke-width="2"/>
+  <polygon points="392,239 402,234 402,244" fill="currentColor"/>
+
+  <!-- 7: on the air -->
+  <text x="230" y="192" font-size="12" font-weight="bold" fill="currentColor">7</text>
+  <rect x="224" y="200" width="168" height="78" stroke="currentColor" stroke-width="3.5" fill="currentColor" fill-opacity="0.12"/>
+  <text x="308" y="230" font-size="13.5" font-weight="bold" fill="currentColor" text-anchor="middle">ON THE AIR!</text>
+  <text x="308" y="247" font-size="10" fill="currentColor" text-anchor="middle">transmit once the grant</text>
+  <text x="308" y="261" font-size="10" fill="currentColor" text-anchor="middle">shows in ULS</text>
+</svg>

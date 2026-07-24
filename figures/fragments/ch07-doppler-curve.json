@@ -1,0 +1,8 @@
+{
+  "id": "ch07-doppler-curve",
+  "chapter": 7,
+  "caption": "Doppler shift across a pass: the satellite's signal arrives a few kHz high while it approaches, slides through the published frequency at closest approach, and ends low as it recedes — which is why you keep adjusting your tuning.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "An S-shaped curve of received frequency versus time: the signal starts a few kilohertz above the published frequency as the satellite approaches, crosses it at closest approach, and ends below as the satellite moves away."
+}

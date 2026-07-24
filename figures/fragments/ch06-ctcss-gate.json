@@ -1,0 +1,8 @@
+{
+  "id": "ch06-ctcss-gate",
+  "chapter": 6,
+  "caption": "CTCSS works like an access gate. Your radio adds a steady sub-audible tone — here 100.0 Hz — to your voice, and the repeater's tone-operated squelch opens so your voice is retransmitted. With no tone, or the wrong tone, the gate stays shut and nothing is retransmitted. The tone is access control, not privacy — everyone hears the repeater's output.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A gate diagram in two rows. Top row: your radio sends voice plus a 100.0 hertz sub-audible CTCSS tone; the repeater's squelch gate opens and your voice is retransmitted on the output to every listener. Bottom row: a radio sending voice with no tone finds the gate closed — nothing is retransmitted. A banner reads: access control, not privacy — everyone hears the repeater's output."
+}

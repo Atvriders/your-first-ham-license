@@ -1,0 +1,402 @@
+{
+  "ch00-license-ladder": {
+    "id": "ch00-license-ladder",
+    "chapter": 0,
+    "number": "0.1",
+    "caption": "The three US amateur license classes — Technician, General, and Amateur Extra — each step up the ladder granting more privileges.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch00-license-ladder.svg",
+    "spoken": "This figure shows the three license classes as ascending steps: Technician, then General, then Amateur Extra, with each step adding privileges."
+  },
+  "ch00-exam-journey": {
+    "id": "ch00-exam-journey",
+    "chapter": 0,
+    "number": "0.2",
+    "caption": "From study to first contact: learn the pool, find a session, pass the 35-question exam, pay the $35 FCC fee online, and transmit once your grant appears in the ULS.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch00-exam-journey.svg",
+    "spoken": "This figure shows the path from studying the question pool, to finding an exam session, passing the thirty-five-question exam, paying the thirty-five-dollar FCC fee, and finally getting on the air once the grant appears in the ULS."
+  },
+  "ch01-ohms-law-triangle": {
+    "id": "ch01-ohms-law-triangle",
+    "chapter": 1,
+    "number": "1.4",
+    "caption": "The Ohm's-law and power triangles: cover the letter you want to find and what remains is the formula — E = I × R and P = E × I, with the pool's own worked examples (R = 12 V / 4 A = 3 Ω; P = 12 V × 2.5 A = 30 W). The exam writes voltage as E; some books and radios write V — both mean volts.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-ohms-law-triangle.svg",
+    "spoken": "two cover-the-unknown triangles: E over I times R for Ohm's law, and P over E times I for power, each with a worked example"
+  },
+  "ch01-series-parallel": {
+    "id": "ch01-series-parallel",
+    "chapter": 1,
+    "number": "1.5",
+    "caption": "Series and parallel resistor circuits compared. In a series circuit there is one path, so the same current flows through every component while the voltage divides across the resistors; in a parallel circuit each branch has its own path, so every branch sees the same voltage while the current divides among the branches.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-series-parallel.svg",
+    "spoken": "a series circuit and a parallel circuit side by side, labeled with what happens to current and voltage in each"
+  },
+  "ch01-ac-dc-waveforms": {
+    "id": "ch01-ac-dc-waveforms",
+    "chapter": 1,
+    "number": "1.1",
+    "caption": "DC versus AC. Direct current is steady and flows in one direction only (a battery); alternating current alternates between positive and negative directions. One complete cycle takes one period T, and frequency f — the number of complete cycles per second, measured in hertz — is 1 / T.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-ac-dc-waveforms.svg",
+    "spoken": "a steady flat DC line above an AC sine wave, with one cycle, the period T, and the frequency relationship marked"
+  },
+  "ch01-wavelength-freq": {
+    "id": "ch01-wavelength-freq",
+    "chapter": 1,
+    "number": "1.2",
+    "caption": "One wavelength λ is the distance the wave travels in one cycle, marked here crest to crest. The pool's own shortcut: wavelength in meters equals 300 divided by frequency in megahertz — at 146 MHz, λ = 300 / 146 ≈ 2 m, which is why it is called the 2-meter band. (The 300 comes from the wave's speed, about 3×10⁸ m/s; higher frequency means shorter wavelength.)",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-wavelength-freq.svg",
+    "spoken": "a sine wave with one wavelength marked crest to crest, illustrating wavelength in meters equals 300 divided by frequency in megahertz, with the 146 megahertz example"
+  },
+  "ch01-component-symbols": {
+    "id": "ch01-component-symbols",
+    "chapter": 1,
+    "number": "1.6",
+    "caption": "Every schematic symbol used in exam pool figures T-1, T-2, and T-3: resistor, variable resistor (rheostat), capacitor, polarized capacitor, variable capacitor, inductor, variable (tapped) inductor, transformer, diode, LED, Zener diode, NPN transistor, battery, ground (drawn the pool's way, with three slanted strokes), SPST switch, two-position switch, fuse, lamp, connector, antenna, and AC voltage source.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-component-symbols.svg",
+    "spoken": "a labeled panel of all the schematic symbols used in the three exam pool figures"
+  },
+  "ch01-prefix-ladder": {
+    "id": "ch01-prefix-ladder",
+    "chapter": 1,
+    "number": "1.3",
+    "caption": "The metric prefix ladder from giga down to micro, in steps of 1000. Each step toward a smaller unit multiplies the number by 1000; each step toward a larger unit divides by 1000. Examples are the exam pool's own: 146 MHz = 146,000 kHz; 3.525 MHz = 3525 kHz; 28400 kHz = 28.400 MHz; 2425 MHz = 2.425 GHz; 1.5 A = 1500 mA. Case counts: kHz takes a lowercase k, MHz a capital M.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-prefix-ladder.svg",
+    "spoken": "the metric prefix ladder from giga to micro with multiply and divide directions, plus example conversions from the exam pool"
+  },
+  "ch01-pool-fig-t1": {
+    "id": "ch01-pool-fig-t1",
+    "chapter": 1,
+    "number": "1.7",
+    "caption": "Pool figure T-1 — a transistor switch circuit (redrawn from the NCVEC 2026–2030 Technician pool).",
+    "kind": "original",
+    "source": "redrawn from NCVEC pool figure T-1",
+    "file": "figures/ch01-pool-fig-t1.svg",
+    "spoken": "A transistor switch circuit: a two-position switch feeds resistor 1 into the base of NPN transistor 2, which switches current from battery 4 through lamp 3; ground symbols at 5, under the transistor, and under the battery."
+  },
+  "ch01-pool-fig-t2": {
+    "id": "ch01-pool-fig-t2",
+    "chapter": 1,
+    "number": "1.8",
+    "caption": "Pool figure T-2 — an AC power supply (redrawn from the NCVEC 2026–2030 Technician pool).",
+    "kind": "original",
+    "source": "redrawn from NCVEC pool figure T-2",
+    "file": "figures/ch01-pool-fig-t2.svg",
+    "spoken": "An AC power supply: AC source 1, fuse 2, switch 3, transformer 4, rectifier diode 5, smoothing capacitor 6, resistor 7 with LED 8 power indicator, variable resistor 9, Zener diode 10, and the output terminal, with grounds along the bottom."
+  },
+  "ch01-pool-fig-t3": {
+    "id": "ch01-pool-fig-t3",
+    "chapter": 1,
+    "number": "1.9",
+    "caption": "Pool figure T-3 — an antenna tuner (transmatch) T-network (redrawn from the NCVEC 2026–2030 Technician pool).",
+    "kind": "original",
+    "source": "redrawn from NCVEC pool figure T-3",
+    "file": "figures/ch01-pool-fig-t3.svg",
+    "spoken": "An antenna tuner T-network: connector 1, variable capacitor 2, a second unnumbered variable capacitor, variable inductor 3 tapped to ground, and antenna 4."
+  },
+  "ch02-am-fm-cw": {
+    "id": "ch02-am-fm-cw",
+    "chapter": 2,
+    "number": "2.2",
+    "caption": "One voice, three ways to send it: AM varies the carrier's amplitude, FM wiggles the carrier's frequency, and CW simply keys the carrier on and off.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-am-fm-cw.svg",
+    "spoken": "This figure shows the same voice signal carried three ways: by the carrier's amplitude in AM, by wiggles of its frequency in FM, and by simple on-off keying in CW."
+  },
+  "ch02-ssb-vs-am-spectrum": {
+    "id": "ch02-ssb-vs-am-spectrum",
+    "chapter": 2,
+    "number": "2.3",
+    "caption": "AM occupies about 6 kHz with its carrier and two sidebands, while SSB keeps only one sideband and suppresses the carrier — the same voice in about 3 kHz.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-ssb-vs-am-spectrum.svg",
+    "spoken": "This figure shows an AM signal's spectrum with its carrier and two sidebands next to an SSB signal with just one sideband, showing why SSB takes about half the space."
+  },
+  "ch02-rf-spectrum": {
+    "id": "ch02-rf-spectrum",
+    "chapter": 2,
+    "number": "2.1",
+    "caption": "The radio spectrum from 3 MHz to 3 GHz, with the HF, VHF, and UHF regions and the Technician-relevant amateur bands marked, from 10 meters to 23 centimeters.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-rf-spectrum.svg",
+    "spoken": "This figure shows the radio spectrum on a logarithmic scale, marking the HF, VHF, and UHF regions and the amateur bands a Technician can use, from ten meters to twenty-three centimeters."
+  },
+  "ch03-groundwave-skywave": {
+    "id": "ch03-groundwave-skywave",
+    "chapter": 3,
+    "number": "3.2",
+    "caption": "Three ways a signal can travel from one transmitter: the direct wave (line of sight), the ground wave hugging the surface, and the sky wave bent back to Earth by the ionosphere.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-groundwave-skywave.svg",
+    "spoken": "This figure shows one transmitter sending a signal three ways: a direct line-of-sight wave to a nearby car, a ground wave that hugs the surface and quickly fades, and a sky wave that the ionosphere bends back down to a distant station."
+  },
+  "ch03-ionosphere-skip": {
+    "id": "ch03-ionosphere-skip",
+    "chapter": 3,
+    "number": "3.4",
+    "caption": "How the ionosphere bends an HF signal back to Earth: the ground wave dies out close in, the sky wave lands far away, and the ring between them — the skip zone — hears nothing.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-ionosphere-skip.svg",
+    "spoken": "This figure shows an HF signal refracted by the ionosphere. The ground wave fades close to the transmitter and the sky wave lands much farther away, at the skip distance, leaving a skip zone in between where the signal cannot be heard."
+  },
+  "ch03-multipath-fading": {
+    "id": "ch03-multipath-fading",
+    "chapter": 3,
+    "number": "3.1",
+    "caption": "Multipath: the direct and reflected signals arrive together at the mobile receiver, adding when in phase and canceling when out of phase — so a moving car hears the rapid flutter called picket fencing.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-multipath-fading.svg",
+    "spoken": "This figure shows one signal reaching a moving car over two paths, one direct and one reflected off a building. Where the two arrive in phase the signal is stronger; where they arrive out of phase it nearly cancels, so a moving car hears a rapid flutter called picket fencing."
+  },
+  "ch03-polarization": {
+    "id": "ch03-polarization",
+    "chapter": 3,
+    "number": "3.3",
+    "caption": "Polarization is the orientation of the electric field. On line-of-sight paths, cross-polarized antennas weaken the signal; on skywave paths the ionosphere scrambles polarization, so either antenna orientation works.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-polarization.svg",
+    "spoken": "This figure shows vertical and horizontal antenna polarization. On a line-of-sight path, matching antennas give a strong signal and cross-polarized antennas a weak one; on a skywave path the ionosphere scrambles the polarization, so either antenna orientation works."
+  },
+  "ch04-dipole": {
+    "id": "ch04-dipole",
+    "chapter": 4,
+    "number": "4.1",
+    "caption": "A half-wave dipole is two quarter-wave legs fed at the center, where the coax feed line runs to the transceiver. Length tracks wavelength: with the pool's shortcut λ(m) = 300 / f(MHz), a dipole for 50 MHz works out to λ/2 = 3 m tip to tip — and shortening a dipole raises its resonant frequency (T9A05).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-dipole.svg",
+    "spoken": "a half-wave dipole drawn as two quarter-wave legs with a center feedpoint into a coax feed line, dimensioned as lambda over two total, with the fifty megahertz example of about three meters tip to tip"
+  },
+  "ch04-vertical-groundplane": {
+    "id": "ch04-vertical-groundplane",
+    "chapter": 4,
+    "number": "4.2",
+    "caption": "A quarter-wave vertical is a single upright whip worked against ground radials, which act as the other half of the antenna. On 2 meters, λ = 300 / 146 ≈ 2 m, so λ/4 ≈ 19 inches — which is exactly why the pool says the common 19-inch whip is used on 2 meters: it is a resonant quarter-wave there (T9A08).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-vertical-groundplane.svg",
+    "spoken": "a quarter-wave vertical whip with drooping ground radials, dimensioned as lambda over four, about nineteen inches at one forty-six megahertz"
+  },
+  "ch04-dipole-pattern": {
+    "id": "ch04-dipole-pattern",
+    "chapter": 4,
+    "number": "4.3",
+    "caption": "Seen from above, a half-wave dipole radiates strongest broadside — out from its sides — and almost nothing off its ends (T9A10). The power is not amplified; it is concentrated. That focusing in a specified direction, compared to a reference antenna, is all antenna “gain” means (T9A11).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-dipole-pattern.svg",
+    "spoken": "a polar plot of a half-wave dipole's radiation pattern with two lobes broadside to the wire and nulls off the ends, showing gain as concentration rather than amplification"
+  },
+  "ch04-swr-curve": {
+    "id": "ch04-swr-curve",
+    "chapter": 4,
+    "number": "4.4",
+    "caption": "SWR — a measure of how well a load is matched to a transmission line (T9B12) — is lowest at the antenna's resonant frequency, where 1:1 means a perfect match between antenna and feed line. Away from resonance, reflected power climbs and the reading rises toward a mismatch like 4:1. It matters because high SWR makes a solid-state transceiver reduce its output power to protect the RF output transistors (T7B04).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-swr-curve.svg",
+    "spoken": "a curve of SWR versus frequency across the two-meter band, dipping to one-to-one at the resonant frequency and rising toward the band edges"
+  },
+  "ch04-connectors": {
+    "id": "ch04-connectors",
+    "chapter": 4,
+    "number": "4.5",
+    "caption": "Three plugs every Technician meets — the PL-259 “UHF” plug (the standard at HF and VHF, but not watertight), the quarter-turn BNC, and the tiny screw-on SMA found on many handhelds — plus the four layers of coaxial cable: center conductor, dielectric, shield, and jacket. Amateur coax is 50 Ω (T9B02), and any outdoor connector should be carefully taped against the weather (T9B01).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-connectors.svg",
+    "spoken": "pictograms of PL-259, BNC, and SMA connectors, plus a coaxial-cable cross-section labeling the center conductor, dielectric, shield, and jacket"
+  },
+  "ch05-station-block": {
+    "id": "ch05-station-block",
+    "chapter": 5,
+    "number": "5.1",
+    "caption": "A basic station is four hookups. AC mains feed a DC power supply — a 50-watt radio wants about 13.8 V at around 12 A. The microphone (voice plus push-to-talk) and the Morse key (keying) drive the transceiver. RF leaves through an SWR meter installed inline in the feed line — rated for the frequency and power being measured — and runs along the coax feed line to the antenna; on receive it comes back the same path.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-station-block.svg",
+    "spoken": "a block diagram of a beginner station: mains power into a DC supply, the microphone and key into the transceiver, and RF out through an inline SWR meter and the coax feed line to the antenna"
+  },
+  "ch05-swr-hookup": {
+    "id": "ch05-swr-hookup",
+    "chapter": 5,
+    "number": "5.2",
+    "caption": "An SWR meter goes inline between the transceiver and the antenna, on a short coax jumper, where it reads forward and reflected power — 1:1 is a perfect match and 4:1 warns of a mismatch. For testing, swap the antenna for a dummy load: a 50-ohm non-inductive resistor on a heat sink that absorbs the transmitter's power so nothing goes on the air.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-swr-hookup.svg",
+    "spoken": "two hookups: the SWR meter on a short jumper between the transceiver and the antenna, and the same setup with a dummy load replacing the antenna for off-the-air testing"
+  },
+  "ch05-rfi-path": {
+    "id": "ch05-rfi-path",
+    "chapter": 5,
+    "number": "5.3",
+    "caption": "How RFI happens and where to stop it. Your radiated RF reaches a neighbor's device directly and by pickup on its wiring, and a strong signal overloads a receiver that cannot reject it — the problem is in the affected device. The fixes, at each entry point: more distance between antennas and less power at your end; a filter at the affected receiver's antenna input; clip-on ferrite chokes on the device's cables; and properly installed coax connectors with sound shielding and grounding. First, though, make sure your own station is operating properly.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-rfi-path.svg",
+    "spoken": "a ham antenna radiating toward a TV and speaker, with four numbered fixes: distance and lower power, a filter at the receiver's antenna input, ferrite chokes on the cables, and good connectors, shielding, and grounding"
+  },
+  "ch06-simplex-duplex": {
+    "id": "ch06-simplex-duplex",
+    "chapter": 6,
+    "number": "6.2",
+    "caption": "Simplex puts both radios on one frequency — 146.520 MHz is the 2 m national FM simplex calling frequency — with no machine in the middle, so stations in direct range can talk without tying up a repeater. Through a repeater (half-duplex), radio A transmits on the repeater's input, the repeater retransmits on its output, and radio B listens there; to reply, B transmits on the input.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch06-simplex-duplex.svg",
+    "spoken": "Two panels. Left, simplex: two radios talk directly on a single frequency, 146.520 megahertz, both transmitting and receiving there. Right, through a repeater: radio A transmits on the repeater's input, 146.340 megahertz; the repeater retransmits on its output, 146.940 megahertz, where radio B listens. To reply, B transmits on the input."
+  },
+  "ch06-repeater-offset": {
+    "id": "ch06-repeater-offset",
+    "chapter": 6,
+    "number": "6.1",
+    "caption": "A 2 m repeater listens on its input (146.340 MHz) and transmits on its output (146.940 MHz). To listen, you tune to the output; your radio transmits on the input. The offset is the difference between the repeater's transmit and receive frequencies — a common offset on 2 m is −600 kHz. Offsets are community custom, not an FCC rule, and odd splits exist near the band edges.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch06-repeater-offset.svg",
+    "spoken": "A 2 meter repeater has two frequencies: it listens on 146.340 megahertz, its input, and transmits on 146.940 megahertz, its output. You tune to the output to listen, and your radio transmits on the input. The difference between the two frequencies is the offset — a common minus 600 kilohertz offset on 2 meters."
+  },
+  "ch06-ctcss-gate": {
+    "id": "ch06-ctcss-gate",
+    "chapter": 6,
+    "number": "6.3",
+    "caption": "CTCSS works like an access gate. Your radio adds a steady sub-audible tone — here 100.0 Hz — to your voice, and the repeater's tone-operated squelch opens so your voice is retransmitted. With no tone, or the wrong tone, the gate stays shut and nothing is retransmitted. The tone is access control, not privacy — everyone hears the repeater's output.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch06-ctcss-gate.svg",
+    "spoken": "A gate diagram in two rows. Top row: your radio sends voice plus a 100.0 hertz sub-audible CTCSS tone; the repeater's squelch gate opens and your voice is retransmitted on the output to every listener. Bottom row: a radio sending voice with no tone finds the gate closed — nothing is retransmitted. A banner reads: access control, not privacy — everyone hears the repeater's output."
+  },
+  "ch06-net-flow": {
+    "id": "ch06-net-flow",
+    "chapter": 6,
+    "number": "6.4",
+    "caption": "A directed net runs through its net control station (NCS). Stations check in one at a time and net control acknowledges each in turn, while everyone else listens. Listen before transmitting and follow net control's direction — in a directed net you transmit only when the NCS directs, unless you are reporting an emergency.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch06-net-flow.svg",
+    "spoken": "Net control sits at the center with four stations around it. Numbered arrows show the flow: one, station A checks in; two, net control acknowledges; three, station B checks in; four, net control acknowledges — one at a time — while stations C and D listen. A banner reminds you to listen before transmitting and follow net control's direction."
+  },
+  "ch07-ft8-sequence": {
+    "id": "ch07-ft8-sequence",
+    "chapter": 7,
+    "number": "7.1",
+    "caption": "FT8 runs on a strict clock: stations take turns in 15-second transmit/receive slots, kept in lock-step by internet-synced computer clocks — and the mode decodes signals buried below the noise.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-ft8-sequence.svg",
+    "spoken": "A timeline of two FT8 stations taking turns: each transmits for 15 seconds while the other listens, then they swap. Every computer's clock is synchronized, so the slots line up, and a whole contact fits in about a minute."
+  },
+  "ch07-aprs-path": {
+    "id": "ch07-aprs-path",
+    "chapter": 7,
+    "number": "7.2",
+    "caption": "How an APRS position gets onto the map: your tracker beacons a packet on the national 144.390 MHz channel, hilltop digipeaters relay it, an iGate pushes it onto the internet, and friends watch your dot move on aprs.fi.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-aprs-path.svg",
+    "spoken": "A path diagram: a handheld tracker beacons its GPS position on 144.390 MHz, a digipeater relays the packet, an internet gateway called an iGate forwards it onto the internet, and the position appears as a moving dot on a map site."
+  },
+  "ch07-satellite-pass": {
+    "id": "ch07-satellite-pass",
+    "chapter": 7,
+    "number": "7.4",
+    "caption": "Anatomy of a Low Earth Orbit pass: the satellite rises above your horizon (AOS), climbs overhead, and sets (LOS) — a roughly 10-minute window out of an orbit of about 100 minutes, worked on separate uplink and downlink frequencies.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-satellite-pass.svg",
+    "spoken": "A ground station under the arc of a satellite pass: the satellite rises at AOS, passes overhead exchanging uplink and downlink signals on different frequencies, and sets at LOS. A low Earth orbit takes about 100 minutes."
+  },
+  "ch07-doppler-curve": {
+    "id": "ch07-doppler-curve",
+    "chapter": 7,
+    "number": "7.5",
+    "caption": "Doppler shift across a pass: the satellite's signal arrives a few kHz high while it approaches, slides through the published frequency at closest approach, and ends low as it recedes — which is why you keep adjusting your tuning.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-doppler-curve.svg",
+    "spoken": "An S-shaped curve of received frequency versus time: the signal starts a few kilohertz above the published frequency as the satellite approaches, crosses it at closest approach, and ends below as the satellite moves away."
+  },
+  "ch07-echolink-topology": {
+    "id": "ch07-echolink-topology",
+    "chapter": 7,
+    "number": "7.3",
+    "caption": "Internet linking with EchoLink or IRLP: your HT talks to a local repeater's node, your voice crosses the internet as data (VoIP), and a remote repeater puts you on the air in another part of the world.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-echolink-topology.svg",
+    "spoken": "A chain diagram: your handheld radio reaches a local repeater with an internet node, the internet carries your voice to a distant repeater, and a far-away ham hears you on their radio — EchoLink and IRLP style."
+  },
+  "ch08-tech-band-chart": {
+    "id": "ch08-tech-band-chart",
+    "chapter": 8,
+    "number": "8.2",
+    "caption": "Technician privileges at a glance. On HF you get CW-only slices of 80 m (3.525–3.600 MHz), 40 m (7.025–7.125 MHz), and 15 m (21.025–21.200 MHz), plus 10 m (28.0–28.5 MHz): CW and data on 28.0–28.3 MHz — where the automatic propagation beacons live at 28.2–28.3 MHz — and SSB phone plus CW on 28.300–28.500 MHz, all at 200 W PEP maximum. On VHF and up you share the same allocations and modes as every license class: 6 m (50–54 MHz), 2 m (144–148 MHz), 1.25 m (219–220 and 222–225 MHz), 70 cm (420–450 MHz), and more bands above, with a 1500 W PEP general ceiling (some specific restrictions apply). The bottom 100 kHz of 6 m and 2 m is CW only.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch08-tech-band-chart.svg",
+    "spoken": "a bar chart of Technician privileges: narrow CW-only HF slices on 80, 40, and 15 meters, a split 10-meter bar with CW and data below 28.3 and SSB phone above, then full all-mode bars for 6 meters, 2 meters, 1.25 meters, 70 centimeters, and the higher bands"
+  },
+  "ch08-callsign-anatomy": {
+    "id": "ch08-callsign-anatomy",
+    "chapter": 8,
+    "number": "8.1",
+    "caption": "Anatomy of a US call sign, using the pool's own example KF1XXX. The prefix is one letter (K, N, or W) or two letters (AA–AL, KA–KZ, NA–NZ, or WA–WZ); the numeral 0–9 is the call district (1 = New England, 6 = California, 0 = the tenth region); the suffix is one to three letters. The sequential call sign system has four groups: Group A for Amateur Extra (1×2, 2×1, and 2×2 starting with A), Group B for Advanced (2×2 starting K, N, or W), Group C for General, Technician, and Technician Plus (1×3, like K1XXX), and Group D for Novice, club, and military recreation stations (2×3 with a K- or W-first prefix). KF1XXX — two-letter prefix, numeral, three-letter suffix — is exactly the Group D format, which is why the pool keys it as the valid Group D call sign for a Technician (T1C05). A Technician may hold Group C or Group D formats.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch08-callsign-anatomy.svg",
+    "spoken": "the call sign K F 1 X X X broken into its three parts — two-letter prefix, district numeral, three-letter suffix — above a small table of the four call-sign groups A through D, with Group D's 2-by-3 format highlighted as the exam's example"
+  },
+  "ch09-grounding": {
+    "id": "ch09-grounding",
+    "chapter": 9,
+    "number": "9.1",
+    "caption": "Station grounding and lightning protection. Inside the shack, every equipment chassis — transceiver, power supply, computer — bonds to a single ground point (the station ground bus), and the ground conductors run short and direct with smooth bends, never sharp corners. Where the coax feed line enters the building it passes through a lightning arrester mounted on a grounded panel right at the entry. Outside, the station ground and the arrester bond to a ground rod at the entry, the tower or mast has its own rod, and all external ground rods are bonded together with heavy wire or strap. The reason: separate, unbonded grounds can sit at very different voltages during a lightning strike or a fault — bonding keeps everything at one potential. Grounding requirements come from local electrical codes, not the FCC.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-grounding.svg",
+    "spoken": "a shack-and-yard diagram: the transceiver and power supply bond to one ground bus inside, the feed line enters through a lightning arrester on a grounded panel at the wall, and outside two ground rods — one at the entry, one at the mast — are bonded together with heavy wire"
+  },
+  "ch09-rf-exposure": {
+    "id": "ch09-rf-exposure",
+    "chapter": 9,
+    "number": "9.2",
+    "caption": "RF exposure in one picture. RF energy is non-ionizing radiation — its hazard is heating, not DNA damage — and the exposure limits are about your average exposure. You control three levers: power (use the minimum transmitter power necessary for the contact), distance (exposure falls off fast with separation, so keep antennas away from people — relocate the antenna, not the people), and duty cycle (transmit less of the time and the average drops with it). Never touch an antenna while transmitting; it can cause an RF burn to the skin. Behind the habits sit the FCC's Maximum Permissible Exposure (MPE) limits: the station licensee is responsible for evaluating the station — by calculation per OET Bulletin 65, by computer modeling, or by measurement with calibrated field-strength equipment — and for re-evaluating whenever anything in the transmitter or antenna system changes.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-rf-exposure.svg",
+    "spoken": "an antenna high on a house roof with a person standing well clear of it, a dashed arrow marked distance between them, beside three cards listing the levers you control — power, distance, and duty cycle — over a note that the FCC sets maximum permissible exposure limits that the licensee must evaluate"
+  },
+  "ch09-duty-cycle": {
+    "id": "ch09-duty-cycle",
+    "chapter": 9,
+    "number": "9.3",
+    "caption": "Duty cycle — the percentage of time the transmitter is actually transmitting — scales your average exposure, and exposure limits are about the average. Transmit with a 100% duty cycle and the whole minute is RF; key 5 seconds on and 5 seconds off and the peak is unchanged but the average is cut in half. The allowable power density scales inversely: the pool's own arithmetic (T0C03) is that dropping from 100% to 50% duty cycle doubles the allowable power density — a factor of 2, not 50% and not 3×. The same scaling continues: 25% duty allows ×4, and an operator transmitting 30 seconds in every 5 minutes (a 10% duty cycle) allows ×10 the continuous limit.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-duty-cycle.svg",
+    "spoken": "two transmit timelines — one keyed down for a full minute, one keyed five seconds on and five off — above a curve of allowable power density against duty cycle, with points marked at 100 percent times 1, 50 percent times 2, 25 percent times 4, and 10 percent times 10"
+  }
+}

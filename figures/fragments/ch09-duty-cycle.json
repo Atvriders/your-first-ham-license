@@ -1,0 +1,8 @@
+{
+  "id": "ch09-duty-cycle",
+  "chapter": 9,
+  "caption": "Duty cycle — the percentage of time the transmitter is actually transmitting — scales your average exposure, and exposure limits are about the average. Transmit with a 100% duty cycle and the whole minute is RF; key 5 seconds on and 5 seconds off and the peak is unchanged but the average is cut in half. The allowable power density scales inversely: the pool's own arithmetic (T0C03) is that dropping from 100% to 50% duty cycle doubles the allowable power density — a factor of 2, not 50% and not 3×. The same scaling continues: 25% duty allows ×4, and an operator transmitting 30 seconds in every 5 minutes (a 10% duty cycle) allows ×10 the continuous limit.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "two transmit timelines — one keyed down for a full minute, one keyed five seconds on and five off — above a curve of allowable power density against duty cycle, with points marked at 100 percent times 1, 50 percent times 2, 25 percent times 4, and 10 percent times 10"
+}

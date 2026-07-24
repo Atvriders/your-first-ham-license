@@ -1,0 +1,8 @@
+{
+  "id": "ch06-repeater-offset",
+  "chapter": 6,
+  "caption": "A 2 m repeater listens on its input (146.340 MHz) and transmits on its output (146.940 MHz). To listen, you tune to the output; your radio transmits on the input. The offset is the difference between the repeater's transmit and receive frequencies — a common offset on 2 m is −600 kHz. Offsets are community custom, not an FCC rule, and odd splits exist near the band edges.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A 2 meter repeater has two frequencies: it listens on 146.340 megahertz, its input, and transmits on 146.940 megahertz, its output. You tune to the output to listen, and your radio transmits on the input. The difference between the two frequencies is the offset — a common minus 600 kilohertz offset on 2 meters."
+}

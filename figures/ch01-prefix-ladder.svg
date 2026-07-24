@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+
+  <!-- direction arrows: right = smaller unit = x1000, left = larger unit = /1000 -->
+  <text x="320" y="34" font-size="14" fill="currentColor" text-anchor="middle">each step to the right: × 1000 — toward a smaller unit</text>
+  <line x1="40" y1="46" x2="600" y2="46" stroke="currentColor" stroke-width="1.8" fill="none"/>
+  <polygon points="600,46 589,41 589,51" fill="currentColor" stroke="none"/>
+
+  <!-- ladder rungs -->
+  <g>
+    <rect x="16" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="62" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">giga</text>
+    <text x="62" y="106" font-size="13" fill="currentColor" text-anchor="middle">G = 10⁹</text>
+  </g>
+  <g>
+    <rect x="119" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="165" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">mega</text>
+    <text x="165" y="106" font-size="13" fill="currentColor" text-anchor="middle">M = 10⁶</text>
+  </g>
+  <g>
+    <rect x="222" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="268" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">kilo</text>
+    <text x="268" y="106" font-size="13" fill="currentColor" text-anchor="middle">k = 10³</text>
+  </g>
+  <g>
+    <rect x="325" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="371" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">base unit</text>
+    <text x="371" y="106" font-size="13" fill="currentColor" text-anchor="middle">× 1</text>
+  </g>
+  <g>
+    <rect x="428" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="474" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">milli</text>
+    <text x="474" y="106" font-size="13" fill="currentColor" text-anchor="middle">m = 10⁻³</text>
+  </g>
+  <g>
+    <rect x="531" y="64" width="92" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <text x="577" y="86" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">micro</text>
+    <text x="577" y="106" font-size="13" fill="currentColor" text-anchor="middle">µ = 10⁻⁶</text>
+  </g>
+
+  <!-- return arrow -->
+  <line x1="600" y1="140" x2="40" y2="140" stroke="currentColor" stroke-width="1.8" fill="none"/>
+  <polygon points="40,140 51,135 51,145" fill="currentColor" stroke="none"/>
+  <text x="320" y="158" font-size="14" fill="currentColor" text-anchor="middle">each step to the left: ÷ 1000 — toward a larger unit</text>
+
+  <!-- the pool's own conversions -->
+  <text x="320" y="200" font-size="15" font-weight="bold" fill="currentColor" text-anchor="middle">Conversions straight from the exam pool:</text>
+  <text x="320" y="226" font-size="14" fill="currentColor" text-anchor="middle">146 MHz = 146,000 kHz</text>
+  <text x="320" y="250" font-size="14" fill="currentColor" text-anchor="middle">3.525 MHz = 3525 kHz</text>
+  <text x="320" y="274" font-size="14" fill="currentColor" text-anchor="middle">28400 kHz = 28.400 MHz</text>
+  <text x="320" y="298" font-size="14" fill="currentColor" text-anchor="middle">2425 MHz = 2.425 GHz</text>
+  <text x="320" y="322" font-size="14" fill="currentColor" text-anchor="middle">1.5 A = 1500 mA</text>
+
+  <text x="320" y="348" font-size="12.5" fill="currentColor" text-anchor="middle">Case counts: kHz has a lowercase k, MHz a capital M — the exam tests this.</text>
+
+</svg>

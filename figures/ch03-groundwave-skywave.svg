@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="sans-serif">
+
+  <!-- ===== Ionosphere (dashed refracting layer) ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="40" y1="64" x2="720" y2="64" stroke-dasharray="8,5"/>
+    <line x1="40" y1="92" x2="720" y2="92" stroke-dasharray="8,5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1" opacity="0.6" fill="none">
+    <line x1="90" y1="67" x2="85" y2="89"/>
+    <line x1="210" y1="67" x2="205" y2="89"/>
+    <line x1="330" y1="67" x2="325" y2="89"/>
+    <line x1="450" y1="67" x2="445" y2="89"/>
+    <line x1="570" y1="67" x2="565" y2="89"/>
+    <line x1="690" y1="67" x2="685" y2="89"/>
+  </g>
+
+  <!-- ===== Ground with hatching ===== -->
+  <line x1="30" y1="350" x2="730" y2="350" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <g stroke="currentColor" stroke-width="1.2" opacity="0.7" fill="none">
+    <line x1="60" y1="350" x2="51" y2="361"/>
+    <line x1="100" y1="350" x2="91" y2="361"/>
+    <line x1="140" y1="350" x2="131" y2="361"/>
+    <line x1="180" y1="350" x2="171" y2="361"/>
+    <line x1="220" y1="350" x2="211" y2="361"/>
+    <line x1="260" y1="350" x2="251" y2="361"/>
+    <line x1="300" y1="350" x2="291" y2="361"/>
+    <line x1="340" y1="350" x2="331" y2="361"/>
+    <line x1="380" y1="350" x2="371" y2="361"/>
+    <line x1="420" y1="350" x2="411" y2="361"/>
+    <line x1="460" y1="350" x2="451" y2="361"/>
+    <line x1="500" y1="350" x2="491" y2="361"/>
+    <line x1="540" y1="350" x2="531" y2="361"/>
+    <line x1="580" y1="350" x2="571" y2="361"/>
+    <line x1="620" y1="350" x2="611" y2="361"/>
+    <line x1="660" y1="350" x2="651" y2="361"/>
+    <line x1="700" y1="350" x2="691" y2="361"/>
+  </g>
+
+  <!-- ===== TX tower ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="100" y1="350" x2="100" y2="258"/>
+    <line x1="100" y1="258" x2="85" y2="243"/>
+    <line x1="100" y1="258" x2="100" y2="236"/>
+    <line x1="100" y1="258" x2="115" y2="243"/>
+  </g>
+
+  <!-- ===== Distant RX tower ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="640" y1="350" x2="640" y2="296"/>
+    <line x1="640" y1="296" x2="627" y2="283"/>
+    <line x1="640" y1="296" x2="640" y2="276"/>
+    <line x1="640" y1="296" x2="653" y2="283"/>
+  </g>
+
+  <!-- ===== Nearby car (mobile receiver) ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+    <rect x="380" y="326" width="70" height="20" rx="6"/>
+    <path d="M 392,326 L 398,312 L 430,312 L 438,326"/>
+    <line x1="410" y1="312" x2="410" y2="288"/>
+  </g>
+  <circle cx="396" cy="350" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="436" cy="350" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+
+  <!-- ===== Direct wave (line of sight) ===== -->
+  <line x1="110" y1="264" x2="404" y2="290" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M 404,290 L 393.6,293.6 L 394.4,284.6 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Ground wave (hugs the surface, fades out) ===== -->
+  <path d="M 108,339 Q 160,331 215,332" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M 215,332 Q 275,333 330,339" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="6,5"/>
+
+  <!-- ===== Sky wave (refracted by the ionosphere) ===== -->
+  <path d="M 104,252 L 350,112 Q 430,48 510,112 L 636,296" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M 228,181 L 221.5,189.8 L 217.1,182 Z" fill="currentColor" stroke="none"/>
+  <path d="M 573,204 L 563.6,198.3 L 571.1,193.2 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Labels ===== -->
+  <g fill="currentColor" stroke="none">
+    <text x="380" y="45" text-anchor="middle" font-size="13" letter-spacing="2">IONOSPHERE</text>
+    <text x="100" y="222" text-anchor="middle" font-size="13" font-weight="bold">TX</text>
+    <text x="100" y="207" text-anchor="middle" font-size="10.5">your station</text>
+    <text x="240" y="252" text-anchor="middle" font-size="13">direct wave</text>
+    <text x="240" y="267" text-anchor="middle" font-size="10.5">(line of sight)</text>
+    <text x="215" y="318" text-anchor="middle" font-size="12">ground wave</text>
+    <text x="215" y="392" text-anchor="middle" font-size="10.5">hugs the surface — short range</text>
+    <text x="185" y="155" font-size="13" transform="rotate(-29.6 185 155)">sky wave</text>
+    <text x="545" y="132" font-size="10.5">bent back to Earth</text>
+    <text x="660" y="266" font-size="13" font-weight="bold">RX</text>
+    <text x="660" y="281" font-size="10.5">distant station</text>
+    <text x="380" y="428" text-anchor="middle" font-size="11.5" font-style="italic">HF reaches far by sky wave; VHF/UHF is mostly line of sight</text>
+  </g>
+</svg>

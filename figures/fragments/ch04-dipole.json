@@ -1,0 +1,8 @@
+{
+  "id": "ch04-dipole",
+  "chapter": 4,
+  "caption": "A half-wave dipole is two quarter-wave legs fed at the center, where the coax feed line runs to the transceiver. Length tracks wavelength: with the pool's shortcut λ(m) = 300 / f(MHz), a dipole for 50 MHz works out to λ/2 = 3 m tip to tip — and shortening a dipole raises its resonant frequency (T9A05).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a half-wave dipole drawn as two quarter-wave legs with a center feedpoint into a coax feed line, dimensioned as lambda over two total, with the fifty megahertz example of about three meters tip to tip"
+}

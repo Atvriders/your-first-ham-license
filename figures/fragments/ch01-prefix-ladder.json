@@ -1,0 +1,8 @@
+{
+  "id": "ch01-prefix-ladder",
+  "chapter": 1,
+  "caption": "The metric prefix ladder from giga down to micro, in steps of 1000. Each step toward a smaller unit multiplies the number by 1000; each step toward a larger unit divides by 1000. Examples are the exam pool's own: 146 MHz = 146,000 kHz; 3.525 MHz = 3525 kHz; 28400 kHz = 28.400 MHz; 2425 MHz = 2.425 GHz; 1.5 A = 1500 mA. Case counts: kHz takes a lowercase k, MHz a capital M.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "the metric prefix ladder from giga to micro with multiply and divide directions, plus example conversions from the exam pool"
+}

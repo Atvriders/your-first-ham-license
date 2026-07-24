@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="32" font-size="17" font-weight="bold">HOOKING UP AN SWR METER</text>
+    <text x="380" y="52" font-size="12">inline between the transceiver and the antenna — or a dummy load for testing</text>
+  </g>
+
+  <!-- ===== Row 1: on the air ===== -->
+  <text x="40" y="86" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">On the air:</text>
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <rect x="40" y="100" width="150" height="80"/>
+    <rect x="300" y="100" width="160" height="80"/>
+    <!-- short jumper, radio to meter -->
+    <line x1="190" y1="140" x2="294" y2="140"/>
+    <!-- coax feed line, meter to antenna feedpoint -->
+    <line x1="460" y1="140" x2="660" y2="140"/>
+    <!-- antenna whip -->
+    <line x1="660" y1="140" x2="660" y2="62"/>
+    <line x1="648" y1="72" x2="672" y2="72"/>
+    <line x1="651" y1="85" x2="669" y2="85"/>
+    <line x1="654" y1="98" x2="666" y2="98"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="300,140 290,135 290,145"/>
+    <polygon points="566,140 556,135 556,145"/>
+    <circle cx="660" cy="140" r="3.4"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="115" y="144" font-size="14" font-weight="bold">TRANSCEIVER</text>
+    <text x="380" y="132" font-size="14" font-weight="bold">SWR METER</text>
+    <text x="380" y="150" font-size="9.5">reads forward and</text>
+    <text x="380" y="163" font-size="9.5">reflected power</text>
+    <text x="245" y="128" font-size="10">short coax jumper</text>
+    <text x="245" y="158" font-size="9.5" font-style="italic">keep it short</text>
+    <text x="555" y="128" font-size="10.5">coax feed line</text>
+    <text x="660" y="50" font-size="12" font-weight="bold">ANTENNA</text>
+    <text x="676" y="158" font-size="9.5" font-style="italic" text-anchor="start">feedpoint</text>
+  </g>
+  <text x="380" y="200" font-size="11" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">1:1 is a perfect match — 4:1 warns of a mismatch</text>
+
+  <!-- ===== Row 2: dummy load for testing ===== -->
+  <text x="40" y="234" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">Testing without going on the air:</text>
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <rect x="40" y="252" width="150" height="80"/>
+    <rect x="300" y="252" width="160" height="80"/>
+    <line x1="190" y1="292" x2="294" y2="292"/>
+    <line x1="460" y1="292" x2="544" y2="292"/>
+    <rect x="548" y="257" width="150" height="70"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="300,292 290,287 290,297"/>
+    <polygon points="548,292 538,287 538,297"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="115" y="296" font-size="14" font-weight="bold">TRANSCEIVER</text>
+    <text x="380" y="296" font-size="14" font-weight="bold">SWR METER</text>
+    <text x="245" y="280" font-size="10">same short jumper</text>
+    <text x="502" y="280" font-size="10">short coax</text>
+    <text x="623" y="288" font-size="13.5" font-weight="bold">DUMMY LOAD</text>
+    <text x="623" y="305" font-size="9.5">50 Ω non-inductive resistor</text>
+    <text x="623" y="318" font-size="9.5">on a heat sink</text>
+  </g>
+
+  <!-- ===== bottom note ===== -->
+  <text x="380" y="418" font-size="11.5" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">A dummy load soaks up the transmitter's power — test all you like without putting a signal on the air.</text>
+
+</svg>

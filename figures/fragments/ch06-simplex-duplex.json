@@ -1,0 +1,8 @@
+{
+  "id": "ch06-simplex-duplex",
+  "chapter": 6,
+  "caption": "Simplex puts both radios on one frequency — 146.520 MHz is the 2 m national FM simplex calling frequency — with no machine in the middle, so stations in direct range can talk without tying up a repeater. Through a repeater (half-duplex), radio A transmits on the repeater's input, the repeater retransmits on its output, and radio B listens there; to reply, B transmits on the input.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Two panels. Left, simplex: two radios talk directly on a single frequency, 146.520 megahertz, both transmitting and receiving there. Right, through a repeater: radio A transmits on the repeater's input, 146.340 megahertz; the repeater retransmits on its output, 146.940 megahertz, where radio B listens. To reply, B transmits on the input."
+}

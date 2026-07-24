@@ -1,0 +1,8 @@
+{
+  "id": "ch01-pool-fig-t1",
+  "chapter": 1,
+  "caption": "Pool figure T-1 — a transistor switch circuit (redrawn from the NCVEC 2026–2030 Technician pool).",
+  "kind": "original",
+  "source": "redrawn from NCVEC pool figure T-1",
+  "spoken": "A transistor switch circuit: a two-position switch feeds resistor 1 into the base of NPN transistor 2, which switches current from battery 4 through lamp 3; ground symbols at 5, under the transistor, and under the battery."
+}

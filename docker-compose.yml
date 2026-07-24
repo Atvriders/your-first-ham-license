@@ -1,0 +1,7 @@
+services:
+  your-first-ham-license:
+    image: ghcr.io/atvriders/your-first-ham-license:latest
+    container_name: your-first-ham-license
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 448" font-family="sans-serif">
+
+  <!-- ================= ROW 1 : right tone, gate opens ================= -->
+  <text x="380" y="36" text-anchor="middle" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">with the right tone, the gate opens</text>
+
+  <!-- your radio -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="71" y="120" width="28" height="48" rx="5"/>
+    <line x1="85" y1="120" x2="85" y2="102" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="79" y1="134" x2="91" y2="134" stroke-width="1.5"/>
+    <line x1="79" y1="140" x2="91" y2="140" stroke-width="1.5"/>
+  </g>
+  <text x="85" y="186" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">your radio</text>
+
+  <!-- voice + tone toward the gate -->
+  <line x1="108" y1="144" x2="296" y2="144" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="296,144 284,139 284,149" fill="currentColor" stroke="none"/>
+  <g fill="currentColor" stroke="none">
+    <text x="202" y="132" text-anchor="middle" font-size="11" font-weight="bold">voice + 100.0 Hz tone</text>
+    <text x="202" y="160" text-anchor="middle" font-size="10">(a sub-audible tone rides along)</text>
+  </g>
+
+  <!-- gate, open -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="318" y1="110" x2="318" y2="170"/>
+    <line x1="342" y1="110" x2="342" y2="170"/>
+    <line x1="318" y1="168" x2="354" y2="132"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="330" y="100" text-anchor="middle" font-size="11" font-weight="bold">squelch gate: OPEN</text>
+    <text x="330" y="186" text-anchor="middle" font-size="10">the repeater's tone-operated squelch</text>
+  </g>
+
+  <!-- through the gate to the repeater -->
+  <line x1="356" y1="144" x2="446" y2="144" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="446,144 434,139 434,149" fill="currentColor" stroke="none"/>
+  <text x="401" y="132" text-anchor="middle" font-size="10" fill="currentColor" stroke="none">voice passes</text>
+
+  <!-- repeater -->
+  <rect x="446" y="114" width="134" height="60" rx="6" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="513" y="140" text-anchor="middle" font-size="13" font-weight="bold">REPEATER</text>
+    <text x="513" y="158" text-anchor="middle" font-size="10">retransmits your voice</text>
+  </g>
+
+  <!-- out to the listeners -->
+  <line x1="580" y1="144" x2="668" y2="144" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="668,144 656,139 656,149" fill="currentColor" stroke="none"/>
+  <text x="624" y="132" text-anchor="middle" font-size="10" fill="currentColor" stroke="none">on the output</text>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="682" y="120" width="28" height="48" rx="5"/>
+    <line x1="696" y1="120" x2="696" y2="102" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="690" y1="134" x2="702" y2="134" stroke-width="1.5"/>
+    <line x1="690" y1="140" x2="702" y2="140" stroke-width="1.5"/>
+  </g>
+  <text x="696" y="186" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">listeners</text>
+
+  <!-- ================= ROW 2 : no / wrong tone, gate stays shut ================= -->
+  <text x="380" y="252" text-anchor="middle" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">no tone — or the wrong tone — and the gate stays shut</text>
+
+  <!-- another radio -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="71" y="320" width="28" height="48" rx="5"/>
+    <line x1="85" y1="320" x2="85" y2="302" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="79" y1="334" x2="91" y2="334" stroke-width="1.5"/>
+    <line x1="79" y1="340" x2="91" y2="340" stroke-width="1.5"/>
+  </g>
+  <text x="85" y="386" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">another radio</text>
+
+  <!-- voice without the tone, blocked -->
+  <line x1="108" y1="344" x2="300" y2="344" stroke="currentColor" stroke-width="2" stroke-dasharray="6,5" fill="none"/>
+  <text x="204" y="332" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">voice, but no 100.0 Hz tone</text>
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="288" y1="336" x2="304" y2="352"/>
+    <line x1="304" y1="336" x2="288" y2="352"/>
+  </g>
+
+  <!-- gate, closed -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <line x1="318" y1="310" x2="318" y2="370"/>
+    <line x1="342" y1="310" x2="342" y2="370"/>
+    <line x1="318" y1="344" x2="342" y2="344" stroke-width="3.5"/>
+  </g>
+  <text x="330" y="392" text-anchor="middle" font-size="10.5" fill="currentColor" stroke="none">squelch gate: CLOSED — nothing is retransmitted</text>
+
+  <!-- ================= banner : access, not privacy ================= -->
+  <rect x="70" y="406" width="620" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="380" y="421" text-anchor="middle" font-size="12" font-weight="bold">Access control, not privacy — everyone hears the repeater's output.</text>
+    <text x="380" y="435" text-anchor="middle" font-size="10">the tone only opens the squelch — "PL" is just Motorola's 1951 trade name</text>
+  </g>
+</svg>

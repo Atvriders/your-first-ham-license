@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="sans-serif">
+
+  <!-- ===== Ionosphere (dashed refracting layer) ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="30" y1="60" x2="620" y2="60" stroke-dasharray="8,5"/>
+    <line x1="30" y1="92" x2="620" y2="92" stroke-dasharray="8,5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1" opacity="0.6" fill="none">
+    <line x1="80" y1="63" x2="75" y2="89"/>
+    <line x1="170" y1="63" x2="165" y2="89"/>
+    <line x1="260" y1="63" x2="255" y2="89"/>
+    <line x1="350" y1="63" x2="345" y2="89"/>
+    <line x1="440" y1="63" x2="435" y2="89"/>
+    <line x1="530" y1="63" x2="525" y2="89"/>
+    <line x1="600" y1="63" x2="595" y2="89"/>
+  </g>
+
+  <!-- ===== From-above inset: the skip zone is a ring ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <circle cx="682" cy="74" r="13" stroke-dasharray="4,3"/>
+    <circle cx="682" cy="74" r="30" stroke-dasharray="4,3"/>
+  </g>
+  <circle cx="682" cy="74" r="3" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Earth surface (curvature exaggerated) with hatching ===== -->
+  <path d="M -10,396 Q 380,372 770,396" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <g stroke="currentColor" stroke-width="1.2" opacity="0.7" fill="none">
+    <line x1="20" y1="396.2" x2="12" y2="406.2"/>
+    <line x1="60" y1="394.1" x2="52" y2="404.1"/>
+    <line x1="100" y1="390.2" x2="92" y2="402.2"/>
+    <line x1="140" y1="388.5" x2="132" y2="400.5"/>
+    <line x1="180" y1="389.2" x2="172" y2="401.2"/>
+    <line x1="220" y1="388.0" x2="212" y2="400.0"/>
+    <line x1="260" y1="387.1" x2="252" y2="399.1"/>
+    <line x1="300" y1="386.5" x2="292" y2="398.5"/>
+    <line x1="340" y1="386.1" x2="332" y2="398.1"/>
+    <line x1="380" y1="386.0" x2="372" y2="398.0"/>
+    <line x1="420" y1="386.1" x2="412" y2="398.1"/>
+    <line x1="460" y1="386.5" x2="452" y2="398.5"/>
+    <line x1="500" y1="387.1" x2="492" y2="399.1"/>
+    <line x1="540" y1="388.0" x2="532" y2="400.0"/>
+    <line x1="580" y1="389.2" x2="572" y2="401.2"/>
+    <line x1="620" y1="390.5" x2="612" y2="402.5"/>
+    <line x1="660" y1="392.2" x2="652" y2="404.2"/>
+    <line x1="700" y1="394.1" x2="692" y2="406.1"/>
+    <line x1="740" y1="396.2" x2="732" y2="408.2"/>
+  </g>
+
+  <!-- ===== TX tower ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="80" y1="391" x2="80" y2="300"/>
+    <line x1="80" y1="300" x2="66" y2="286"/>
+    <line x1="80" y1="300" x2="80" y2="278"/>
+    <line x1="80" y1="300" x2="94" y2="286"/>
+  </g>
+
+  <!-- ===== Distant RX tower ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="600" y1="388" x2="600" y2="322"/>
+    <line x1="600" y1="322" x2="586" y2="308"/>
+    <line x1="600" y1="322" x2="600" y2="300"/>
+    <line x1="600" y1="322" x2="614" y2="308"/>
+  </g>
+
+  <!-- ===== Ground wave (dies out close in) ===== -->
+  <path d="M 88,385 Q 125,377 165,377.5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M 165,377.5 Q 190,377.8 208,380" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="6,5"/>
+
+  <!-- ===== Sky wave: up, bent (refracted) inside the layer, back down ===== -->
+  <path d="M 86,296 L 280,110 Q 360,50 440,110 L 598,320" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M 183,203 L 178.9,213.2 L 172.7,206.7 Z" fill="currentColor" stroke="none"/>
+  <path d="M 519,215 L 509.4,209.7 L 516.6,204.3 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Skip zone bracket (between ground-wave end and sky-wave landing) ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="200" y1="345" x2="585" y2="345"/>
+    <line x1="200" y1="338" x2="200" y2="352"/>
+    <line x1="585" y1="338" x2="585" y2="352"/>
+  </g>
+
+  <!-- ===== Skip distance dimension ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <line x1="80" y1="445" x2="600" y2="445"/>
+    <line x1="80" y1="439" x2="80" y2="451"/>
+    <line x1="600" y1="439" x2="600" y2="451"/>
+  </g>
+  <path d="M 80,445 L 91,440.5 L 91,449.5 Z" fill="currentColor" stroke="none"/>
+  <path d="M 600,445 L 589,440.5 L 589,449.5 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Labels ===== -->
+  <g fill="currentColor" stroke="none">
+    <text x="360" y="40" text-anchor="middle" font-size="13" letter-spacing="2">IONOSPHERE</text>
+    <text x="80" y="264" text-anchor="middle" font-size="13" font-weight="bold">TX</text>
+    <text x="80" y="250" text-anchor="middle" font-size="10.5">your station</text>
+    <text x="150" y="180" font-size="13" transform="rotate(-43.8 150 180)">sky wave</text>
+    <text x="530" y="122" text-anchor="middle" font-size="10.5">bent back to Earth</text>
+    <text x="118" y="362" text-anchor="middle" font-size="11.5">ground wave (short)</text>
+    <text x="618" y="306" font-size="13" font-weight="bold">RX</text>
+    <text x="618" y="321" font-size="10.5">distant station</text>
+    <text x="392" y="332" text-anchor="middle" font-size="14" font-weight="bold">SKIP ZONE</text>
+    <text x="392" y="361" text-anchor="middle" font-size="10.5">no signal: past the ground wave, short of the sky wave</text>
+    <text x="340" y="463" text-anchor="middle" font-size="12">skip distance</text>
+    <text x="682" y="120" text-anchor="middle" font-size="10">from above:</text>
+    <text x="682" y="133" text-anchor="middle" font-size="10">the skip zone is a ring</text>
+    <text x="748" y="425" text-anchor="end" font-size="10" opacity="0.75">curvature exaggerated</text>
+  </g>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="30" font-size="17" font-weight="bold">RFI: YOUR RF GETS INTO THEIR GEAR</text>
+    <text x="380" y="50" font-size="12">fundamental overload — a strong signal the device cannot reject; fixes go at the entry points</text>
+  </g>
+
+  <!-- ===== your station (left) ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <!-- mast -->
+    <line x1="120" y1="350" x2="120" y2="130"/>
+    <line x1="105" y1="138" x2="135" y2="138"/>
+    <line x1="108" y1="151" x2="132" y2="151"/>
+    <line x1="111" y1="164" x2="129" y2="164"/>
+    <!-- station box -->
+    <rect x="50" y="350" width="140" height="56"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="120" y="116" font-size="11">your antenna</text>
+    <text x="120" y="376" font-size="12.5" font-weight="bold">YOUR STATION</text>
+    <text x="120" y="391" font-size="10">transceiver</text>
+  </g>
+
+  <!-- ===== pickup paths (dashed) ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.8" stroke-dasharray="7,6" stroke-linecap="round">
+    <!-- radiated straight into their gear -->
+    <path d="M136,132 C300,110 460,135 566,180"/>
+    <!-- picked up on the device's wiring -->
+    <path d="M136,150 C260,210 400,290 566,310"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="570,182 557,181 561,173"/>
+    <polygon points="566,311 553,314 555,305"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="384" y="102" font-size="11">radiated through the air</text>
+    <text x="335" y="272" font-size="11">picked up on its wiring</text>
+  </g>
+
+  <!-- ===== their gear (right) ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <!-- TV -->
+    <rect x="540" y="200" width="140" height="95"/>
+    <rect x="552" y="212" width="116" height="52" stroke-width="1.2"/>
+    <!-- rabbit-ear antenna -->
+    <line x1="585" y1="200" x2="565" y2="150"/>
+    <line x1="635" y1="200" x2="655" y2="150"/>
+    <!-- cable-TV coax from the wall, with a filter inline at the TV -->
+    <line x1="726" y1="250" x2="758" y2="250"/>
+    <rect x="700" y="239" width="26" height="22"/>
+    <line x1="680" y1="250" x2="700" y2="250"/>
+    <!-- speaker + its wire -->
+    <rect x="558" y="330" width="64" height="64"/>
+    <circle cx="590" cy="362" r="18" stroke-width="1.5"/>
+    <line x1="590" y1="295" x2="590" y2="330" stroke-width="2"/>
+    <!-- clip-on ferrite choke on the speaker wire -->
+    <rect x="572" y="304" width="36" height="16" rx="7" stroke-width="2"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <!-- wall-plate connector -->
+    <circle cx="752" cy="250" r="3.4"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="610" y="134" font-size="11">their gear (TV + speakers)</text>
+    <text x="610" y="284" font-size="11">TV / stereo</text>
+    <text x="590" y="408" font-size="10">speaker</text>
+    <text x="724" y="278" font-size="10">cable-TV coax</text>
+  </g>
+
+  <!-- ===== numbered fix markers ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.8">
+    <circle cx="384" cy="152" r="10"/>
+    <circle cx="713" cy="224" r="10"/>
+    <circle cx="636" cy="312" r="10"/>
+    <circle cx="745" cy="215" r="10"/>
+    <line x1="625" y1="312" x2="609" y2="312" stroke-width="1.5"/>
+    <line x1="748" y1="224" x2="751" y2="247" stroke-width="1.5"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="11" font-weight="bold">
+    <text x="384" y="156">1</text>
+    <text x="713" y="228">2</text>
+    <text x="636" y="316">3</text>
+    <text x="745" y="219">4</text>
+  </g>
+
+  <!-- ===== the fixes, point by point ===== -->
+  <g fill="currentColor" stroke="none" font-size="11">
+    <text x="40" y="430">1 — more distance between antennas · run less power</text>
+    <text x="40" y="450">3 — clip-on ferrite chokes on the device's cables</text>
+    <text x="400" y="430">2 — a filter at the affected receiver's antenna input</text>
+    <text x="400" y="450">4 — check coax connectors; shielding and grounding keep RF out</text>
+  </g>
+  <text x="380" y="472" font-size="11" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">First step with any complaint: make sure your own station is operating properly — the overload is in their receiver.</text>
+
+</svg>

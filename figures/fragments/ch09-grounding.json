@@ -1,0 +1,8 @@
+{
+  "id": "ch09-grounding",
+  "chapter": 9,
+  "caption": "Station grounding and lightning protection. Inside the shack, every equipment chassis — transceiver, power supply, computer — bonds to a single ground point (the station ground bus), and the ground conductors run short and direct with smooth bends, never sharp corners. Where the coax feed line enters the building it passes through a lightning arrester mounted on a grounded panel right at the entry. Outside, the station ground and the arrester bond to a ground rod at the entry, the tower or mast has its own rod, and all external ground rods are bonded together with heavy wire or strap. The reason: separate, unbonded grounds can sit at very different voltages during a lightning strike or a fault — bonding keeps everything at one potential. Grounding requirements come from local electrical codes, not the FCC.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a shack-and-yard diagram: the transceiver and power supply bond to one ground bus inside, the feed line enters through a lightning arrester on a grounded panel at the wall, and outside two ground rods — one at the entry, one at the mast — are bonded together with heavy wire"
+}

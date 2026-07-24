@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Pool figure T-3: antenna tuner T-network">
+  <title>Pool figure T-3 — antenna tuner (transmatch) T-network (redrawn from the NCVEC 2026–2030 Technician pool)</title>
+  <defs>
+    <!-- ground symbol per canon §7.4: three slanted strokes of decreasing length, longest on top; wire enters at (0,0) -->
+    <g id="gnd" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <line x1="14.7" y1="-0.5" x2="-14.7" y2="16.5"/>
+      <line x1="10.5" y1="14.5" x2="-8.5" y2="25.5"/>
+      <line x1="7.2" y1="26" x2="-3.2" y2="32"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- input line from the left -->
+    <line x1="40" y1="180" x2="255" y2="180"/>
+
+    <!-- 1 = connector: curly-brace symbol standing on the input line -->
+    <path d="M124,152 C110,156 114,170 102,180 C114,190 110,204 124,208"/>
+
+    <!-- 2 = variable capacitor: two vertical plates, diagonal arrow through them, arrowhead upper right -->
+    <line x1="255" y1="148" x2="255" y2="212"/>
+    <line x1="277" y1="148" x2="277" y2="212" stroke-width="5"/>
+    <line x1="240" y1="210" x2="290" y2="158"/>
+
+    <!-- top line: from capacitor 2 through the junction to the second (unnumbered) variable capacitor -->
+    <line x1="277" y1="180" x2="488" y2="180"/>
+
+    <!-- second variable capacitor (unnumbered per the official figure) -->
+    <line x1="488" y1="148" x2="488" y2="212"/>
+    <line x1="510" y1="148" x2="510" y2="212" stroke-width="5"/>
+    <line x1="473" y1="210" x2="523" y2="158"/>
+
+    <!-- line right, then up to the antenna -->
+    <line x1="510" y1="180" x2="660" y2="180"/>
+    <line x1="660" y1="180" x2="660" y2="124"/>
+
+    <!-- 4 = antenna: outline inverted triangle, apex down on the feed wire -->
+    <path d="M606,58 L714,58 L660,124 Z"/>
+
+    <!-- 3 = variable inductor: junction dot down through a 4-hump coil -->
+    <line x1="340" y1="180" x2="340" y2="232"/>
+    <path d="M340,232 a18,21 0 0 0 0,42 a18,21 0 0 0 0,42 a18,21 0 0 0 0,42 a18,21 0 0 0 0,42"/>
+    <!-- tap: filled arrowhead pointing left into the coil mid-region; tap wire right, down, left to the coil-bottom dot -->
+    <line x1="364" y1="316" x2="424" y2="316"/>
+    <line x1="424" y1="316" x2="424" y2="400"/>
+    <line x1="424" y1="400" x2="346" y2="400"/>
+    <line x1="340" y1="406" x2="340" y2="452"/>
+  </g>
+
+  <g fill="currentColor" stroke="none">
+    <!-- variable-capacitor arrowheads -->
+    <path d="M298,148 L293,161 L286,154 Z"/>
+    <path d="M531,148 L526,161 L519,154 Z"/>
+    <!-- inductor tap arrowhead, pointing left into the coil -->
+    <path d="M348,316 L364,308 L364,324 Z"/>
+    <!-- junction dots -->
+    <circle cx="340" cy="180" r="6"/>
+    <circle cx="340" cy="400" r="6"/>
+  </g>
+
+  <use href="#gnd" transform="translate(340 452)"/>
+
+  <g fill="currentColor" stroke="none" font-weight="bold" text-anchor="middle">
+    <text x="54" y="192" font-size="30">1</text>
+    <text x="266" y="120" font-size="30">2</text>
+    <text x="284" y="325" font-size="30">3</text>
+    <text x="660" y="40" font-size="30">4</text>
+    <text x="400" y="545" font-size="34">Figure T-3</text>
+  </g>
+</svg>

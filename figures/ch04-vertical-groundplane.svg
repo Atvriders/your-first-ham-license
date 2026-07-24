@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Titles ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="320" y="32" font-size="17" font-weight="bold">THE QUARTER-WAVE VERTICAL</text>
+    <text x="320" y="54" font-size="12.5">a vertical whip worked against ground radials</text>
+  </g>
+
+  <!-- ===== Whip (radiator) ===== -->
+  <g stroke="currentColor" fill="none" stroke-linecap="round">
+    <line x1="320" y1="270" x2="320" y2="80" stroke-width="4.5"/>
+    <!-- feedpoint terminal -->
+    <circle cx="320" cy="270" r="3.4" fill="currentColor" stroke="none"/>
+    <!-- ground radials drooping from the feedpoint -->
+    <line x1="320" y1="270" x2="175" y2="338" stroke-width="2.5"/>
+    <line x1="320" y1="270" x2="465" y2="338" stroke-width="2.5"/>
+    <line x1="320" y1="270" x2="235" y2="352" stroke-width="2.5"/>
+    <line x1="320" y1="270" x2="405" y2="352" stroke-width="2.5"/>
+    <!-- coax feed line down to the radio -->
+    <line x1="316" y1="274" x2="316" y2="340" stroke-width="2"/>
+    <line x1="324" y1="274" x2="324" y2="340" stroke-width="2"/>
+  </g>
+
+  <!-- ===== Dimension: whip length is a quarter wavelength ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.2">
+    <line x1="272" y1="80" x2="272" y2="270"/>
+    <line x1="264" y1="80" x2="280" y2="80"/>
+    <line x1="264" y1="270" x2="280" y2="270"/>
+    <polygon points="272,80 268,90 276,90" fill="currentColor" stroke="none"/>
+    <polygon points="272,270 268,260 276,260" fill="currentColor" stroke="none"/>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="12.5" text-anchor="end">
+    <text x="256" y="168" font-weight="bold">λ/4 whip</text>
+    <text x="256" y="186">≈ 19 in at 146 MHz</text>
+  </g>
+
+  <!-- ===== Labels ===== -->
+  <g fill="currentColor" stroke="none" font-size="12">
+    <text x="620" y="316" text-anchor="end">ground radials — the</text>
+    <text x="620" y="331" text-anchor="end">“other half” of the antenna</text>
+    <text x="320" y="368" text-anchor="middle">coax feed line (50 Ω) to the transceiver</text>
+  </g>
+  <g stroke="currentColor" fill="none" stroke-width="1">
+    <line x1="478" y1="324" x2="452" y2="334"/>
+  </g>
+
+  <!-- ===== The numbers the exam uses ===== -->
+  <text x="320" y="392" font-size="12.5" fill="currentColor" stroke="none" text-anchor="middle">At 146 MHz: λ = 300 / 146 ≈ 2 m, so λ/4 ≈ 0.5 m ≈ 19 inches — a resonant quarter-wave on 2 meters.</text>
+
+</svg>

@@ -1,0 +1,8 @@
+{
+  "id": "ch05-station-block",
+  "chapter": 5,
+  "caption": "A basic station is four hookups. AC mains feed a DC power supply — a 50-watt radio wants about 13.8 V at around 12 A. The microphone (voice plus push-to-talk) and the Morse key (keying) drive the transceiver. RF leaves through an SWR meter installed inline in the feed line — rated for the frequency and power being measured — and runs along the coax feed line to the antenna; on receive it comes back the same path.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a block diagram of a beginner station: mains power into a DC supply, the microphone and key into the transceiver, and RF out through an inline SWR meter and the coax feed line to the antenna"
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Titles ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="320" y="34" font-size="17" font-weight="bold">THE HALF-WAVE DIPOLE</text>
+    <text x="320" y="56" font-size="12.5">two quarter-wave legs, fed at the center</text>
+  </g>
+
+  <!-- ===== Dipole element (two legs, center gap at the feedpoint) ===== -->
+  <g stroke="currentColor" fill="none" stroke-linecap="round">
+    <line x1="70" y1="150" x2="310" y2="150" stroke-width="4.5"/>
+    <line x1="330" y1="150" x2="570" y2="150" stroke-width="4.5"/>
+    <!-- feedpoint terminals -->
+    <circle cx="310" cy="150" r="3.4" fill="currentColor" stroke="none"/>
+    <circle cx="330" cy="150" r="3.4" fill="currentColor" stroke="none"/>
+    <!-- short leads from the terminals into the feed line -->
+    <line x1="310" y1="150" x2="317" y2="192" stroke-width="1.6"/>
+    <line x1="330" y1="150" x2="323" y2="192" stroke-width="1.6"/>
+    <!-- coax feed line (paired conductors) down to the radio -->
+    <line x1="316" y1="192" x2="316" y2="252" stroke-width="2"/>
+    <line x1="324" y1="192" x2="324" y2="252" stroke-width="2"/>
+  </g>
+
+  <!-- ===== Dimension: each leg is a quarter wavelength ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.2">
+    <line x1="70" y1="108" x2="310" y2="108"/>
+    <line x1="70" y1="116" x2="70" y2="100"/>
+    <line x1="310" y1="116" x2="310" y2="100"/>
+    <polygon points="70,108 80,104 80,112" fill="currentColor" stroke="none"/>
+    <polygon points="310,108 300,104 300,112" fill="currentColor" stroke="none"/>
+
+    <line x1="330" y1="108" x2="570" y2="108"/>
+    <line x1="330" y1="116" x2="330" y2="100"/>
+    <line x1="570" y1="116" x2="570" y2="100"/>
+    <polygon points="330,108 340,104 340,112" fill="currentColor" stroke="none"/>
+    <polygon points="570,108 560,104 560,112" fill="currentColor" stroke="none"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="12.5">
+    <text x="190" y="94">λ/4 leg</text>
+    <text x="450" y="94">λ/4 leg</text>
+  </g>
+
+  <!-- ===== Dimension: total length is a half wavelength ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.2">
+    <line x1="70" y1="300" x2="570" y2="300"/>
+    <line x1="70" y1="308" x2="70" y2="292"/>
+    <line x1="570" y1="308" x2="570" y2="292"/>
+    <polygon points="70,300 80,296 80,304" fill="currentColor" stroke="none"/>
+    <polygon points="570,300 560,296 560,304" fill="currentColor" stroke="none"/>
+  </g>
+  <text x="320" y="290" font-size="12.5" fill="currentColor" stroke="none" text-anchor="middle">λ/2 tip to tip — the total length</text>
+
+  <!-- ===== Feedpoint / feed-line labels ===== -->
+  <g fill="currentColor" stroke="none" font-size="12">
+    <text x="348" y="200">center feedpoint: the feed line</text>
+    <text x="348" y="215">connects between the two legs</text>
+    <text x="348" y="243">coax feed line (50 Ω)</text>
+    <text x="348" y="258">to the transceiver</text>
+  </g>
+  <g stroke="currentColor" fill="none" stroke-width="1">
+    <line x1="344" y1="205" x2="330" y2="186"/>
+    <line x1="344" y1="248" x2="328" y2="230"/>
+  </g>
+
+  <!-- ===== The numbers the exam uses ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="320" y="344" font-size="13">The exam's own math: at 50 MHz, λ = 300 / 50 = 6 m — so a dipole is ≈ 3 m tip to tip.</text>
+    <text x="320" y="368" font-size="13">Length tracks wavelength: a shorter dipole resonates higher, a longer dipole lower.</text>
+  </g>
+
+</svg>

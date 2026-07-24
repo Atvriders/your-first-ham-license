@@ -1,0 +1,8 @@
+{
+  "id": "ch01-pool-fig-t2",
+  "chapter": 1,
+  "caption": "Pool figure T-2 — an AC power supply (redrawn from the NCVEC 2026–2030 Technician pool).",
+  "kind": "original",
+  "source": "redrawn from NCVEC pool figure T-2",
+  "spoken": "An AC power supply: AC source 1, fuse 2, switch 3, transformer 4, rectifier diode 5, smoothing capacitor 6, resistor 7 with LED 8 power indicator, variable resistor 9, Zener diode 10, and the output terminal, with grounds along the bottom."
+}

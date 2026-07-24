@@ -1,0 +1,8 @@
+{
+  "id": "ch04-vertical-groundplane",
+  "chapter": 4,
+  "caption": "A quarter-wave vertical is a single upright whip worked against ground radials, which act as the other half of the antenna. On 2 meters, λ = 300 / 146 ≈ 2 m, so λ/4 ≈ 19 inches — which is exactly why the pool says the common 19-inch whip is used on 2 meters: it is a resonant quarter-wave there (T9A08).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a quarter-wave vertical whip with drooping ground radials, dimensioned as lambda over four, about nineteen inches at one forty-six megahertz"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ch07-aprs-path",
+  "chapter": 7,
+  "caption": "How an APRS position gets onto the map: your tracker beacons a packet on the national 144.390 MHz channel, hilltop digipeaters relay it, an iGate pushes it onto the internet, and friends watch your dot move on aprs.fi.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A path diagram: a handheld tracker beacons its GPS position on 144.390 MHz, a digipeater relays the packet, an internet gateway called an iGate forwards it onto the internet, and the position appears as a moving dot on a map site."
+}

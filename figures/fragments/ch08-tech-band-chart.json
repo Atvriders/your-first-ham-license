@@ -1,0 +1,8 @@
+{
+  "id": "ch08-tech-band-chart",
+  "chapter": 8,
+  "caption": "Technician privileges at a glance. On HF you get CW-only slices of 80 m (3.525–3.600 MHz), 40 m (7.025–7.125 MHz), and 15 m (21.025–21.200 MHz), plus 10 m (28.0–28.5 MHz): CW and data on 28.0–28.3 MHz — where the automatic propagation beacons live at 28.2–28.3 MHz — and SSB phone plus CW on 28.300–28.500 MHz, all at 200 W PEP maximum. On VHF and up you share the same allocations and modes as every license class: 6 m (50–54 MHz), 2 m (144–148 MHz), 1.25 m (219–220 and 222–225 MHz), 70 cm (420–450 MHz), and more bands above, with a 1500 W PEP general ceiling (some specific restrictions apply). The bottom 100 kHz of 6 m and 2 m is CW only.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a bar chart of Technician privileges: narrow CW-only HF slices on 80, 40, and 15 meters, a split 10-meter bar with CW and data below 28.3 and SSB phone above, then full all-mode bars for 6 meters, 2 meters, 1.25 meters, 70 centimeters, and the higher bands"
+}

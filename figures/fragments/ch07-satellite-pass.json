@@ -1,0 +1,8 @@
+{
+  "id": "ch07-satellite-pass",
+  "chapter": 7,
+  "caption": "Anatomy of a Low Earth Orbit pass: the satellite rises above your horizon (AOS), climbs overhead, and sets (LOS) — a roughly 10-minute window out of an orbit of about 100 minutes, worked on separate uplink and downlink frequencies.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A ground station under the arc of a satellite pass: the satellite rises at AOS, passes overhead exchanging uplink and downlink signals on different frequencies, and sets at LOS. A low Earth orbit takes about 100 minutes."
+}

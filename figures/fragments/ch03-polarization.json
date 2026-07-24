@@ -1,0 +1,8 @@
+{
+  "id": "ch03-polarization",
+  "chapter": 3,
+  "caption": "Polarization is the orientation of the electric field. On line-of-sight paths, cross-polarized antennas weaken the signal; on skywave paths the ionosphere scrambles polarization, so either antenna orientation works.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "This figure shows vertical and horizontal antenna polarization. On a line-of-sight path, matching antennas give a strong signal and cross-polarized antennas a weak one; on a skywave path the ionosphere scrambles the polarization, so either antenna orientation works."
+}

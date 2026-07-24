@@ -1,0 +1,8 @@
+{
+  "id": "ch06-net-flow",
+  "chapter": 6,
+  "caption": "A directed net runs through its net control station (NCS). Stations check in one at a time and net control acknowledges each in turn, while everyone else listens. Listen before transmitting and follow net control's direction — in a directed net you transmit only when the NCS directs, unless you are reporting an emergency.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Net control sits at the center with four stations around it. Numbered arrows show the flow: one, station A checks in; two, net control acknowledges; three, station B checks in; four, net control acknowledges — one at a time — while stations C and D listen. A banner reminds you to listen before transmitting and follow net control's direction."
+}

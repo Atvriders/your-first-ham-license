@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 464" font-family="sans-serif">
+
+  <!-- ===== net control station, center ===== -->
+  <rect x="285" y="185" width="150" height="50" rx="8" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="360" y="207" text-anchor="middle" font-size="13" font-weight="bold">NET CONTROL</text>
+    <text x="360" y="223" text-anchor="middle" font-size="10.5">(NCS) — runs the net</text>
+  </g>
+
+  <!-- ===== stations around the net ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="106" y="100" width="28" height="44" rx="5"/>
+    <line x1="120" y1="100" x2="120" y2="84" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="114" y1="112" x2="126" y2="112" stroke-width="1.5"/>
+    <line x1="114" y1="118" x2="126" y2="118" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="162" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">Station A</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="586" y="100" width="28" height="44" rx="5"/>
+    <line x1="600" y1="100" x2="600" y2="84" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="594" y1="112" x2="606" y2="112" stroke-width="1.5"/>
+    <line x1="594" y1="118" x2="606" y2="118" stroke-width="1.5"/>
+  </g>
+  <text x="600" y="162" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">Station B</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="586" y="330" width="28" height="44" rx="5"/>
+    <line x1="600" y1="330" x2="600" y2="314" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="594" y1="342" x2="606" y2="342" stroke-width="1.5"/>
+    <line x1="594" y1="348" x2="606" y2="348" stroke-width="1.5"/>
+  </g>
+  <text x="600" y="392" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">Station C</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="106" y="330" width="28" height="44" rx="5"/>
+    <line x1="120" y1="330" x2="120" y2="314" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="114" y1="342" x2="126" y2="342" stroke-width="1.5"/>
+    <line x1="114" y1="348" x2="126" y2="348" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="392" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">Station D</text>
+
+  <!-- ===== 1 : Station A checks in ===== -->
+  <line x1="132" y1="126" x2="272" y2="180" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="272,180 259,180.4 262.6,171" fill="currentColor" stroke="none"/>
+  <circle cx="207" cy="140" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="207" y="144.5" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">1</text>
+
+  <!-- ===== 2 : NCS acknowledges ===== -->
+  <line x1="288" y1="206" x2="150" y2="152" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="150,152 163,161.1 159.4,151.7" fill="currentColor" stroke="none"/>
+  <circle cx="214" cy="192" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="214" y="196.5" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">2</text>
+
+  <!-- ===== 3 : Station B checks in ===== -->
+  <line x1="588" y1="126" x2="448" y2="180" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="448,180 457.4,171 461,180.4" fill="currentColor" stroke="none"/>
+  <circle cx="513" cy="140" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="513" y="144.5" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">3</text>
+
+  <!-- ===== 4 : NCS acknowledges ===== -->
+  <line x1="440" y1="202" x2="578" y2="150" stroke="currentColor" stroke-width="2.2" fill="none"/>
+  <polygon points="578,150 568.6,158.9 565,149.5" fill="currentColor" stroke="none"/>
+  <circle cx="514" cy="189" r="11" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="514" y="193.5" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">4</text>
+
+  <!-- ===== everyone else listens ===== -->
+  <line x1="420" y1="235" x2="590" y2="315" stroke="currentColor" stroke-width="1.8" stroke-dasharray="6,5" fill="none"/>
+  <text x="513" y="272" font-size="10" font-style="italic" fill="currentColor" stroke="none">listening</text>
+  <line x1="300" y1="235" x2="130" y2="315" stroke="currentColor" stroke-width="1.8" stroke-dasharray="6,5" fill="none"/>
+  <text x="207" y="272" text-anchor="end" font-size="10" font-style="italic" fill="currentColor" stroke="none">listening</text>
+
+  <!-- ===== legend ===== -->
+  <text x="360" y="412" text-anchor="middle" font-size="10.5" fill="currentColor" stroke="none">1 Station A checks in  ·  2 net control acknowledges  ·  3 Station B checks in  ·  4 acknowledged</text>
+
+  <!-- ===== banner ===== -->
+  <rect x="70" y="424" width="580" height="34" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="360" y="439" text-anchor="middle" font-size="12" font-weight="bold">Listen before transmitting — follow net control's direction.</text>
+    <text x="360" y="452" text-anchor="middle" font-size="10">in a directed net you transmit only when the NCS directs — unless reporting an emergency</text>
+  </g>
+</svg>
