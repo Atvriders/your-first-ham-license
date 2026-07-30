@@ -76,9 +76,10 @@ def test_series_bar_renders_with_current_book_highlighted():
     assert 'class="series-bar"' in html           # the bar renders
     # Technician is this book: highlighted, links to its series mount path
     assert '<a class="current" href="/tech/" aria-current="page">Technician</a>' in html
-    # unshipped books are inert "coming soon" labels, not links
-    assert html.count("coming soon") == 2
-    assert 'href="/general/"' not in html
+    # General is live: a plain link
+    assert '<a href="/general/">General</a>' in html
+    # only Extra remains an inert "coming soon" label
+    assert html.count("coming soon") == 1
     assert 'href="/extra/"' not in html
     # slim bar at the top, before the title block; TOC anchors still resolve
     assert html.index('class="series-bar"') < html.index('class="title-block"')
@@ -97,3 +98,25 @@ def test_no_absolute_links_beyond_series_paths():
     allowed = {path for _label, path, _shipped in SERIES_BOOKS}
     assert abs_links, "expected at least the current book's series path"
     assert set(abs_links) <= allowed
+
+
+def test_html_renders_pipe_table_as_real_table():
+    html = build_html([pathlib.Path("tests/fixtures/ch_table_sample.md")], {})
+    assert '<table class="md-table">' in html          # real table, not a paragraph
+    assert '<th>Term</th>' in html and '<th>Meaning</th>' in html
+    assert html.count('<tr>') == 4                     # 1 header + 3 body rows
+    assert '<td>SWR</td>' in html
+    assert 'Standing-wave ratio' in html
+    assert '<td><span class="math">' in html           # $X_L$ in a cell renders as SVG math
+    assert 'R &lt; X' in html                          # cell text is HTML-escaped
+    assert ':-----' not in html                        # separator row is consumed
+    assert '<p>|' not in html                          # no run-on pipe paragraph
+    assert 'A closing paragraph after the table.' in html  # parsing resumes after
+
+
+def test_txt_drops_table_separator_but_keeps_rows():
+    txt = build_txt([pathlib.Path("tests/fixtures/ch_table_sample.md")])
+    assert '<table' not in txt and '<th' not in txt    # no HTML markup in the TXT edition
+    assert ':-----' not in txt and ':--------' not in txt  # separator row dropped
+    assert '| SWR |' in txt                            # data rows stay raw/greppable
+    assert 'Standing-wave ratio' in txt

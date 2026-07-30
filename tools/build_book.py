@@ -27,7 +27,9 @@ Chapter markdown format (fixed; spec §5 skeleton):
              math, "***" section rules, "> ..." blockquotes (a blockquote
              starting "**The math, if you want it:**" is a sidebar; one
              starting "**Worked example:**" is a worked example),
-             "**bold**" / "*italic*" emphasis.
+             "**bold**" / "*italic*" emphasis, and pipe tables: a block of
+             consecutive "| ... |" lines whose second line is a "|---|"-style
+             separator renders as a real <table>.
 
 Appendix files (appendices/pool.md, appendices/glossary-and-formulas.md)
 use the same dialect but head with "## Appendix A: ..." / "## Appendix B: ..."
@@ -71,7 +73,7 @@ from tools.narration import speak_math, strip_markup
 # (asserted in tests/test_build_book.py).
 SERIES_BOOKS = [
     ("Technician", "/tech/", True),
-    ("General", "/general/", False),
+    ("General", "/general/", True),
     ("Extra", "/extra/", False),
 ]
 SERIES_CURRENT = "Technician"  # this book; retargeted per book in the series
@@ -89,6 +91,7 @@ _CHAPTER_STEM_RE = re.compile(r"^ch\d\d$")
 _LEADING_NUMBER_RE = re.compile(r"^(\d+)\.")
 _APPENDIX_HEADING_RE = re.compile(r"^Appendix\s+([A-Za-z])\b")
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
+_TABLE_SEP_CELL_RE = re.compile(r"^:?-+:?$")
 
 
 @dataclass
@@ -172,11 +175,47 @@ def _parse_body(body_lines: list) -> list:
             blocks.append(("quote", " ".join(quote_lines)))
             continue
 
+        if stripped.startswith("|"):
+            table_lines = []
+            while i < n and body_lines[i].strip().startswith("|"):
+                table_lines.append(body_lines[i].strip())
+                i += 1
+            table = _parse_table(table_lines)
+            if table is None:  # not a table: keep the old join-into-paragraph behavior
+                buf.extend(table_lines)
+            else:
+                flush()
+                blocks.append(("table", table))
+            continue
+
         buf.append(stripped)
         i += 1
 
     flush()
     return blocks
+
+
+def _split_table_row(line: str) -> list:
+    """Split one ``| a | b |`` line into its stripped cell texts."""
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def _is_table_separator(line: str) -> bool:
+    """True for a ``|---|``/``:---``-style separator row (every cell only
+    dashes with optional alignment colons)."""
+    cells = _split_table_row(line)
+    return bool(cells) and all(_TABLE_SEP_CELL_RE.match(cell) for cell in cells)
+
+
+def _parse_table(lines: list):
+    """Parse a block of consecutive ``| ... |`` lines into a
+    ``(header_cells, body_rows)`` pair, or return None when the second line
+    is not a separator row -- then the lines are not a pipe table at all."""
+    if len(lines) < 2 or not _is_table_separator(lines[1]):
+        return None
+    header = _split_table_row(lines[0])
+    rows = [_split_table_row(line) for line in lines[2:]]
+    return (header, rows)
 
 
 def parse_chapter(path: pathlib.Path) -> Chapter:
@@ -246,6 +285,20 @@ def _render_quote(raw: str) -> str:
     return f'<blockquote class="{cls}"><p>{_inline_html(raw)}</p></blockquote>'
 
 
+def _render_table(header: list, rows: list) -> str:
+    parts = ['<table class="md-table"><thead><tr>']
+    for cell in header:
+        parts.append(f"<th>{_inline_html(cell)}</th>")
+    parts.append("</tr></thead><tbody>")
+    for row in rows:
+        parts.append("<tr>")
+        for cell in row:
+            parts.append(f"<td>{_inline_html(cell)}</td>")
+        parts.append("</tr>")
+    parts.append("</tbody></table>")
+    return "".join(parts)
+
+
 def _h4_id(chapter_id: str, text: str) -> str:
     """Anchor id for an h4: the chapter id plus a slug of the heading text,
     e.g. "appendix-a-group-t1a-purpose-and-permissible-use-...". Chapter-
@@ -269,6 +322,9 @@ def _render_chapter(c: Chapter, figreg: dict) -> str:
             parts.append('<hr class="rule">')
         elif kind == "quote":
             parts.append(_render_quote(content))
+        elif kind == "table":
+            header, rows = content
+            parts.append(_render_table(header, rows))
     parts.append("</section>")
     return "".join(parts)
 
@@ -374,6 +430,19 @@ figure.figure .figure-media svg { max-width: none; }
 figcaption { font-size: 0.85em; color: var(--muted); margin-top: 0.5rem; }
 span.math { display: inline-block; vertical-align: middle; line-height: 0; }
 span.math svg { height: 1em; width: auto; vertical-align: middle; }
+table.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+}
+table.md-table th, table.md-table td {
+  padding: 0.3rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+table.md-table thead th { font-weight: bold; border-bottom: 2px solid var(--rule); }
+table.md-table tbody tr { border-bottom: 1px solid var(--rule); }
 hr.rule { border: none; border-top: 1px solid var(--rule); width: 4rem; margin: 2.5rem auto; }
 footer.colophon {
   margin-top: 4rem;
@@ -464,7 +533,9 @@ def build_txt(chapter_paths: list) -> str:
     math spans as English, (3) strip remaining markdown markup. The ``***``
     section-rule marker is converted to a blank line first, since
     narration.strip_markup's emphasis stripping would otherwise leave a
-    stray "*" behind (it turns "***" into "*", not "").
+    stray "*" behind (it turns "***" into "*", not ""). Pipe-table data
+    rows are kept as raw ``| ... |`` lines (still greppable), but the
+    ``|---|`` separator row is dropped as pure markup.
     """
     chapter_texts = []
     for p in chapter_paths:
@@ -474,6 +545,8 @@ def build_txt(chapter_paths: list) -> str:
         for line in lines:
             if line.strip() == "***":
                 out_lines.append("")
+                continue
+            if line.strip().startswith("|") and _is_table_separator(line):
                 continue
             line = _FIG_TXT_RE.sub(lambda m: f"[Figure: {m.group(1)}]", line)
             line = speak_math(line)
