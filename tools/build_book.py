@@ -352,6 +352,17 @@ def _render_series_bar() -> str:
             + "".join(items) + "</nav>\n")
 
 
+def _render_extras_nav() -> str:
+    """One centered line in the title block linking this book's companion
+    tools (audiobook player, practice test, flashcards). Relative links
+    only, so they resolve under the series sub-path proxying (/tech/ etc.)."""
+    return ('<nav class="extras" aria-label="Companion tools">'
+            '<a href="audiobook/">Listen to the audiobook</a> &middot; '
+            '<a href="practice.html">Practice test</a> &middot; '
+            '<a href="flashcards.html">Flashcards</a>'
+            "</nav>")
+
+
 _CSS = """
 :root {
   --bg: #fdfaf3;
@@ -486,6 +497,14 @@ nav.series-bar span.soon em {
   font-size: 0.62rem;
   letter-spacing: 0.08em;
 }
+nav.extras {
+  margin-top: 0.6rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+nav.extras a { color: var(--link); text-decoration: none; }
+nav.extras a:hover { text-decoration: underline; }
 """
 
 
@@ -523,7 +542,8 @@ def build_html(chapter_paths: list, figreg: dict) -> str:
         "<body>\n"
         f"{_render_series_bar()}"
         '<header class="title-block"><h1>Your First Ham License</h1>'
-        "<p>The Technician Course (2026–2030)</p></header>\n"
+        "<p>The Technician Course (2026–2030)</p>"
+        f"{_render_extras_nav()}</header>\n"
         '<nav class="toc" aria-label="Table of contents">'
         f"<h2>Contents</h2><ul>{toc_items}</ul></nav>\n"
         f"<main>{sections}</main>\n"
