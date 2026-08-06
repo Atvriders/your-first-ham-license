@@ -6,7 +6,7 @@
 **Date:** 2026-07-22
 **Status:** Draft — awaiting human sign-off before implementation planning.
 
-This is **Book 2 of the three-book program** begun with *200 Meters and Down* (Book 1, shipped v1.0 at `~/200-meters-and-down/`). It reuses Book 1's production machinery and method per `/home/kasm-user/ham-book-program-plan.md`. Book 3 (General) and Book 4 (Extra) follow the same template afterward.
+This is **Book 1 of a three-book program**. It reuses an earlier book's production machinery and method per `/home/kasm-user/ham-book-program-plan.md`. Book 2 (General) and Book 3 (Extra) follow the same template afterward.
 
 > **Spelling note:** US spelling "License" throughout (FCC usage), including the title — the brainstorm option's British "Licence" was normalized for the US audience.
 
@@ -22,13 +22,13 @@ The book does two jobs at once:
 
 **Spine (organizing idea):** *your first contact* — the book walks a new ham from "curious" to "licensed and on the air," in the order a beginner needs it: fascination → how it works → how to operate → the rules → safety → exam day → what's next.
 
-**Non-goals:** Not a history book (that's Book 1). Not a reference encyclopedia (Books 3/4 carry the deeper theory). Not a bare question-and-answer cram sheet — teaching comes first, exam mapping second.
+**Non-goals:** Not a history book. Not a reference encyclopedia (Books 2/3 carry the deeper theory). Not a bare question-and-answer cram sheet — teaching comes first, exam mapping second.
 
 **Tone:** friendly, plain, reassuring; short sentences; analogies over jargon; jargon defined on first use and in the glossary; math optional and gentle (Ohm's law and f·λ=c are the only required formulas).
 
-## 2. Relationship to Book 1 (what we reuse)
+## 2. Relationship to the earlier toolchain (what we reuse)
 
-| Reused from Book 1 | Retargeted to Book 2 |
+| Reused from the earlier book | Retargeted to this book |
 |---|---|
 | `accuracy-canon.md` "bible as law" | Canon = pinned facts + **the full 2026–2030 pool ingested verbatim** + Part 97 facts (§6) |
 | `tools/` (build, audit, figreg, mathsvg, narration, audiobook, intro) | Copied; constants retargeted; **audit gains an 8th check: verbatim pool quotes + answer keys** (§9) |
@@ -82,14 +82,14 @@ Teaching chapters run ~4,500–6,000 words; ch00 and ch10 shorter. Pool subeleme
 Every teaching chapter (01–09) follows one skeleton so parallel writers produce a coherent book:
 
 1. **Heading:** `## <N>. <Title>` (e.g. `## 4. Antennas & Feedlines`).
-2. **Opener:** one short plain-language paragraph — a concrete new-ham scenario and "in this chapter you'll learn …". No epigraph device (that was Book 1's history-specific form).
+2. **Opener:** one short plain-language paragraph — a concrete new-ham scenario and "in this chapter you'll learn …". No epigraph device.
 3. **Teaching sections** (`### …`): plain language, analogies, figures via `{{fig:id}}`, inline math `$…$` only where the pool needs it; optional `> **The math, if you want it:**` sidebars for anything beyond arithmetic.
 4. **≥1 `> **Worked example:**`** blockquote per teaching chapter — a real, simple calculation (e.g. "What is the wavelength of 146 MHz?") worked end to end.
 5. **`### Exam Focus`** — pool IDs covered; 5–10 verbatim questions, each with correct answer + one-line why.
 6. **`### Key Takeaways`** — 4–8 bullets, retention recap.
 7. **3–5 `**FACT:** <sentence>` lines** copied verbatim from `accuracy-canon.md` (audit greps exact matches).
 
-Chapters 00 and 10 follow the same skeleton minus Exam Focus (ch00 gets "Your first checklist" instead; ch10 gets "Your 30-day plan"). Banned phrases (from Book 1): "little did they know", "in that moment", "a testament to". Nonfiction integrity: no fabricated quotations anywhere; anecdotes are plainly framed as illustrative scenarios, never attributed to real people.
+Chapters 00 and 10 follow the same skeleton minus Exam Focus (ch00 gets "Your first checklist" instead; ch10 gets "Your 30-day plan"). Banned phrases (carried over from the earlier book): "little did they know", "in that moment", "a testament to". Nonfiction integrity: no fabricated quotations anywhere; anecdotes are plainly framed as illustrative scenarios, never attributed to real people.
 
 ## 6. The accuracy canon (`accuracy-canon.md` + `canon/pool-technician.*`) — law for all agents
 
@@ -97,7 +97,7 @@ Chapters 00 and 10 follow the same skeleton minus Exam Focus (ch00 gets "Your fi
 - **Pinned facts with sources** — exam structure (35 Q / 26 to pass / one per group), license classes & privileges, Tech band privileges and frequency limits (exactly as Part 97 / the pool state them — this is what the exam tests; zero tolerance for drift), FRN/ULS process, pool validity window 2026-07-01 → 2030-06-30, the 2026-02-19 revision record.
 - **Notation & units standard** — one symbol set (V, I, R, P, f, λ …), metric with US-conventional units where hams use them; f·λ=c with c = 300,000 km/s ≈ 300 Mm/s for mental math (300/ f(MHz) = λ(m) — the pool's own shortcut, stated as such).
 - **Glossary** — canonical plain-language definition per term (feeds Appendix B).
-- **Copyright ledger** — carried over from Book 1 (PD editions 1927–1951; protected 1968–1983; Part 97 and pools free).
+- **Copyright ledger** — carried over from the earlier book's canon (PD editions 1927–1951; protected 1968–1983; Part 97 and pools free).
 - **Resolved uncertainties** — anything flagged during research, with resolution + source.
 
 ## 7. Copyright discipline
@@ -110,7 +110,7 @@ Chapters 00 and 10 follow the same skeleton minus Exam Focus (ch00 gets "Your fi
 ## 8. Production architecture (multi-agent workflow)
 
 1. **Orchestration** (this phase): spec → human sign-off → task-by-task implementation plan.
-2. **Tooling scaffold (TDD):** copy Book 1's `tools/`, `tests/`, CI, Docker; retarget constants; add `make_exam.py`; extend `audit_book.py` (§9). `pytest` green; fixture build; audit exits 0 on the empty scaffold.
+2. **Tooling scaffold (TDD):** copy the earlier book's `tools/`, `tests/`, CI, Docker; retarget constants; add `make_exam.py`; extend `audit_book.py` (§9). `pytest` green; fixture build; audit exits 0 on the empty scaffold.
 3. **Canon workflow:** parallel researchers (pool ingestion+verification; Part 97 facts; licensing-process facts; per-subelement teaching notes) → 1 assembler writes `accuracy-canon.md` + `canon/pool-technician.*`. **Gate:** 0 `UNVERIFIED`; count = 409; revised questions verified; audit canon checks pass.
 4. **Figures workflow:** one agent per chapter authors that chapter's figures (themeable SVG, `currentColor`; matplotlib→SVG plots post-processed) → assembler writes `figures/figures.json`. **Gate:** `figreg.validate()` empty; all SVGs parse; several rendered to PNG and eyeballed.
 5. **Chapters workflow:** parallel chapter writers (canon + real figure IDs + format laws + Exam Focus with verbatim quotes) → span auditors verifying every fact/value/question-quote against canon & pool, fixing in place. One agent batch also writes Appendix A's 409 one-line "why" annotations (fanned out per subelement). **Gate:** audit all-green incl. verbatim-pool check; full build; spot-read.

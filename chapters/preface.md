@@ -8,7 +8,7 @@ This book is an on-ramp. It assumes you have never studied electronics, never to
 
 Everything here is aligned to the NCVEC 2026–2030 Technician question pool, the public document from which every exam question is drawn, valid for exams given from July 1, 2026 through June 30, 2030. Because the pool is public and fixed for those four years, this book can print all 409 questions verbatim — and does, in Appendix A, each with its answer key and a plain-language explanation of why.
 
-It is also the second book of a series. The first, *200 Meters and Down*, is the history: a century of amateur radio told as a story. This book, *Your First Ham License*, is the Technician course. After it come *Your Next Ham License*, the General course, and *Your Last Ham License*, the Extra course — the full ladder from curious to fully privileged.
+It is also the first book of a three-book series. This book, *Your First Ham License*, is the Technician course. After it come *Your Next Ham License*, the General course, and *Your Last Ham License*, the Extra course — the full ladder from curious to fully privileged.
 
 ### How It Was Made
 
@@ -42,6 +42,6 @@ The integrity rules were simple: original prose throughout; Part 97 and the ques
 
 - Calendar span: July 22 to July 23, 2026, with parallel agents throughout.
 
-- About 3.6 million subagent tokens (estimate). The methodology, in one line: this runtime does not meter subagent tokens; the estimate models all agent reads of the canonical files plus written output volume at about four characters per token — and Book 1's metered 4.7 million corroborates the scale.
+- About 3.6 million subagent tokens (estimate). The methodology, in one line: this runtime does not meter subagent tokens; the estimate models all agent reads of the canonical files plus written output volume at about four characters per token.
 
 None of that is the point of the book. The point is the person holding it. If you finish these eleven chapters and pass your exam, the workflow did its job — and the hobby gets one more operator. Welcome.

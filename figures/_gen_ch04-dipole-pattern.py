@@ -7,7 +7,7 @@ broadside — out from its sides — and weakest off its ends (T9A10), and anten
 
 Single-color (black) matplotlib output on a transparent background, then
 post-processed here: every #000000 becomes currentColor so the SVG themes
-with the book's text color (established pattern from Book 1's _gen_*.py).
+with the book's text color (established pattern for this book's _gen_*.py).
 """
 
 import matplotlib

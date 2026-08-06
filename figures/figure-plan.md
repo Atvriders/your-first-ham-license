@@ -5,10 +5,10 @@
 ## Conventions (binding for every figure)
 
 - **Themeable:** strokes/fills/text use `currentColor` (or theme CSS vars); **no hardcoded black/white**; transparent background; `viewBox` set; legible at ~600–800 px wide.
-- **Hand-authored SVG** for diagrams/schematics/pictograms; **matplotlib→SVG** for plots/curves (generator saved as `figures/_gen_<id>.py`, post-process black→`currentColor`; see `/home/kasm-user/200-meters-and-down/figures/_gen_*.py` for the established pattern).
-- Style reference: Book 1's figures at `/home/kasm-user/200-meters-and-down/figures/` (read 1–2 for the themeable idiom).
+- **Hand-authored SVG** for diagrams/schematics/pictograms; **matplotlib→SVG** for plots/curves (generator saved as `figures/_gen_<id>.py`, post-process black→`currentColor`; see this repo's `figures/_gen_*.py` for the established pattern).
+- Style reference: this book's own existing figures (read 1–2 for the themeable idiom).
 - Ground symbols in the three pool redraws use the canon's slanted-strokes-of-decreasing-length style (canon §7.4).
-- Metadata: each agent writes `figures/fragments/<id>.json` — `{"id", "chapter", "caption", "kind": "original", "source", "spoken"}` — schema per `tools/figreg.py` and Book 1's `figures/figures.json`. `source` is `"original"` except the pool redraws: `"redrawn from NCVEC pool figure T-1"` (etc.).
+- Metadata: each agent writes `figures/fragments/<id>.json` — `{"id", "chapter", "caption", "kind": "original", "source", "spoken"}` — schema per `tools/figreg.py` and this repo's `figures/figures.json`. `source` is `"original"` except the pool redraws: `"redrawn from NCVEC pool figure T-1"` (etc.).
 - Self-check before finishing: XML-parse each SVG, render to PNG via `google-chrome --headless --screenshot`, view with ReadMediaFile, fix clipping/overlap/legibility.
 - Pool-facing numbers come from the canon/pool only (e.g. λ(m) = 300 / f(MHz); 19 in ≈ λ/4 at 146 MHz; 50 MHz dipole ≈ 3 m; offsets "**a common** offset", never "the").
 

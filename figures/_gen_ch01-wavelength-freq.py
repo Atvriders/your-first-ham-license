@@ -7,7 +7,7 @@ c = f * lambda with c ~= 3e8 m/s. Worked example is the pool's drill value:
 
 Single-color (black) matplotlib output on a transparent background, then
 post-processed here: every #000000 becomes currentColor so the SVG themes
-with the book's text color (established pattern from Book 1's _gen_*.py).
+with the book's text color (established pattern for this book's _gen_*.py).
 """
 
 import matplotlib

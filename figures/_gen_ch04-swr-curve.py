@@ -9,7 +9,7 @@ The x-axis is the real 2-meter band, 144–148 MHz (canon section 2.4).
 
 Single-color (black) matplotlib output on a transparent background, then
 post-processed here: every #000000 becomes currentColor so the SVG themes
-with the book's text color (established pattern from Book 1's _gen_*.py).
+with the book's text color (established pattern for this book's _gen_*.py).
 """
 
 import matplotlib

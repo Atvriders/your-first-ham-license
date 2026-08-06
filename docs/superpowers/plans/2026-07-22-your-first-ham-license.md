@@ -4,9 +4,9 @@
 
 **Goal:** Produce *Your First Ham License: The Technician Course (2026–2030)* — an ~55–70k-word, ~30–40-figure beginner course + exam-prep book aligned to the 2026–2030 NCVEC Technician pool (409 questions) — as a self-contained HTML/PDF/TXT edition plus Docker site, practice-exam generator, and 8-voice audiobook, built by a multi-agent workflow against a verified accuracy canon that carries the pool verbatim.
 
-**Architecture:** Two tracks. **(A) Tooling** — Book 1's Python build/verify/audiobook tools copied and retargeted, plus a new pool-fidelity audit check and a new `make_exam.py`, all test-first against small fixtures. **(B) Content** — canon (incl. verbatim pool) → figures → 11 chapters + 2 appendices, produced by parallel writer/figure/auditor agents and gated by the Track-A harness. Track A first so Track B writes into a green gate.
+**Architecture:** Two tracks. **(A) Tooling** — an earlier book's Python build/verify/audiobook tools copied and retargeted, plus a new pool-fidelity audit check and a new `make_exam.py`, all test-first against small fixtures. **(B) Content** — canon (incl. verbatim pool) → figures → 11 chapters + 2 appendices, produced by parallel writer/figure/auditor agents and gated by the Track-A harness. Track A first so Track B writes into a green gate.
 
-**Tech Stack:** Python 3 (stdlib + `edge-tts`, `matplotlib`), headless `google-chrome` for PDF, `ffmpeg` for audio, nginx/Docker, GitHub Actions → GHCR. Base for all copying: `/home/kasm-user/200-meters-and-down/` ("Book 1"). Design spec: `docs/superpowers/specs/2026-07-22-your-first-ham-license-design.md` (approved).
+**Tech Stack:** Python 3 (stdlib + `edge-tts`, `matplotlib`), headless `google-chrome` for PDF, `ffmpeg` for audio, nginx/Docker, GitHub Actions → GHCR. Tooling base: an earlier book's repo (copied and retargeted). Design spec: `docs/superpowers/specs/2026-07-22-your-first-ham-license-design.md` (approved).
 
 ## Global Constraints
 
@@ -16,11 +16,11 @@
 - **Never the `gh` CLI** — GitHub REST API via curl with the token from `~/.config/gh/hosts.yml`.
 - **Pool fidelity is law:** question text, choices, and answer letters are quoted only from `canon/pool-technician.*`, byte-exact. Never paraphrase a question.
 - **Prose original; facts/Part 97/pool free.** No fabricated quotations; anecdotes framed as illustrative scenarios, never attributed to real people.
-- **Self-contained output:** inline SVG figures, math pre-rendered to inline SVG, inline CSS; no external refs (`src="http"`, `<link rel="stylesheet">`, `@import` are failures; SVG `xmlns` URIs are fine — Book 1 gotcha #3).
+- **Self-contained output:** inline SVG figures, math pre-rendered to inline SVG, inline CSS; no external refs (`src="http"`, `<link rel="stylesheet">`, `@import` are failures; SVG `xmlns` URIs are fine — earlier-book gotcha #3).
 - **Environment:** `python3` (not `python`); `matplotlib`, `edge-tts`, `ffmpeg`, `google-chrome` present; no local Docker (CI builds the image).
 - **Naming:** title *Your First Ham License: The Technician Course (2026–2030)* (US spelling); audio ID3 `artist=Kimi K3`, `album=Your First Ham License`; GHCR image `ghcr.io/atvriders/your-first-ham-license`.
-- **sys.path gotcha:** every runnable script keeps `sys.path.insert(0, str(Path(__file__).resolve().parent.parent))` (Book 1 gotcha #2).
-- **CI gotcha:** copy Book 1's *fixed* workflow (`seq -f "%02g"`, not `seq -w` — gotcha #1), then adjust chapter count/audio URLs.
+- **sys.path gotcha:** every runnable script keeps `sys.path.insert(0, str(Path(__file__).resolve().parent.parent))` (earlier-book gotcha #2).
+- **CI gotcha:** copy the earlier book's *fixed* workflow (`seq -f "%02g"`, not `seq -w` — gotcha #1), then adjust chapter count/audio URLs.
 
 ## File Structure
 
@@ -42,7 +42,7 @@ your-first-ham-license/
 ├── appendices/
 │   ├── pool.md                       # Appendix A: all 409 questions verbatim + one-line why
 │   └── glossary-and-formulas.md      # Appendix B
-├── tools/                            # copied from Book 1, retargeted
+├── tools/                            # copied from the earlier book, retargeted
 │   ├── narration.py  mathsvg.py      # as-is
 │   ├── figreg.py                     # protected-years set unchanged (1968–1983)
 │   ├── build_book.py                 # retargeted titles/colophon; appendices in build
@@ -52,7 +52,7 @@ your-first-ham-license/
 │   └── make_exam.py                  # NEW: practice-exam generator
 ├── docker/audiobook-index.html       # retargeted player (11 tracks)
 ├── .github/workflows/build.yml       # copied fixed version, retargeted
-├── tests/                            # pytest: Book 1's 6 files adapted + test_make_exam.py
+├── tests/                            # pytest: the earlier book's 6 files adapted + test_make_exam.py
 │   └── fixtures/                     # ch_sample.md, fig_sample.svg, pool_sample.txt/json
 └── docs/superpowers/{specs,plans}/…  # spec + this plan
 ```
@@ -63,7 +63,7 @@ your-first-ham-license/
 
 ### Task 0.1: Repo skeleton
 - [x] Create `~/your-first-ham-license/` with dirs: `tools/ tests/ tests/fixtures/ chapters/ chapters/specs/ figures/ canon/ appendices/ docker/ .github/workflows/ build/ audiobook/ docs/superpowers/specs/ docs/superpowers/plans/` (last two already exist with spec+plan).
-- [x] Copy from Book 1 (verbatim, then retarget in Phase 1): `tools/*.py`, `tests/`, `pyproject.toml`, `requirements.txt`, `.gitignore`, `docker/audiobook-index.html`, `Dockerfile`, `docker-compose.yml`, `.github/workflows/build.yml`.
+- [x] Copy from the earlier book (verbatim, then retarget in Phase 1): `tools/*.py`, `tests/`, `pyproject.toml`, `requirements.txt`, `.gitignore`, `docker/audiobook-index.html`, `Dockerfile`, `docker-compose.yml`, `.github/workflows/build.yml`.
 - [x] **Do NOT copy:** `chapters/`, `figures/*.svg`, `figures/figures.json`, `accuracy-canon.md`, `AI-CONTEXT.md`, `README.md`, `audiobook/` (1.3 GB), `build/`, `appendices/`, `.gitea/`, `docs/canon-research/`, `.git/`.
 - [x] `git init -b master` (no commits until the end).
 - [x] **Verify:** tree matches File Structure; `python3 -m pytest` collects (failures expected until retarget — that's Phase 1).
@@ -78,7 +78,7 @@ your-first-ham-license/
 
 ### Task 1.2: `build_book.py` retarget
 - [x] Change title/colophon/heading constants to this book; chapter glob `ch*.md`; include `appendices/pool.md` + `appendices/glossary-and-formulas.md` as final TOC sections (after ch10), without chapter numbers in headings.
-- [x] Keep: repo-root sys.path bootstrap; self-contained HTML; PDF probe order `chromium/chromium-browser/google-chrome/google-chrome-stable` → weasyprint → skip (Book 1 gotcha #6).
+- [x] Keep: repo-root sys.path bootstrap; self-contained HTML; PDF probe order `chromium/chromium-browser/google-chrome/google-chrome-stable` → weasyprint → skip (earlier-book gotcha #6).
 - [x] Update `tests/test_build_book.py` + `tests/fixtures/ch_sample.md` to this book's skeleton (§5 of spec: opener, `### Exam Focus`, `### Key Takeaways`, `**FACT:**`).
 - [x] **Verify:** `pytest tests/test_build_book.py` green; fixture builds HTML+TXT; PDF builds via google-chrome.
 
@@ -100,7 +100,7 @@ your-first-ham-license/
 ### Task 1.6: Docker + CI retarget
 - [x] `Dockerfile`: serve this book's build artifacts; `docker-compose.yml`: image `ghcr.io/atvriders/your-first-ham-license:latest`.
 - [x] `docker/audiobook-index.html`: title + 11 track labels (ch00–ch10), same player machinery.
-- [x] `.github/workflows/build.yml`: copy Book 1's fixed version; change repo/image names and the audio-fetch loop to `seq -f "%02g" 0 10` (11 chapters); release `v1.0`.
+- [x] `.github/workflows/build.yml`: copy the earlier book's fixed version; change repo/image names and the audio-fetch loop to `seq -f "%02g" 0 10` (11 chapters); release `v1.0`.
 - [x] **Verify:** `python3 -m pytest` all green; `python3 tools/build_book.py --html --txt --pdf --out build/` succeeds on fixtures; `python3 tools/audit_book.py` exits 0 on the empty scaffold (check #8 skipping gracefully).
 
 ### Task 1.7: Series-site machinery + player auto-play-next (NEW SCOPE — user request 2026-07-22)
@@ -127,7 +127,7 @@ your-first-ham-license/
 - [ ] R5: Operating practice color — repeater etiquette, nets, phonetics, Q-signals (cross-ref `~/arrl-calendar/src/data/rules.ts`).
 
 ### Task 2.3: Assembler
-- [ ] One agent writes `accuracy-canon.md`: pinned facts w/ sources, notation & units (incl. the 300/f(MHz) = λ(m) shortcut, labeled as the pool's own), glossary, copyright ledger (carried from Book 1), pool summary + revision record, resolved uncertainties.
+- [ ] One agent writes `accuracy-canon.md`: pinned facts w/ sources, notation & units (incl. the 300/f(MHz) = λ(m) shortcut, labeled as the pool's own), glossary, copyright ledger (carried over from the earlier book's canon), pool summary + revision record, resolved uncertainties.
 - [ ] **Verify (gate):** 0 `UNVERIFIED` markers; `python3 tools/audit_book.py` canon checks pass (check #8 now live against the real pool); spot-read the canon.
 
 ---
@@ -189,5 +189,5 @@ your-first-ham-license/
 
 ## Tracking & cost notes
 
-- Book 1 cost reference: ~42 agents, ~4.7M subagent tokens, ~90 min wall-time. This book adds pool integration (ingestion, 409 annotations, check #8) — budget ~5–6M tokens, ~2 h.
+- Earlier-book cost reference: ~42 agents, ~4.7M subagent tokens, ~90 min wall-time. This book adds pool integration (ingestion, 409 annotations, check #8) — budget ~5–6M tokens, ~2 h.
 - Mark plan checkboxes as tasks complete; keep the human informed at each content gate (2.3, 3.3, 4.5) and the ship gate.

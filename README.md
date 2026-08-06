@@ -13,8 +13,7 @@ chapters walk from "what ham radio is" through electricity, signals, propagation
 antennas, your station, operating, digital and satellites, the rules in plain English,
 safety, and exam day — and every teaching chapter ends with an **Exam Focus** section
 quoting the exact pool questions that chapter unlocks, verbatim, with the keyed answer
-and a one-line plain-language why. It is **Book 2 of the three-book program** begun
-with *[200 Meters and Down](https://github.com/Atvriders/200-meters-and-down)*; the
+and a one-line plain-language why. It is **Book 1 of a three-book program**; the
 General and Extra courses follow the same template.
 
 ## What's inside
@@ -190,7 +189,7 @@ Built by a **multi-agent workflow** over `accuracy-canon.md` — a bible-as-law 
 canon carrying the entire 409-question pool verbatim (double-parsed from the official
 .docx and .pdf and cross-checked to zero disagreement), pinned Part 97 facts, notation,
 glossary, the chapter map, and the copyright ledger — reusing the production machinery
-of its sibling project, *[200 Meters and Down](https://github.com/Atvriders/200-meters-and-down)*.
+of an earlier book's toolchain.
 
 | | |
 |---|---|

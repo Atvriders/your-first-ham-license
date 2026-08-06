@@ -19,7 +19,7 @@ POOL = json.loads(pathlib.Path(POOL_PATH).read_text(encoding="utf-8"))
 CH_SAMPLE = pathlib.Path("tests/fixtures/ch_sample.md").read_text(encoding="utf-8")
 
 
-# --- Book 1 carry-overs ---------------------------------------------------
+# --- Carry-over checks -------------------------------------------------
 
 def test_banned_phrases_flagged():
     errs = check_banned_phrases("…and little did they know it would grow.")

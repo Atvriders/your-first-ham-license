@@ -33,11 +33,10 @@ after reading a chapter, the reader can answer every question in its mapped pool
 subelement(s). Spine: *your first contact* — curious → how it works → how to operate →
 the rules → safety → exam day → what's next.
 
-This is **Book 2 of the three-book "Your First Ham License" program**, following Book 1
-(*200 Meters and Down*, a technical history of amateur radio — not exam prep). Books 3
-(General) and 4 (Extra) inherit this book's template. Production machinery (build,
-audit, figures, audiobook, Docker) is inherited from Book 1 and retargeted; new here
-are the verbatim-pool integration and `tools/make_exam.py`.
+This is **Book 1 of the three-book "Your First Ham License" program** (Technician).
+Books 2 (General) and 3 (Extra) inherit this book's template. Production machinery
+(build, audit, figures, audiobook, Docker) is adapted from an earlier book's toolchain
+and retargeted; new here are the verbatim-pool integration and `tools/make_exam.py`.
 
 ## 2. The accuracy canon is LAW
 
@@ -147,7 +146,7 @@ produce one coherent book:
 
 1. First line exactly `## <N>. <Title>`.
 2. **Opener** — one short plain-language paragraph (a concrete new-ham scenario plus
-   "in this chapter you'll learn …"). No epigraph device (that was Book 1's form).
+   "in this chapter you'll learn …"). No epigraph device.
 3. **Teaching sections** (`### …`) — plain language, analogies, figures as `{{fig:id}}`
    on their own line, inline math `$…$` only where the pool needs it; optional
    `> **The math, if you want it:**` sidebars for anything beyond arithmetic.
@@ -268,7 +267,7 @@ imported module.
   (skeleton + banned phrases), (8) **pool fidelity** — new in this book, see §7.1.
 - **`tools/mathsvg.py`** — inline `$…$` → embedded SVG.
 - **`tools/figreg.py`** — loads/validates `figures/figures.json`; protected-years set
-  (1968–1983) unchanged from Book 1.
+  (1968–1983) unchanged from the original ledger.
 - **`tools/narration.py`** / **`tools/make_audiobook.py`** — the 8-voice edge-tts
   audiobook pipeline (US/British/Australian/Irish × male/female), **chapters 00–10
   only** (the verbatim pool appendix is never narrated); **`tools/make_intro.py`**
@@ -349,7 +348,7 @@ Extra) and carries the shared machinery; General and Extra ship later and inheri
 - **The 3 pool figures are redrawn, not copied** (§6).
 - **Bare facts, frequencies, and formulas are not copyrightable**; all exam-prep
   explanations are written fresh.
-- **ARRL Handbook ledger (carried from Book 1, governs any optional archival
+- **ARRL Handbook ledger (carried over from an earlier book's canon, governs any optional archival
   figure):** of the 13 owned editions (1927–1983), **7 are public domain and
   reproducible** (1927, 1931, 1933, 1936, 1940, 1941, 1951 — each affirmatively
   evidenced) and **6 are protected and never reproduced in any form** (1968, 1974,
@@ -410,9 +409,9 @@ community practice**, never FCC mandates, and offsets are "**a common**" offset,
 
 Built 2026-07-22 → 2026-07-23 by a **multi-agent workflow** (~47 subagent launches
 across the tooling, canon, figures, chapters, appendix, and audit phases, plus retries
-after transient engine errors), reusing Book 1's production machinery: the same
+after transient engine errors), reusing an earlier book's production machinery: the same
 "bible-as-law" canon discipline, the same `chapters/*.md` → single-file HTML/PDF/TXT
-build shape, the same 8-voice audiobook pipeline, retargeted from a history book to a
+build shape, the same 8-voice audiobook pipeline, retargeted from long-form prose to a
 pool-anchored exam course. New in this book: the verbatim-pool ingestion and
 cross-check (docx + pdf double parse), audit check #8 (mechanical pool fidelity), the
 practice-exam generator, the series-site machinery, and the player's auto-play-next
@@ -421,7 +420,7 @@ toggle. The gate the content was written into: **50 pytest tests, 8 audit checks
 HTML/PDF/TXT build. This runtime does not meter subagent tokens, so no measured token
 total exists; the README's stats block carries the estimate instead: ~3.6M subagent
 tokens, modeled from agent reads of the canonical files plus written output volume at
-~4 chars/token (Book 1's metered ~4.7M corroborates the scale).
+~4 chars/token, labeled as an estimate.
 
 ## 13. Commands
 

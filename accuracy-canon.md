@@ -821,9 +821,9 @@ Notes on the T8 split (binding): **ch02 owns T8A only** (modes and bandwidths, 1
 3. **The NCVEC 2026–2030 Technician question pool is public domain** — released as such by the NCVEC Question Pool Committee on December 18, 2025 (statement on the pool's landing page) — so questions, choices, answer keys, and figure *content* may be reproduced verbatim.
 4. **The three pool figures are redrawn, not copied**: original SVGs conveying exactly the official content (same components, same labels), registered in `figures/figures.json` as `kind:"original"` with the note "redrawn from NCVEC pool figure T-x" (see §1.4).
 5. **Bare facts, frequencies, and formulas are not copyrightable**; exam-prep explanations are always written fresh.
-6. **Archival ARRL Handbook material is optional seasoning only**, governed by the ledger below (carried over unchanged from Book 1's accuracy canon, where each status was affirmatively determined). The book works with zero archival images.
+6. **Archival ARRL Handbook material is optional seasoning only**, governed by the ledger below (carried over unchanged from an earlier book's accuracy canon, where each status was affirmatively determined). The book works with zero archival images.
 
-**ARRL *Radio Amateur's Handbook* ledger (from Book 1 — governs any optional archival figure in this book too):** determinations rest on the US Copyright Office Public Records System and the official Catalog of Copyright Entries renewal volumes; public-domain findings are affirmatively evidenced (registration age, or confirmed absence of renewal within the 28-year window), not assumed.
+**ARRL *Radio Amateur's Handbook* ledger (carried over — governs any optional archival figure in this book too):** determinations rest on the US Copyright Office Public Records System and the official Catalog of Copyright Entries renewal volumes; public-domain findings are affirmatively evidenced (registration age, or confirmed absence of renewal within the 28-year window), not assumed.
 
 | Edition (year) | Status | Basis | Reproducible? |
 |---|---|---|---|

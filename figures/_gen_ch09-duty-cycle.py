@@ -11,7 +11,7 @@ The T0C concept in the pool's own framing:
 Top panel: transmit timelines (continuous vs half-time keying) — same peak,
 half the average. Bottom panel: allowable power density vs duty cycle, with
 the pool's points marked. Single-color (black) on transparent, then
-post-processed: #000000 -> currentColor (Book 1 pattern).
+post-processed: #000000 -> currentColor (the established pattern).
 """
 
 import matplotlib

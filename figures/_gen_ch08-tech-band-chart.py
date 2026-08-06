@@ -15,7 +15,7 @@ Each row is its own bar with explicit numeric labels (rows are not on a
 shared frequency axis). Hatched bar = CW only; open bar = all modes.
 Single-color (black) matplotlib output on a transparent background, then
 post-processed: every #000000 becomes currentColor so the SVG themes with
-the book's text color (established pattern from Book 1's _gen_*.py).
+the book's text color (established pattern for this book's _gen_*.py).
 """
 
 import matplotlib
