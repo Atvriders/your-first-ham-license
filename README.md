@@ -80,8 +80,8 @@ docker compose -f series-docker-compose.yml up -d
 
 Serves everything at [http://localhost:8080](http://localhost:8080): a landing page at
 `/` with a card per book, this book (text + audiobook) at `/tech/`, and `/general/`
-plus `/extra/` reserved for the next two books — marked "coming soon" on the landing
-page and in the book-switcher bar at the top of every page until they ship. Config
+plus `/extra/` for the other two books — all three live since the series completed.
+The book-switcher bar at the top of every page links all three. Config
 lives in [`series/`](series/) (proxy + landing page) and
 [`series-docker-compose.yml`](series-docker-compose.yml).
 
