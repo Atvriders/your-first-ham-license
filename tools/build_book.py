@@ -36,6 +36,11 @@ use the same dialect but head with "## Appendix A: ..." / "## Appendix B: ..."
 and render as the final TOC sections, after ch10, without chapter numbers.
 pool.md also uses "#### Group ..." headings, rendered as anchored <h4>s;
 like h3s, they never enter the chapter-level TOC.
+
+Preface: if chapters/preface.md exists it is parsed and rendered FIRST,
+before ch00. Its heading is "## Preface — Why & How This Book Was Made";
+it carries no chapter number, gets the id "preface" (so "#preface" links
+work), and appears in the TOC as "Preface: Why & How This Book Was Made".
 """
 
 from __future__ import annotations
@@ -103,13 +108,15 @@ class Chapter:
 
 
 def compute_chapter_id(path: pathlib.Path, heading: str) -> str:
-    """id = file stem if it matches ch\\d\\d; else ch + 2-digit chapter number
-    parsed from a "<N>. <Title>" heading; else appendix-<letter> parsed from
-    an "Appendix X: ..." heading.
+    """id = file stem if it matches ch\\d\\d; "preface" for the preface;
+    else ch + 2-digit chapter number parsed from a "<N>. <Title>" heading;
+    else appendix-<letter> parsed from an "Appendix X: ..." heading.
     """
     stem = pathlib.Path(path).stem
     if _CHAPTER_STEM_RE.match(stem):
         return stem
+    if stem == "preface":
+        return "preface"
     h = heading.strip()
     m = _LEADING_NUMBER_RE.match(h)
     if m:
@@ -482,12 +489,24 @@ nav.series-bar span.soon em {
 """
 
 
+PREFACE_TOC_TITLE = "Preface: Why & How This Book Was Made"
+
+
+def _toc_label(c: Chapter) -> str:
+    """TOC label for a parsed section: the preface gets a fixed colon-form
+    title (its source heading uses an em dash); everything else lists its
+    own heading text."""
+    if c.id == "preface":
+        return PREFACE_TOC_TITLE
+    return c.heading
+
+
 def build_html(chapter_paths: list, figreg: dict) -> str:
     """Build a single self-contained HTML edition from chapter markdown files."""
     chapters = [parse_chapter(pathlib.Path(p)) for p in chapter_paths]
 
     toc_items = "".join(
-        f'<li><a href="#{c.id}">{html.escape(c.heading, quote=False)}</a></li>'
+        f'<li><a href="#{c.id}">{html.escape(_toc_label(c), quote=False)}</a></li>'
         for c in chapters
     )
     sections = "".join(_render_chapter(c, figreg) for c in chapters)
@@ -621,8 +640,12 @@ def main(argv=None) -> int:
     for err in errors:
         print(f"figure registry warning: {err}")
 
-    # Chapters first (ch00..ch10), then the appendices as final TOC sections.
+    # Preface first (when present), then chapters (ch00..ch10), then the
+    # appendices as final TOC sections.
     chapter_paths = sorted(pathlib.Path("chapters").glob("ch*.md"))
+    preface_path = pathlib.Path("chapters/preface.md")
+    if preface_path.exists():
+        chapter_paths.insert(0, preface_path)
     for app in ("appendices/pool.md", "appendices/glossary-and-formulas.md"):
         app_path = pathlib.Path(app)
         if app_path.exists():

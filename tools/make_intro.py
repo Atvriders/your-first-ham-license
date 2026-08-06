@@ -31,6 +31,8 @@ If you have never touched a radio, never studied electronics, and are not entire
 
 This edition is offered in eight voices — American, British, Australian, and Irish, male and female.
 
+A word about why this book exists, and how it was made. It exists to take you from never having touched a radio to a passed Technician exam — teaching first, then aligning every chapter to the exam. And it was built by a multi-agent AI workflow — the official public-domain question pool, every question verbatim, every answer key machine-verified — about 3.6 million tokens of AI work.
+
 And now — Your First Ham License. Begin whenever you are ready."""
 
 

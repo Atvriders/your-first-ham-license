@@ -16,6 +16,9 @@ Run as a script:
 Consumes (all optional at this stage of the project -- the checks that
 depend on missing inputs are skipped, not failed):
 
+    chapters/preface.md        -- optional preface (front matter: exempt from
+                                  the §5 chapter format laws, but still
+                                  scanned for banned phrases and pool quotes)
     chapters/ch*.md            -- chapter markdown files
     appendices/pool.md         -- Appendix A (the verbatim pool)
     figures/figures.json       -- figure registry (via figreg.load())
@@ -77,8 +80,8 @@ BANNED_PHRASES = ("little did they know", "in that moment", "a testament to")
 _FIG_REF_RE = re.compile(r"\{\{fig:([^}]+)\}\}")
 _MATH_SPAN_RE = re.compile(r"\$(.+?)\$")
 _FACT_RE = re.compile(r"(?m)^\s*\*\*FACT:\*\*\s*(.+?)\s*$")
-_HREF_RE = re.compile(r'href="#(ch\d\d|appendix-[a-z])"')
-_ID_RE = re.compile(r'id="(ch\d\d|appendix-[a-z])"')
+_HREF_RE = re.compile(r'href="#(ch\d\d|appendix-[a-z]|preface)"')
+_ID_RE = re.compile(r'id="(ch\d\d|appendix-[a-z]|preface)"')
 _HEADING_RE = re.compile(r"^##\s+(\d+)\.\s+.+")
 _EXAM_FOCUS_RE = re.compile(r"(?m)^### Exam Focus\s*$")
 _KEY_TAKEAWAYS_RE = re.compile(r"(?m)^### Key Takeaways\s*$")
@@ -94,6 +97,12 @@ POOL_JSON_PATH = "canon/pool-technician.json"
 # Chapters exempt from the worked-example / Exam Focus format laws
 # (welcome and exam-day bookends are not teaching chapters).
 _EXEMPT_FROM_TEACHING_LAWS = ("ch00", "ch10")
+
+# The preface (chapters/preface.md) is front matter: exempt from ALL chapter
+# format laws (heading number, opener, Exam Focus, Key Takeaways, FACT
+# counts). It is still scanned for banned phrases and pool-quote fidelity.
+PREFACE_STEM = "preface"
+PREFACE_PATH = "chapters/preface.md"
 
 # Check #8: pool-quote markup (see module docstring for the convention).
 _POOL_QUOTE_RE = re.compile(r"^\s*>\s*\*\*(T\d[A-F]\d\d)\*\*\s+(.+?)\s*$")
@@ -317,6 +326,8 @@ def main() -> int:
     warnings = []
 
     chapter_paths = sorted(glob(CHAPTERS_GLOB))
+    if pathlib.Path(PREFACE_PATH).exists():
+        chapter_paths.insert(0, PREFACE_PATH)
     chapter_texts = []
     for p in chapter_paths:
         chapter_texts.append(pathlib.Path(p).read_text(encoding="utf-8"))
@@ -431,6 +442,13 @@ def main() -> int:
         format_errors = 0
         for path, text in zip(chapter_paths, chapter_texts):
             stem = pathlib.Path(path).stem
+            if stem == PREFACE_STEM:
+                # Front matter: exempt from the §5 format laws, but banned
+                # phrases are still flagged.
+                for pe in check_banned_phrases(text):
+                    format_errors += 1
+                    errors.append(f"format law: {path}: {pe}")
+                continue
             if not _CHAPTER_STEM_RE.match(stem):
                 continue
 

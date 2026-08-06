@@ -143,3 +143,33 @@ def test_audit_main_skips_pool_check_on_empty_scaffold(tmp_path, monkeypatch, ca
     assert main() == 0
     out = capsys.readouterr().out.lower()
     assert "pool" in out and "skip" in out
+
+
+# --- Preface: front matter, exempt from format laws -------------------------
+
+_PREFACE_HEADING = "## Preface — Why & How This Book Was Made\n\n"
+
+def test_audit_main_preface_does_not_trip_format_laws(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    chapters = tmp_path / "chapters"
+    chapters.mkdir()
+    # This preface would violate every chapter format law (no numbered
+    # heading, an Exam Focus section, no Key Takeaways, no FACT lines) --
+    # as front matter it is exempt from all of them.
+    (chapters / "preface.md").write_text(
+        _PREFACE_HEADING +
+        "Plain front matter, no teaching-chapter skeleton.\n\n"
+        "### Exam Focus\n\nNot a teaching chapter; this section is allowed here.\n",
+        encoding="utf-8",
+    )
+    assert main() == 0
+
+def test_audit_main_preface_still_scanned_for_banned_phrases(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    chapters = tmp_path / "chapters"
+    chapters.mkdir()
+    (chapters / "preface.md").write_text(
+        _PREFACE_HEADING + "Little did they know this book was built by agents.\n",
+        encoding="utf-8",
+    )
+    assert main() == 1

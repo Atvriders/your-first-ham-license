@@ -419,7 +419,9 @@ practice-exam generator, the series-site machinery, and the player's auto-play-n
 toggle. The gate the content was written into: **50 pytest tests, 8 audit checks**
 (including mechanical verification of all 409/409 pool quotes and answer keys), full
 HTML/PDF/TXT build. This runtime does not meter subagent tokens, so no measured token
-total exists; the README's stats block carries a clearly-labeled estimate instead.
+total exists; the README's stats block carries the estimate instead: ~3.6M subagent
+tokens, modeled from agent reads of the canonical files plus written output volume at
+~4 chars/token (Book 1's metered ~4.7M corroborates the scale).
 
 ## 13. Commands
 

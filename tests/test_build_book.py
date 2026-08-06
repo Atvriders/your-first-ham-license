@@ -38,6 +38,8 @@ def test_build_html_appendix_is_final_toc_section():
 
 def test_compute_chapter_id_numbered_and_appendix_headings():
     assert compute_chapter_id("chapters/ch04.md", "4. Antennas & Feedlines") == "ch04"
+    assert compute_chapter_id("chapters/preface.md",
+                              "Preface — Why & How This Book Was Made") == "preface"
     assert compute_chapter_id("appendices/pool.md",
                               "Appendix A: The Complete 2026–2030 Pool") == "appendix-a"
     assert compute_chapter_id("appendices/glossary-and-formulas.md",
@@ -69,6 +71,29 @@ def test_txt_strips_h4_group_headings():
     txt = build_txt([pathlib.Path("tests/fixtures/ch_h4_sample.md")])
     assert '####' not in txt
     assert 'Group T1A — Sample group heading; with topics' in txt
+
+
+def test_preface_renders_first_with_working_toc_link():
+    html = build_html(
+        [pathlib.Path("tests/fixtures/preface.md"),
+         pathlib.Path("tests/fixtures/ch_sample.md")],
+        {},
+    )
+    assert 'id="preface"' in html                   # preface anchor (so #preface links work)
+    assert 'href="#preface"' in html                # TOC link resolves
+    # TOC entry: fixed colon-form title, no chapter number
+    assert '<a href="#preface">Preface: Why &amp; How This Book Was Made</a>' in html
+    # preface comes before ch01, in both the TOC and the body
+    assert html.index('href="#preface"') < html.index('href="#ch01"')
+    assert html.index('id="preface"') < html.index('id="ch01"')
+
+
+def test_txt_includes_preface_first():
+    txt = build_txt([pathlib.Path("tests/fixtures/preface.md"),
+                     pathlib.Path("tests/fixtures/ch_sample.md")])
+    assert "Preface — Why & How This Book Was Made" in txt
+    assert txt.index("Preface — Why & How This Book Was Made") < \
+        txt.index("Electricity & Radio from Zero")
 
 
 def test_series_bar_renders_with_current_book_highlighted():
