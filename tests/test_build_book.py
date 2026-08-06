@@ -76,11 +76,10 @@ def test_series_bar_renders_with_current_book_highlighted():
     assert 'class="series-bar"' in html           # the bar renders
     # Technician is this book: highlighted, links to its series mount path
     assert '<a class="current" href="/tech/" aria-current="page">Technician</a>' in html
-    # General is live: a plain link
+    # General and Extra are both live: plain links, no inert labels remain
     assert '<a href="/general/">General</a>' in html
-    # only Extra remains an inert "coming soon" label
-    assert html.count("coming soon") == 1
-    assert 'href="/extra/"' not in html
+    assert '<a href="/extra/">Extra</a>' in html
+    assert "coming soon" not in html
     # slim bar at the top, before the title block; TOC anchors still resolve
     assert html.index('class="series-bar"') < html.index('class="title-block"')
     assert 'href="#ch01"' in html
