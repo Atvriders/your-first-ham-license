@@ -355,8 +355,9 @@ def _render_series_bar() -> str:
 def _render_extras_nav() -> str:
     """One centered line in the title block linking this book's companion
     tools (audiobook player, practice test, flashcards). Relative links
-    only, so they resolve under the series sub-path proxying (/tech/ etc.)."""
-    return ('<nav class="extras" aria-label="Companion tools">'
+    only, so they resolve under the series sub-path proxying (/tech/ etc.).
+    Class/aria-label match the other books of the series."""
+    return ('<nav class="book-extras" aria-label="Book extras">'
             '<a href="audiobook/">Listen to the audiobook</a> &middot; '
             '<a href="practice.html">Practice test</a> &middot; '
             '<a href="flashcards.html">Flashcards</a>'
@@ -383,24 +384,6 @@ _CSS = """
     --sidebar-bg: #1f2937;
     --worked-bg: #332b1a;
   }
-}
-:root[data-theme="light"] {
-  --bg: #fdfaf3;
-  --fg: #1b1b1b;
-  --muted: #666666;
-  --rule: #cccccc;
-  --link: #2a5db0;
-  --sidebar-bg: #eef3f8;
-  --worked-bg: #fff7e6;
-}
-:root[data-theme="dark"] {
-  --bg: #181818;
-  --fg: #eaeaea;
-  --muted: #aaaaaa;
-  --rule: #444444;
-  --link: #8ab4f8;
-  --sidebar-bg: #1f2937;
-  --worked-bg: #332b1a;
 }
 * { box-sizing: border-box; }
 html, body { background: var(--bg); }
@@ -442,9 +425,12 @@ blockquote.worked-example {
   border-radius: 4px;
 }
 figure.figure { margin: 2rem 0; text-align: center; }
-figure.figure .figure-media { overflow-x: auto; }
+figure.figure .figure-media { overflow-x: auto; padding-bottom: 0.4rem;
+  scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
+figure.figure .figure-media::-webkit-scrollbar { height: 6px; }
+figure.figure .figure-media::-webkit-scrollbar-track { background: transparent; }
+figure.figure .figure-media::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 figure.figure svg { max-width: 100%; height: auto; }
-figure.figure .figure-media svg { max-width: none; }
 figcaption { font-size: 0.85em; color: var(--muted); margin-top: 0.5rem; }
 span.math { display: inline-block; vertical-align: middle; line-height: 0; }
 span.math svg { height: 1em; width: auto; vertical-align: middle; }
@@ -497,14 +483,14 @@ nav.series-bar span.soon em {
   font-size: 0.62rem;
   letter-spacing: 0.08em;
 }
-nav.extras {
+nav.book-extras {
   margin-top: 0.6rem;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 0.85rem;
   color: var(--muted);
 }
-nav.extras a { color: var(--link); text-decoration: none; }
-nav.extras a:hover { text-decoration: underline; }
+nav.book-extras a { color: var(--link); text-decoration: none; }
+nav.book-extras a:hover { text-decoration: underline; }
 """
 
 
@@ -536,6 +522,7 @@ def build_html(chapter_paths: list, figreg: dict) -> str:
         "<head>\n"
         '<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Cpath d=\'M8 6.5 4 15h8z\' fill=\'none\' stroke=\'%238a6a24\' stroke-width=\'1.3\' stroke-linejoin=\'round\'/%3E%3Cpath d=\'M8 6.5V15M6.1 11h3.8\' stroke=\'%238a6a24\' stroke-width=\'1.1\'/%3E%3Ccircle cx=\'8\' cy=\'4.8\' r=\'1.3\' fill=\'%238a6a24\'/%3E%3Cpath d=\'M5.7 2.4a3.3 3.3 0 0 1 4.6 0M4 .7a5.7 5.7 0 0 1 8 0\' fill=\'none\' stroke=\'%238a6a24\' stroke-width=\'1\' stroke-linecap=\'round\'/%3E%3C/svg%3E">\n'
         "<title>Your First Ham License</title>\n"
         f"<style>{_CSS}</style>\n"
         "</head>\n"

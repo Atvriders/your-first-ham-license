@@ -36,7 +36,8 @@ def assert_self_contained(html):
     assert 'src="http' not in html and "src='http" not in html
     assert 'href="http' not in html and "href='http" not in html
     assert "<script src" not in html
-    assert "<link" not in html
+    # the only <link> allowed is the inline data-URI favicon
+    assert not re.findall(r'<link[^>]*href="(?!data:)[^"]*"', html)
     assert "<img" not in html
 
 
@@ -267,6 +268,38 @@ def test_flashcards_page_contains_every_real_pool_id():
     for qid in ("T1A01", "T5C09", "T0C12", "T6C02", "T6D10"):
         assert qid in html
     assert_self_contained(html)
+
+
+def test_pages_link_the_book_and_editions_from_the_same_directory():
+    """practice.html/flashcards.html sit next to the book at the site root, so
+    their book/PDF/TXT links must be same-dir relative (../ 404s there and
+    lands on the series landing under the /tech/ proxy)."""
+    records = build_fixture_records()
+    titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))
+    subs = make_study.subelement_summaries(records, titles)
+    for html in (make_study.render_practice_html(records, fixture_figures(), subs),
+                 make_study.render_flashcards_html(records, fixture_figures(), subs)):
+        assert 'href="./"' in html                          # Read the book
+        assert 'href="./your-first-ham-license.pdf"' in html
+        assert 'href="./your-first-ham-license.txt"' in html
+        assert 'href="../"' not in html
+        assert 'href="../your-first-ham-license.pdf"' not in html
+        assert 'href="../your-first-ham-license.txt"' not in html
+        # unified naming: the companion page is the "Practice test"
+        assert "Practice exam" not in html
+        assert "practice test" in html.lower()
+
+
+def test_practice_drill_tally_keeps_the_question_position_after_answering():
+    records = build_fixture_records()
+    titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))
+    html = make_study.render_practice_html(
+        records, fixture_figures(), make_study.subelement_summaries(records, titles))
+    # one tally writer, called both when a drill question renders and after
+    # answering it, so "question n of N" survives the correctness update
+    assert "function updateDrillTally()" in html
+    assert html.count("updateDrillTally();") >= 2
+    assert '" of " + drillQueue.length' in html
 
 
 # ---------- CLI ----------

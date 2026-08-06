@@ -237,7 +237,7 @@ def render_practice_html(records: list, figures: dict, subelements: list) -> str
 _HEAD_CSS = """
 :root {
   color-scheme: light dark;
-  --paper: #f7f3ec; --ink: #2b2620; --muted: #7a7060; --rule: #cfc6b6;
+  --paper: #f7f3ec; --ink: #2b2620; --muted: #716858; --rule: #cfc6b6;
   --link: #8a6a24; --panel: #efe9dd;
   --beam: #e8c877; --beam-hi: #ffe6ac; --glow: rgba(232,200,119,.55);
   --ok: #3f7d3f; --bad: #b04a32;
@@ -249,8 +249,6 @@ _HEAD_CSS = """
     --ok: #7fbf7f; --bad: #d98a76;
   }
 }
-:root[data-theme="light"] { --paper:#f7f3ec; --ink:#2b2620; --muted:#7a7060; --rule:#cfc6b6; --link:#8a6a24; --panel:#efe9dd; }
-:root[data-theme="dark"] { --paper:#131110; --ink:#ddd6c9; --muted:#968d7c; --rule:#322d25; --link:#d8c390; --panel:#1b1815; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -290,6 +288,7 @@ h1 { font-size: 2.5rem; font-weight: normal; letter-spacing: .05em; margin: .7re
   font-size: .7rem; text-transform: uppercase; letter-spacing: .14em;
   color: var(--muted); background: none; border: 1px solid var(--rule);
   border-radius: 999px; padding: .55em 1.3em; cursor: pointer;
+  min-height: 36px; display: inline-flex; align-items: center; justify-content: center;
   transition: border-color .18s, color .18s, box-shadow .25s; }
 .btn:hover { border-color: var(--beam); color: var(--ink); }
 .btn:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; }
@@ -328,6 +327,7 @@ _FLASHCARDS_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 6.5 4 15h8z' fill='none' stroke='%238a6a24' stroke-width='1.3' stroke-linejoin='round'/%3E%3Cpath d='M8 6.5V15M6.1 11h3.8' stroke='%238a6a24' stroke-width='1.1'/%3E%3Ccircle cx='8' cy='4.8' r='1.3' fill='%238a6a24'/%3E%3Cpath d='M5.7 2.4a3.3 3.3 0 0 1 4.6 0M4 .7a5.7 5.7 0 0 1 8 0' fill='none' stroke='%238a6a24' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Your First Ham License — Flashcards</title>
 <style>__HEAD_CSS__
 /* ---- flashcards ---- */
@@ -370,10 +370,10 @@ __SERIES_BAR__
   <p class="sub">The Technician Course (2026&ndash;2030)</p>
   <p class="tagline">all 409 pool questions &middot; hints &amp; explanations &middot; marks that stick</p>
   <p class="back">
-    <a href="../">&larr; Read the book</a> <span class="dot">&middot;</span>
-    <a href="practice.html">Practice exam</a> <span class="dot">&middot;</span>
-    <a href="../your-first-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
-    <a href="../your-first-ham-license.txt">Text</a>
+    <a href="./">&larr; Read the book</a> <span class="dot">&middot;</span>
+    <a href="practice.html">Practice test</a> <span class="dot">&middot;</span>
+    <a href="./your-first-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
+    <a href="./your-first-ham-license.txt">Text</a>
   </p>
 </header>
 
@@ -402,7 +402,7 @@ __SERIES_BAR__
 <section class="note">
   <h2 class="label">About these cards</h2>
   <p>Every question, choice, and answer key is verbatim from the NCVEC 2026&ndash;2030 Technician pool (public domain; valid for exams 2026-07-01 through 2030-06-30). The one-line explanations are this book&rsquo;s own, and each card&rsquo;s hint names the published pool group and the chapter that teaches it. Figures T-1&ndash;T-3 are redrawn from the pool originals.</p>
-  <p><a href="../">Read the book</a> &middot; <a href="practice.html">Take a practice exam</a></p>
+  <p><a href="./">Read the book</a> &middot; <a href="practice.html">Take a practice test</a></p>
 </section>
 
 </div>
@@ -584,7 +584,8 @@ _PRACTICE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your First Ham License — Practice Exam</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 6.5 4 15h8z' fill='none' stroke='%238a6a24' stroke-width='1.3' stroke-linejoin='round'/%3E%3Cpath d='M8 6.5V15M6.1 11h3.8' stroke='%238a6a24' stroke-width='1.1'/%3E%3Ccircle cx='8' cy='4.8' r='1.3' fill='%238a6a24'/%3E%3Cpath d='M5.7 2.4a3.3 3.3 0 0 1 4.6 0M4 .7a5.7 5.7 0 0 1 8 0' fill='none' stroke='%238a6a24' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Your First Ham License — Practice Test</title>
 <style>__HEAD_CSS__
 /* ---- practice exam ---- */
 .rule { text-align: center; color: var(--muted); max-width: 34em; margin: 0 auto 1.6rem; }
@@ -638,15 +639,15 @@ _PRACTICE_TEMPLATE = """<!DOCTYPE html>
 
 __SERIES_BAR__
 <header>
-  <p class="over label">Practice exam</p>
+  <p class="over label">Practice test</p>
   <h1>Your First Ham License</h1>
   <p class="sub">The Technician Course (2026&ndash;2030)</p>
   <p class="tagline">drawn fresh every time &middot; graded with explanations</p>
   <p class="back">
-    <a href="../">&larr; Read the book</a> <span class="dot">&middot;</span>
+    <a href="./">&larr; Read the book</a> <span class="dot">&middot;</span>
     <a href="flashcards.html">Flashcards</a> <span class="dot">&middot;</span>
-    <a href="../your-first-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
-    <a href="../your-first-ham-license.txt">Text</a>
+    <a href="./your-first-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
+    <a href="./your-first-ham-license.txt">Text</a>
   </p>
 </header>
 
@@ -687,7 +688,7 @@ below, or drill a single subelement with immediate feedback.</p>
 <section class="note">
   <h2 class="label">About this exam</h2>
   <p>Every question, choice, and answer key is verbatim from the NCVEC 2026&ndash;2030 Technician pool (public domain; valid for exams 2026-07-01 through 2030-06-30), drawn one per group exactly as the real exam does. The explanations are this book&rsquo;s own. Figures T-1&ndash;T-3 are redrawn from the pool originals.</p>
-  <p><a href="../">Read the book</a> &middot; <a href="flashcards.html">Study the flashcards</a></p>
+  <p><a href="./">Read the book</a> &middot; <a href="flashcards.html">Study the flashcards</a></p>
 </section>
 
 </div>
@@ -885,6 +886,11 @@ below, or drill a single subelement with immediate feedback.</p>
     renderDrill();
   }
 
+  function updateDrillTally() {
+    drillTally.textContent = drillCorrect + " / " + drillAnswered + " correct" +
+      " · question " + (drillIdx + 1) + " of " + drillQueue.length;
+  }
+
   function renderDrill() {
     drillLocked = false;
     drillNextBtn.style.display = "none";
@@ -921,13 +927,12 @@ below, or drill a single subelement with immediate feedback.</p>
           "Hint: this is " + rec.groupTheme + " — review chapter " + rec.chapter + "."));
         feedback.style.display = "";
         drillNextBtn.style.display = "";
-        drillTally.textContent = drillCorrect + " / " + drillAnswered + " correct";
+        updateDrillTally();
       }));
     });
     block.appendChild(feedback);
     drillCard.appendChild(block);
-    drillTally.textContent = drillCorrect + " / " + drillAnswered + " correct" +
-      " · question " + (drillIdx + 1) + " of " + drillQueue.length;
+    updateDrillTally();
   }
 
   document.getElementById("drillStartBtn").addEventListener("click", startDrill);

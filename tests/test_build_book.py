@@ -19,7 +19,8 @@ def test_build_html_embeds_figure_toc_and_math():
     assert 'Your First Ham License' in html     # retargeted title
     # self-contained: no external RESOURCE fetches (namespace xmlns http URIs are fine)
     assert 'src="http' not in html
-    assert '<link ' not in html.lower()
+    # the only <link> allowed is the inline data-URI favicon
+    assert not re.findall(r'<link[^>]*href="(?!data:)[^"]*"', html.lower())
     assert '@import' not in html
 
 
@@ -116,11 +117,25 @@ def test_title_block_links_companion_tools():
     assert '<a href="audiobook/">Listen to the audiobook</a>' in html
     assert '<a href="practice.html">Practice test</a>' in html
     assert '<a href="flashcards.html">Flashcards</a>' in html
-    # one nav line inside the title block: after the subtitle, before the TOC
-    assert 'class="extras"' in html
-    assert html.index('class="title-block"') < html.index('class="extras"')
-    assert html.index('The Technician Course') < html.index('class="extras"')
-    assert html.index('class="extras"') < html.index('<nav class="toc"')
+    # one nav line inside the title block: after the subtitle, before the TOC;
+    # class/aria-label are the unified series-wide form ("book-extras")
+    assert 'class="book-extras"' in html
+    assert 'aria-label="Book extras"' in html
+    assert 'class="extras"' not in html
+    assert html.index('class="title-block"') < html.index('class="book-extras"')
+    assert html.index('The Technician Course') < html.index('class="book-extras"')
+    assert html.index('class="book-extras"') < html.index('<nav class="toc"')
+
+
+def test_figures_scale_to_the_column_with_a_visible_scroll_fallback():
+    html = build_html([pathlib.Path("tests/fixtures/ch_sample.md")], {})
+    # inline SVGs scale down to the text column instead of being clipped
+    assert 'figure.figure svg { max-width: 100%; height: auto; }' in html
+    assert 'max-width: none' not in html
+    # any still-overflowing figure scrolls horizontally with a visible cue
+    assert 'overflow-x: auto' in html
+    assert '::-webkit-scrollbar-thumb' in html
+    assert 'scrollbar-width: thin' in html
 
 
 def test_no_absolute_links_beyond_series_paths():
