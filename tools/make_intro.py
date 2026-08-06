@@ -1,8 +1,8 @@
 """Synthesize the audiobook introduction (audiobook/intro.mp3) with edge-tts.
 
 A short spoken preface that opens the audiobook: a welcome to the absolute
-beginner, what Your First Ham License is, that it was written by Claude
-Opus 4.8 running in Claude Code, and how to use the eight-voice edition.
+beginner, what Your First Ham License is, that it was written by Kimi
+K3 running in Kimi Code, and how to use the eight-voice edition.
 Kept separate from the chapter tracks so it can be regenerated on its own.
 
 Usage:
@@ -25,7 +25,7 @@ OUT = Path(__file__).resolve().parent.parent / "audiobook" / "intro.mp3"
 
 INTRO = """Your First Ham License: The Technician Course, 2026 to 2030. A welcome.
 
-This audiobook was written by Claude Opus 4.8 — an artificial intelligence made by Anthropic — running inside the coding tool Claude Code.
+This audiobook was written by Kimi K3 — an artificial intelligence made by Moonshot AI — running inside Kimi Code.
 
 If you have never touched a radio, never studied electronics, and are not entirely sure what a ham is — you are exactly who this course was written for. In eleven chapters it walks you from curious to licensed: what amateur radio is and how the exam works, how signals travel, antennas and stations, operating on repeaters, the rules in plain English, safety, and finally exam day itself. Every fact and every practice question is checked against the official twenty twenty-six to twenty thirty Technician question pool, so what you hear is what the exam asks.
 
@@ -57,7 +57,7 @@ async def main() -> None:
             "ffmpeg", "-y", "-loglevel", "error", "-i", str(raw),
             "-c", "copy",
             "-metadata", "title=Introduction",
-            "-metadata", "artist=Claude Opus 4.8",
+            "-metadata", "artist=Kimi K3",
             "-metadata", "album=Your First Ham License",
             "-metadata", "track=0/11",
             "-metadata", "genre=Audiobook",

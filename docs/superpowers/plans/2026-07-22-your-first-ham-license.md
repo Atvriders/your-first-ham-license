@@ -18,7 +18,7 @@
 - **Prose original; facts/Part 97/pool free.** No fabricated quotations; anecdotes framed as illustrative scenarios, never attributed to real people.
 - **Self-contained output:** inline SVG figures, math pre-rendered to inline SVG, inline CSS; no external refs (`src="http"`, `<link rel="stylesheet">`, `@import` are failures; SVG `xmlns` URIs are fine — Book 1 gotcha #3).
 - **Environment:** `python3` (not `python`); `matplotlib`, `edge-tts`, `ffmpeg`, `google-chrome` present; no local Docker (CI builds the image).
-- **Naming:** title *Your First Ham License: The Technician Course (2026–2030)* (US spelling); audio ID3 `artist=Claude Opus 4.8`, `album=Your First Ham License`; GHCR image `ghcr.io/atvriders/your-first-ham-license`.
+- **Naming:** title *Your First Ham License: The Technician Course (2026–2030)* (US spelling); audio ID3 `artist=Kimi K3`, `album=Your First Ham License`; GHCR image `ghcr.io/atvriders/your-first-ham-license`.
 - **sys.path gotcha:** every runnable script keeps `sys.path.insert(0, str(Path(__file__).resolve().parent.parent))` (Book 1 gotcha #2).
 - **CI gotcha:** copy Book 1's *fixed* workflow (`seq -f "%02g"`, not `seq -w` — gotcha #1), then adjust chapter count/audio URLs.
 
@@ -88,7 +88,7 @@ your-first-ham-license/
 - [x] **Verify:** `pytest tests/test_audit_book.py` green (incl. new fixture-based tests for #8: a correct quote passes; a one-word-off quote fails; a wrong answer letter fails; missing pool → skip).
 
 ### Task 1.4: `make_audiobook.py` + `make_intro.py` retarget
-- [x] Chapter range 00–10 (11 chapters); `spoken_heading()` for `## <N>. <Title>`; ID3 `album=Your First Ham License`, `artist=Claude Opus 4.8`; exclude `appendices/` from narration; keep sys.path bootstrap, chunking/retries, ffmpeg stitch.
+- [x] Chapter range 00–10 (11 chapters); `spoken_heading()` for `## <N>. <Title>`; ID3 `album=Your First Ham License`, `artist=Kimi K3`; exclude `appendices/` from narration; keep sys.path bootstrap, chunking/retries, ffmpeg stitch.
 - [x] New INTRO text (beginner welcome, ~1 min spoken); keep `--dry`.
 - [x] **Verify:** `pytest tests/test_audiobook_prepare.py` green; `python3 tools/make_intro.py --dry` prints sane text.
 
@@ -177,7 +177,7 @@ your-first-ham-license/
 
 - [ ] Clean rebuild from scratch; `pytest` green; `audit_book.py` exit 0; human-style spot-read.
 - [ ] **Ship gate (human confirms before outward actions).**
-- [ ] One commit (trailer `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>`).
+- [ ] One commit (trailer `Co-Authored-By: Kimi K3 <noreply@moonshot.cn>`).
 - [ ] Create GitHub repo via REST API (`POST /user/repos`, `private:false`); push `master`.
 - [ ] Generate audiobook: `make_audiobook.py --all` (8 voices × 11 chapters) + `make_intro.py`.
 - [ ] Create release **v1.0**; upload audio assets.
