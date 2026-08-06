@@ -118,6 +118,30 @@ Writes `build/practice-exam.md` (questions and choices A–D, never the answers 
 it and circle) and `build/practice-exam-key.md` (the answer key with a subelement
 tally). Pass `--out` to write elsewhere.
 
+## Practice tests & flashcards
+
+Two interactive study pages, generated from the same canonical pool data and served in
+the container at **`/practice.html`** and **`/flashcards.html`** (themed like the
+audiobook player, light/dark, fully self-contained — they work offline):
+
+- **`/practice.html`** draws a valid exam — one question per group, 35 questions, 26
+  to pass — reseeding with every **New exam** click. Answer by clicking; grading shows
+  your score, pass/fail, and a full review list (your answer, the correct answer, and
+  the one-line why). A per-subelement **drill mode** gives immediate feedback with the
+  why after each question.
+- **`/flashcards.html`** flips through all **409 questions**: front is the question and
+  choices, back is the correct answer, the why, and a hint naming the published pool
+  group and the chapter that teaches it. Filter by subelement, shuffle, and mark cards
+  **review later** (persisted in `localStorage`). Keyboard-friendly: space/enter flips,
+  arrows move, M marks.
+
+The three pool figures appear inline on the twelve cards and exam questions that
+reference them. Regenerate after any pool update:
+
+```sh
+python3 tools/make_study.py --out build/
+```
+
 ## Pool currency
 
 This book tracks the **NCVEC 2026–2030 Technician question pool**, valid for exams
