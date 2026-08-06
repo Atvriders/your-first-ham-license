@@ -62,3 +62,12 @@ jobs:
           push: true
           tags: ghcr.io/atvriders/your-first-ham-license:latest
           labels: org.opencontainers.image.source=https://github.com/Atvriders/your-first-ham-license
+
+      - name: Build and push the series proxy
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: series/Dockerfile.proxy
+          push: true
+          tags: ghcr.io/atvriders/series-proxy:latest
+          labels: org.opencontainers.image.source=https://github.com/Atvriders/your-first-ham-license

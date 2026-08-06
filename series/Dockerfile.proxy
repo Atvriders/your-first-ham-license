@@ -1,0 +1,7 @@
+# Series-site proxy image: the nginx config and landing page baked in, so
+# series-docker-compose.yml needs no host files (safe to paste into Portainer
+# or run from a bare checkout). Built and pushed by this repo's CI
+# (.github/workflows/build.yml) as ghcr.io/atvriders/series-proxy:latest.
+FROM nginx:alpine
+COPY series/nginx.conf /etc/nginx/conf.d/default.conf
+COPY series/index.html /usr/share/nginx/html/index.html

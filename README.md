@@ -81,8 +81,12 @@ docker compose -f series-docker-compose.yml up -d
 Serves everything at [http://localhost:8080](http://localhost:8080): a landing page at
 `/` with a card per book, this book (text + audiobook) at `/tech/`, and `/general/`
 plus `/extra/` for the other two books — all three live since the series completed.
-The book-switcher bar at the top of every page links all three. Config
-lives in [`series/`](series/) (proxy + landing page) and
+The book-switcher bar at the top of every page links all three. The stack runs with
+zero host files — the compose file alone is enough (the proxy is a prebuilt image,
+`ghcr.io/atvriders/series-proxy`, with the nginx config and landing page baked in),
+so it can be pasted straight into the Portainer web editor or run from any checkout.
+Config lives in [`series/`](series/) (proxy + landing page — the source of truth for
+the proxy image, republished by this repo's CI) and
 [`series-docker-compose.yml`](series-docker-compose.yml).
 
 ## Audiobook
