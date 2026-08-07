@@ -269,9 +269,9 @@ imported module.
 - **`tools/figreg.py`** — loads/validates `figures/figures.json`; protected-years set
   (1968–1983) unchanged from the original ledger.
 - **`tools/narration.py`** / **`tools/make_audiobook.py`** — the 8-voice edge-tts
-  audiobook pipeline (US/British/Australian/Irish × male/female), **chapters 00–10
-  only** (the verbatim pool appendix is never narrated); **`tools/make_intro.py`**
-  generates the spoken introduction. `docker/audiobook-index.html` is the player (§8).
+  audiobook pipeline (US/British/Australian/Irish × male/female), **preface +
+  chapters 00–10** (the verbatim pool appendix is never narrated).
+  `docker/audiobook-index.html` is the player (§8).
 - **`tools/make_exam.py`** — the practice-exam generator (new in this book):
   `python3 tools/make_exam.py [--seed N] [--out build/] [--pool canon/pool-technician.json]`
   draws exactly **one question per NCVEC group** (35 groups → a valid 35-question
@@ -322,7 +322,7 @@ Extra) and carries the shared machinery; General and Extra ship later and inheri
   services sit behind the `future` profile so `up` never pulls placeholders. Each
   book's standalone image (`docker-compose.yml`, also :8080) runs fine alone.
 - **Audiobook player** (`docker/audiobook-index.html`) — themed page with 12 tracks
-  (intro + 11 chapters), a **voice switcher** grouped by accent (8 voices: Andrew, Ava,
+  (preface + 11 chapters), a **voice switcher** grouped by accent (8 voices: Andrew, Ava,
   Ryan, Sonia, William, Natasha, Connor, Emily), continuous chapter-to-chapter
   playback, a live visualizer, and **resume** (voice/track/position persisted in
   `localStorage` under `yfhl-audio`). The **"Auto-play next chapter" toggle**
@@ -332,8 +332,8 @@ Extra) and carries the shared machinery; General and Extra ship later and inheri
 - **Hosting/CI** — `Dockerfile` (nginx serving `build/index.html`, the TXT/PDF,
   `chapters/`, and `audiobook/` with the player at `/audiobook/`); GitHub Actions
   (`.github/workflows/build.yml`, push to `master`/`main` or `workflow_dispatch`)
-  fetches the audiobook from **release v1.0** (intro + 8 voices × 11 chapters),
-  rebuilds the book, and pushes `ghcr.io/atvriders/your-first-ham-license:latest`.
+  fetches the audiobook from **release v1.0** (8 voices × 12 tracks: preface + 11
+  chapters), rebuilds the book, and pushes `ghcr.io/atvriders/your-first-ham-license:latest`.
   GitHub-only CI; no Gitea path. **Audio ships on the release, not in git.**
 
 ## 9. Copyright ledger summary

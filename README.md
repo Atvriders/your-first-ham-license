@@ -42,7 +42,7 @@ General and Extra courses follow the same template.
 | [`build/your-first-ham-license.txt`](build/your-first-ham-license.txt) | Plain-text edition — open in any editor; math spoken as words, figures as placeholders. |
 | [`chapters/`](chapters/) | The 11 source chapters as Markdown (`ch00.md` … `ch10.md`). |
 | [`appendices/`](appendices/) | Appendix A ([the complete annotated pool](appendices/pool.md)) and Appendix B ([glossary & formulas](appendices/glossary-and-formulas.md)). |
-| Audiobook (release v1.0) | Eight voices, each reading all 11 chapters, plus a spoken introduction — see below. |
+| Audiobook (release v1.0) | Eight voices × 12 tracks (preface + 11 chapters) — see below. |
 | [`Dockerfile`](Dockerfile) / [`docker-compose.yml`](docker-compose.yml) | Serve the book yourself — see below. |
 
 ## Read online via Docker
@@ -91,11 +91,11 @@ the proxy image, republished by this repo's CI) and
 ## Audiobook
 
 The audiobook comes in **eight voices** — men and women in **American, British,
-Australian, and Irish** accents — each reading all eleven chapters, synthesized with
+Australian, and Irish** accents — each reading the preface and all eleven chapters
+(8 voices × 12 tracks), synthesized with
 [edge-tts](https://pypi.org/project/edge-tts/) via
 [`tools/make_audiobook.py`](tools/make_audiobook.py) (`--voice <key>` for one voice,
-`--all` for every voice) plus a spoken introduction via
-[`tools/make_intro.py`](tools/make_intro.py). Formulas and figures are narrated in
+`--all` for every voice). Formulas and figures are narrated in
 words, not read as raw markup. The verbatim pool appendix is print-only and is not
 narrated.
 
